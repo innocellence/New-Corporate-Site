@@ -1,2 +1,1 @@
-# innocellence.github.io
-Corporate Site
+# InnoCellence

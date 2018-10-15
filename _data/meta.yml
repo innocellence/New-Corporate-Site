@@ -1,0 +1,19 @@
+#####################
+###### English ######
+#####################
+en:
+  title       : InnoCellence
+  byline      : Excellence in Digital Innovation
+  masthead    : We design and develop the digital solutions companies need to succeed.
+  keywords    : 
+  author      : InnoCellence Singapore Pte. Ltd.
+
+#####################
+###### Chinese ######
+#####################
+zh:
+  title       : InnoCellence
+  byline      : 致力于卓越的数字化创新
+  masthead    : 我们设计和开发的数字解决方案助力企业获得成功。
+  keywords    : 
+  author      : 英诺瑞新科技发展（大连）有限公司

@@ -1,0 +1,31 @@
+<!-- #navigation -->
+<nav class="main_navigation fade-c-transparent{% if page.menu != 'initialize' %} ready{% endif %}">
+<div class="inner">
+  <div class="logo">
+    <a href="{{ site.baseurl }}{% if page.lang == 'zh' %}/cn/{% elsif page.lang == 'jp' %}/jp/{% else %}/{% endif %}">
+      <svg width="43px" height="40px" viewBox="0 0 27 25">
+        <g id="innoLogo" fill="#FFFFFF">
+          <path d="M5.2305524,24.4105447 C2.04810848,21.9164712 0,18.0165025 0,13.6334439 C0,6.273955 5.77422511,0.276439626 12.9970443,0.0092865282 L5.2305524,24.4105447 Z M13.0028874,0.00907166929 C13.1678539,0.00304123285 13.3335752,0 13.5,0 C20.9558441,0 27,6.10390074 27,13.6334439 C27,18.3790097 24.5990982,22.5582718 20.9570609,25 L13.0028874,0.00907166929 Z" id="Combined-Shape"></path>
+        </g>
+      </svg>
+<!--      <div class="logoName">InnoCellence</div>-->
+    </a>
+  </div> 
+  <ul class="menu menu--left">
+    {% for item in site.data.menus[page.lang].main.items %}
+    <li class="menu__item"><a {% if page.title == item[1].name %}class="active"{% endif %}href="{{ item[1].url | prepend: site.baseurl }}">{{ item[1].name }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul class="menu menu--right">
+    {% assign translations = site.pages | where:"ref", page.ref | sort: 'lang' %} 
+    {% for item in translations %}
+    <li class="menu__item"><a href="{{ item.url | prepend: site.baseurl }}" class="{{ item.lang }}{% if page.lang == item.lang %} active{% endif %}">{{ item.lang }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="pagename_vertical">
+  {% assign meta = site.data.meta[page.lang] %}  
+  <div>{% if page.layout == 'home' %}{{ meta.title }}{% else %}{{ page.title }}{% endif %}</div>
+  <div>{% if page.layout != 'home' %}{{ meta.title }}{% else %}{{ meta.byline }}{% endif %}</div>
+</div>
+</nav>

@@ -1,0 +1,95 @@
+// Wrapper
+main {
+//  overflow-x: hidden;
+}
+
+// Section
+.section {
+  --background: var(--color_sky); // Set the background variable
+  
+  height: auto;
+  width: 100% !important;
+  position: relative;
+  padding-top: $margin_gap;
+  padding-bottom: 0;
+  background: var(--background);
+
+  &__top,
+  &__top--right {
+    --background: var(--color_sky); // Set the background variable
+    position: absolute;
+    display: block;
+    top: calc(-10vh + 1px);
+    width: 100%;
+
+    svg {
+      display: block;  
+    }
+    polygon{
+      fill: var(--background);
+    }
+  }
+  &__bottom,
+  &__bottom--right {
+    --background: var(--color_sky); // Set the background variable
+    position: absolute;
+    display: block;
+    top: calc(100% - 10vh + 1px);
+    width: 100%;
+
+    svg {
+      display: block;  
+    }
+    polygon{
+      fill: var(--background);
+    }
+  }
+  
+  &__container {
+    position: relative;
+    max-width: $max_width;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    position: relative;
+    max-width: $max_width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: unquote(" 
+      [full-start] minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) 
+      [main-start] repeat(18, 1fr) [main-end]
+      minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) [full-end]");
+    grid-column-gap: $margin;  
+  }
+  
+  &__content--carousel {
+    width: calc(100% - (2 * var(--padding_horiz)) );
+    max-width: calc(#{$max_width} - (2 * var(--padding_horiz)) );
+  }
+}
+
+// Background Colors
+.bg--red {
+  --background: var(--color_red);
+}
+.bg--white {
+  --background: var(--color_white);
+}
+.bg--blue {
+  --background: var(--color_blue);
+}
+.bg--sky {
+  --background: var(--color_sky);
+}
+
+// Colors
+.color--red {
+  --color: var(--color_red);
+}
+.color--white {
+  --color: var(--color_white);
+}
+.color--blue {
+  --color: var(--color_blue);
+}

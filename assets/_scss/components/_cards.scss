@@ -1,0 +1,90 @@
+.cards {
+  display: flex;
+  width: auto;
+  overflow: visible;
+  position: relative;
+}
+.card {
+  --card_background: var(--color_white);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--card_background);
+  width: 250px;
+  height: auto;
+  min-height: 190px;
+  margin: $margin_large / 2;
+  padding: $margin_large / 2;
+  box-shadow: 0 1px 4px transparentize($black, .85);
+  border-radius: $radius_small;
+  
+  img {
+    margin-top: 10%;
+  }
+}
+
+// Tile Cards
+.card.tile {
+  --card_background: transparent;
+
+  align-items: flex-start;
+  background: var(--card_background);
+  min-width: 300px;
+  min-height: 190px;
+  margin-left: $margin_huge;
+  margin-right: $margin_huge;
+  border-radius: 0;
+  box-shadow: none;
+
+  &--text:first-child {
+    margin-left: var(--repeating_width);
+  }
+  &--cta {
+    align-items: center;
+  }
+}
+
+// Tiles
+.tile {
+  --color: var(--color_black);
+  
+  color: var(--color);
+  padding: 0;
+  height: auto;
+  margin-bottom: $margin_gap * .5;
+  
+  &__subheading {
+    font-weight: bold;
+    font-size: $typo_sparrow;
+    color: var(--color_red);
+    letter-spacing: .01em;
+  }
+  &__heading {
+    font-weight: bold;
+    margin-bottom: $margin_large;
+  }
+  &--cta {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &--text {}
+  &.centered {
+    text-align: center;
+  }
+}
+
+// Tile Colors
+.tile--red {
+  --color: var(--color_red);
+}
+.tile--white {
+  --color: var(--color_white);
+}
+.tile--blue {
+  --color: var(--color_blue);
+}
+
+

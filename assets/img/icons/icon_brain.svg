@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="48px" viewBox="0 0 70 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_brain</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon_brain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M36.9077104,1 C28.6538468,1 21.2593468,7.90209091 20.415665,15.2390909 C20.1313014,17.7126364 18.3101195,22.5018636 16.1857559,25.0956364 C15.0650286,26.4641364 19.3545286,26.3857273 19.6723468,28.0103636 C21.0889377,35.2720909 24.5452104,38.6865455 32.0860741,40.0958182 L32.0860741,47 L45.370665,47 L45.370665,38.0268636 C51.5419832,34.6751364 55.7269377,28.1849545 55.7269377,20.7256364 C55.7269377,9.83095455 47.9132104,1 36.9077104,1" id="head" stroke="#375EB4" stroke-width="2"></path>
+        <g id="lightbulb" transform="translate(23.000000, 6.000000)">
+            <path d="M16,28 C16,28.8295 15.328,29.5 14.5,29.5 C13.672,29.5 13,28.8295 13,28" id="Fill-6" fill="#375EB4"></path>
+            <circle id="Oval" fill="#375EB4" cx="1.5" cy="15.5" r="1.5"></circle>
+            <circle id="Oval-Copy" fill="#375EB4" cx="27.5" cy="15.5" r="1.5"></circle>
+            <circle id="Oval-Copy-2" fill="#375EB4" cx="24.5" cy="6.5" r="1.5"></circle>
+            <circle id="Oval-Copy-3" fill="#375EB4" cx="4.5" cy="6.5" r="1.5"></circle>
+            <circle id="Oval-Copy-4" fill="#375EB4" cx="14.5" cy="1.5" r="1.5"></circle>
+            <path d="M11.5,23.5 L11.5,27 C11.5,27.2761424 11.7238576,27.5 12,27.5 L17,27.5 C17.2761424,27.5 17.5,27.2761424 17.5,27 L17.5,23.5 L11.5,23.5 Z" id="Rectangle-Copy" stroke="#375EB4"></path>
+            <polyline id="Line" stroke="#375EB4" stroke-linecap="square" points="12 25 15.5 23.5 17.0447764 23.5"></polyline>
+            <path d="M12,27 L17,25" id="Line-Copy" stroke="#375EB4" stroke-linecap="square"></path>
+            <path d="M17.4723789,23.0319305 C17.5043529,22.3907848 17.4238748,21.776623 17.8627669,21.5151996 C20.6208178,19.8719514 22.7731185,17.546171 22.7731185,14.2731185 C22.7731185,9.7042888 19.0688297,6 14.5,6 C9.93117031,6 6.22688151,9.7042888 6.22688151,14.2731185 C6.22688151,17.546171 8.38212367,19.8729856 11.1412087,21.5151996 C11.5817261,21.7771739 11.4983727,22.3948403 11.5305377,23.0386087" id="Path" stroke="#375EB4"></path>
+        </g>
+    </g>
+</svg>

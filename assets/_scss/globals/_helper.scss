@@ -1,0 +1,43 @@
+// Draw Grid
+:root {
+  --background_columns: repeating-linear-gradient(
+      to right,
+      var(--color),
+      var(--color) var(--column_width),
+      transparent var(--column_width),
+      transparent var(--repeating_width)
+  );
+  --background_baseline: repeating-linear-gradient(
+    to bottom,
+    var(--baseline_color),
+    var(--baseline_color) var(--line_thickness),
+    transparent var(--line_thickness),
+    transparent var(--baseline)
+  );
+}  
+html::before {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  width: calc(100% - (2 * var(--page_gutter)));
+  max-width: calc(#{$max_width} - (2 * var(--page_gutter)));
+  content: '';
+  box-shadow: inset 3px 0 0 var(--guide_outer_color), inset -3px 0 0 var(--guide_outer_color);
+  z-index: 1000;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+html::after {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  width: var(--grid_width);
+  max-width: calc(#{$max_width} - (2 * var(--padding_horiz)));
+  box-shadow: inset 3px 0 0 var(--guide_color), inset -3px 0 0 var(--guide_color);
+  content: '';
+  background-image: var(--background_columns), var(--background_baseline);
+  background-size: var(--background_width) 100%;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translateZ(0);
+}

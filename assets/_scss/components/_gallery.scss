@@ -1,0 +1,167 @@
+.gallery {
+  position: relative;
+  max-width: $max_width;
+  margin: 0 auto;
+  width: calc(100% - (2 * var(--padding_horiz)) );
+  max-width: calc(#{$max_width} - (2 * var(--padding_horiz)) );
+
+  .swiper-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Thumbs
+  &__thumbs {
+    margin-bottom: $margin;
+    
+    .swiper-wrapper {
+      display: flex;
+      width: auto;
+      overflow: visible;
+      position: relative;
+    }
+    
+    // Thumbnails
+    .swiper-slide {
+      --background: $white;
+      --color: $white;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: var(--background);
+      width: 400px;
+      height: auto;
+      min-height: 190px;
+      margin: $margin_large / 2;
+      padding: $margin_large / 2 $margin_huge;
+      box-shadow: 0 1px 4px transparentize($black, .85);
+      border-radius: $radius_small;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      opacity: .5;
+//      transform: translateX(-50px);
+      color: var(--color);
+      transition: all $base_duration $base_motion !important;
+      
+      h3 {
+        position: relative;
+        z-index: 1;
+      }
+      .control {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--color);
+        z-index: 1;
+        transition: all $base_duration $base_motion !important;
+        
+        &:after,
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 2px;
+          height: 16px;
+          margin-top: -8px;
+          margin-left: -1px;
+          background-color: var(--color);
+        }
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        transition: all $base_duration $base_motion !important;
+      }
+    }
+    
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+      --background: transparent;
+      --color: $black;
+      box-shadow: none;
+      opacity: 1;
+//      width: 420px;
+//      padding: $margin_large /2 calc(50px + #{$margin_large} / 2);
+      
+      img {
+        width: 100%;
+        transform: translateY(100%);
+      }
+      .control {
+        transform: rotate(90deg);
+        
+        &:before {
+          transform: rotate(-45deg) !important;
+          top: 14px;
+          height: 10px !important;
+          left: 16px;
+        }
+        &:after {
+          transform: rotate(45deg) !important;
+          top: 20px;
+          height: 10px !important;
+          left: 16px;
+        }
+      }
+    }
+  }
+
+  // Gallery Showcase
+  &__showcase {
+//    height: auto !important;
+    width: 100%;
+    overflow: hidden;
+    
+    .swiper-wrapper {
+//      height: auto !important;
+    }
+    
+    // Show selected items only
+    .swiper-slide {
+//      height: auto !important; 
+//      max-height: 0;
+//      opacity: 0 !important;
+//      visibility: hidden;
+      padding-left: $margin_large / 2;
+      padding-right: $margin_large / 2;
+//      transition: all $base_duration $base_motion !important;
+//      transition-property: all !important;
+//      transition-duration: 300ms !important;
+    }
+    
+    // Fade images if they are not active
+    img {
+      display: block;
+      width: 100%;
+//      opacity: 0;
+//      visibility: hidden;
+//      transition: all $base_duration $base_motion !important;
+    }
+    .swiper-slide-active {
+//      max-height: 9999px;
+//      opacity: 1 !important;
+//      visibility: visible;
+//      transition-property: all !important;
+//      transition-duration: 300ms !important;
+      
+      img {
+//        opacity: 1;
+//        visibility: visible;
+//        transition: all $base_duration $base_motion !important;
+      }
+    }
+  }
+}

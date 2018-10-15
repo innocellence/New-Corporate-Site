@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="48px" viewBox="0 0 70 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_content</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon_content" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M27.5,38.5 C21.4243333,38.5 16.5,33.5756667 16.5,27.5" id="Stroke-12" stroke="#375EB4"></path>
+        <rect id="Rectangle-6" stroke="#375EB4" stroke-width="2" x="11" y="2" width="27" height="19"></rect>
+        <rect id="Rectangle-6-Copy" stroke="#375EB4" stroke-width="2" x="33" y="27" width="27" height="19"></rect>
+        <circle id="Oval-7" stroke="#375EB4" cx="22.5" cy="7.5" r="2"></circle>
+        <polyline id="Path-4" stroke="#375EB4" points="11 21 18 12 23 17 30 7 38 14"></polyline>
+        <path d="M43.5,32.8549237 L43.5,40.1450763 L49.9801356,36.5 L43.5,32.8549237 Z" id="Rectangle-7" stroke="#375EB4"></path>
+        <rect id="Rectangle-8" stroke="#375EB4" x="43.5" y="6.5" width="17" height="4"></rect>
+        <path d="M43.5,14.5 L60.5,14.5" id="Line-7" stroke="#375EB4" stroke-linecap="square"></path>
+        <path d="M43.5,18.5 L60.5,18.5" id="Line-7" stroke="#375EB4" stroke-linecap="square"></path>
+    </g>
+</svg>

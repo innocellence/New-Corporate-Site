@@ -1,0 +1,215 @@
+body[data-page_layout="home"] {
+  
+  #summary {
+    padding-bottom: 0;
+    
+    .tile {
+      margin-bottom: 0;
+    }
+  }
+  
+  #teamwork {
+    .tile--text {
+      margin-bottom: 0;
+    }
+    .tile--image {
+      position: relative;
+      z-index: 1;
+      margin-top: -$margin_huge;
+      margin-bottom: 0;
+      grid-column: 9 / 21;
+
+      img {
+        max-width: none;
+        width: 100%;
+      }
+    }  
+    .lasers {
+      // Variables
+      $beam_width: 6px;
+
+      position: absolute;
+      top: -100px;
+      height: 150px;
+      width: 100%;
+
+      .beam {
+        position: absolute;
+        width: $beam_width;
+        height: 100%;
+
+        &:before,
+        &:after {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          content: '';
+        }
+        &:before {
+          background: $blue;
+          z-index: 1;
+        }
+        &:after {
+          background: $red;
+        }
+      }
+      .beam--one {
+        left: 40%;
+
+        &:before {
+          animation: beam--one_top 5s 1s infinite linear;
+        }
+        &:after {
+          animation: beam--one_bot 5s 1s infinite linear;
+        }
+      }
+      .beam--two {
+        left: 70%;
+        bottom: 70px;
+        height: 100%;
+
+        &:before {
+          animation: beam--two_top 4s 1s infinite linear;
+          animation-delay: 3s;
+          background: $red;
+        }
+        &:after {
+          animation: beam--two_bot 4s 1s infinite linear;
+          animation-delay: 3s;
+          background: $blue;
+        }
+      }
+      .beam--three {
+        left: calc(40% - (#{$beam_width} * 3));
+        bottom: 20px;
+        height: 50%;
+
+        &:before {
+          animation: beam--two_top 4s 1s infinite linear;
+          animation-delay: 4.5s;
+          background: $red;
+        }
+        &:after {
+          animation: beam--two_bot 4s 1s infinite linear;
+          animation-delay: 4.5s;
+          background: $blue;
+        }
+      }
+      .beam--four {
+        left: calc(74% - (#{$beam_width} * 3));
+        bottom: 0;
+        height: 50%;
+
+        &:before {
+          animation: beam--one_top 4s 1s infinite linear;
+          animation-delay: 5.5s;
+          background: $red;
+        }
+        &:after {
+          animation: beam--one_bot 4s 1s infinite linear;
+          animation-delay: 5.5s;
+          background: $blue;
+        }
+      }
+      .beam--five {
+        left: calc(16% - (#{$beam_width} * 3));
+        bottom: 10px;
+        height: 70%;
+
+        &:before {
+          animation: beam--one_top 4s 1s infinite linear;
+          animation-delay: 10.5s;
+          background: $blue;
+        }
+        &:after {
+          animation: beam--one_bot 4s 1s infinite linear;
+          animation-delay: 10.5s;
+          background: $red;
+        }
+      }
+
+      @keyframes beam--one_top {
+        0% {
+          height: 0%;
+        }
+        20% {
+          height: 95%; opacity: 0;
+        }
+        100% {
+          height: 0%; opacity: 0;
+        }
+      }
+      @keyframes beam--one_bot {
+        0% {
+          height: 0%;
+        }
+        40% {
+          height: 95%; opacity: 0;
+        }
+        100% {
+          height: 0%; opacity: 0;
+        }
+      }
+      @keyframes beam--two_top {
+        0% {
+          height: 0%;
+        }
+        20% {
+          height: 95%; opacity: 0;
+        }
+        100% {
+          height: 0%; opacity: 0;
+        }
+      }
+      @keyframes beam--two_bot {
+        0% {
+          height: 0%;
+        }
+        40% {
+          height: 95%; opacity: 0;
+        }
+        100% {
+          height: 0%; opacity: 0;
+        }
+      }
+    }
+  }
+
+  #trust {
+    padding-bottom: $margin_gap;
+    
+    .grid {
+      padding-bottom: $margin_gap / 2;
+    
+      &__item {
+
+        .numeral {
+          font-size: 4vw;
+          color: var(--color_black);
+          text-shadow: -0.4vw 0.5vw var(--color_grey);
+          mix-blend-mode: overlay;
+          line-height: 1;
+        }
+      }
+      
+      &__item--image {
+        position: relative;
+        z-index: 1;
+        grid-column: 2 / 1;
+        grid-row: 2;
+
+        .image {
+          position: absolute;
+          transform: rotate(25deg);
+          box-shadow: -3px 6px 20px rgba(0,0,0,0.2);
+
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  
+}

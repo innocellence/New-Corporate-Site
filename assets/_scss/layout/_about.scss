@@ -1,0 +1,67 @@
+body[data-page_layout="about"] {
+
+  #snapshot {
+    padding-bottom: 0;
+  }
+  
+  #timeZones {
+    padding-bottom: 0;
+    
+    .grid {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  #process {
+    .grid_main {
+      grid-column-start: 3;
+    }
+    
+    
+    #discover .flow {
+      background: linear-gradient(180deg, $red, #5BD758);
+    }
+    #design .flow {
+      background: linear-gradient(180deg, #5BD758, #FFC108);
+    }
+    #iterate .flow {
+      background: linear-gradient(180deg, $red, $blue);
+    }
+    #deliver .flow {
+      background: linear-gradient(180deg, $red, $blue);
+    }
+    #deploy .flow {
+      background: linear-gradient(180deg, #7E8694, #2096F3);
+    }
+    .grid_right {
+      display: flex;
+      position: relative;
+      width: 100%;
+      align-items: center;
+    
+      .notes {
+        width: 50%;
+        padding-right: $margin_large * 2; 
+        text-align: right;
+      }
+      .flow {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: $margin * 2;
+        background: red;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+    }
+    .grid_right.align_left {
+      justify-content: flex-end;
+      
+      .notes {
+        text-align: left;
+        padding-right: 0;
+        padding-left: $margin_large * 2; 
+      }
+    }
+  }
+}

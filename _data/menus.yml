@@ -1,0 +1,168 @@
+#####################
+###### English ######
+#####################
+en:
+  ## Main Navigation / Explore ##
+  main:
+    title: Explore
+    items: 
+      1:
+        name: Home
+        url: /
+#      2:
+#        name: About Us
+#        url: /about/
+#      3:
+#        name: Our Services
+#        url: /services/
+#      4:
+#        name: Careers
+#        url: /careers/
+#      5:
+#        name: Contact
+#        url: /contact/
+  
+  ## Location ##      
+  location: 
+    title: Find Us
+    items: 
+      1: 
+        name: "InnoCellence<br>24 Peck Seah Street #05-01,<br>Singapore, 079314."
+#      2:
+#        name: Other Locations
+#        url: /contact/
+#        class: other_locations
+  
+  ## Updates ##
+  updates:
+    title: Updates
+    items: 
+      1:
+        name: LinkedIn
+        url: https://www.linkedin.com/company/innocellence
+        external: true
+#      2:
+#        name: WeChat
+#        url: https://
+#        external: true
+#      3:
+#        name: News
+#        url: /
+#      4:
+#        name: Whitepapers
+#        url: /
+        
+  ## Legal ##      
+  legal: 
+    title: Legal
+    items: 
+      1: 
+        name: Terms
+        url: /terms/
+      2:
+        name: Privacy
+        url: /privacy/
+        
+  ## Contact ##      
+  contact: 
+    title: New Opportunities
+    items: 
+      1: 
+        name: info@innocellence.com
+        url: mailto:info@innocellence.com
+        external: true
+      2:
+        name: +65 6222 6959 
+        
+  ## Copyright ##      
+  copyright: 
+    title: Copyright
+    items: 
+      1: 
+        name: © 2018 InnoCellence. All Rights Reserved.
+#      2:
+#        name: Sitemap
+#        url: /sitemap.xml
+        
+#####################
+###### Chinese ######
+#####################
+zh:
+  ## Main Navigation / Explore ##
+  main: 
+    title: 全站导航
+    items: 
+      1:
+        name: 首页
+        url: /cn/
+#      2:
+#        name: 关于我们
+#        url: /cn/关于我们/
+#      3:
+#        name: XOur ServicesX
+#        url: /cn/services/
+#      4:
+#        name: 联系我们
+#        url: /cn/联系我们/ 
+        
+  ## Location ##      
+  location: 
+    title: 联系我们
+    items: 
+      1: 
+        name: "英诺瑞新科技发展<br>大连高新园区<br>汇贤园区<br>7号腾飞软件园<br>2号11-05"
+#      2:
+#        name: XOther LocationsX
+#        url: /cn/联系我们/
+#        class: other_locations
+        
+  ## Updates ##      
+  updates:
+    title: 最新动态
+    items: 
+      1:
+        name: 领英
+        url: https://www.linkedin.com/company/innocellence
+        external: true
+      2:
+        name: 微信
+        url: http://weixin.qq.com/r/MUwtKezEySS1KahKbxm1
+        external: true
+#      3:
+#        name: XNewsX
+#        url: /cn/xxxx/
+#      4:
+#        name: XWhitepapersX
+#        url: /cn/xxxx/      
+        
+  ## Legal ##       
+  legal: 
+    title: 协议
+    items: 
+      1: 
+        name: 条款
+        url: /cn/terms/
+      2:
+        name: 隐私政策
+        url: /cn/privacy/
+        
+  ## Contact ##      
+  contact: 
+    title: 合作机会
+    items: 
+      1: 
+        name: info@innocellence.com
+        url: mailto:info@innocellence.com
+        external: true
+      2:
+        name: +86-411-6683-8010      
+  
+  ## Copyright ##
+  copyright: 
+    title: Copyright
+    items: 
+      1: 
+        name: ©2018 英诺瑞新 版权所有
+#      2:
+#        name: XSitemapX
+#        url: /sitemap.xml      

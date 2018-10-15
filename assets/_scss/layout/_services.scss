@@ -1,0 +1,79 @@
+body[data-page_layout="services"] {
+
+  #innovation {
+    padding-top: $margin_gap * 1.5;
+    padding-bottom: $margin_gap * .5;
+    
+    .tile--text {
+      margin-bottom: $margin_gap;
+    }
+    .tile--image {
+      position: absolute;
+      z-index: 1;
+      grid-column: 10 / 20;
+      display: flex;
+      align-items: flex-start;
+      height: calc(100% + #{$margin_gap} * .5);
+
+      > div {
+        position: relative;
+        width: 40%;
+        align-self: flex-end;
+        
+        p {
+          transform: skewY(30deg);
+          position: absolute;
+          font-size: $typo_sparrow;
+          color: $white;
+          margin: 0;
+          width: auto;
+          text-align: right;
+        }
+      }
+      > div.ideation {
+        margin-top: 0;
+        
+        p {
+          bottom: calc(100% - #{$margin});
+          right: 0;
+          width: 50%;
+        }
+      }
+      > div.research {
+        align-self: flex-start;
+        margin-top: -10%;
+        margin-left: -10%;
+        
+        p {
+          transform: skewY(-30deg);
+          text-align: left;
+          left: 70%;
+          top: 0;
+          width: 50%;
+        }
+      }
+      > div.poc {
+        margin-left: -10%;
+        margin-top: -5%;
+        
+        p {
+          right: -$margin;
+          bottom: 100%;
+        }
+      }
+    }
+  }
+  
+  #projects {
+    padding-bottom: $margin_gap; 
+  }
+  
+  #web {
+    padding-bottom: $margin_gap;
+  }
+  
+  #mobile {
+    padding-bottom: $margin_gap;
+  }
+  
+}

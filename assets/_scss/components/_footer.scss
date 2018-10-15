@@ -1,0 +1,112 @@
+// Footer 
+.footer {
+  height: auto;
+  width: 100%;
+  position: relative;
+  padding-top: $margin_gap / 2;
+  padding-bottom: $margin;
+  font-size: $typo_hummingbird;
+
+  &__container {
+    position: relative;
+    max-width: $max_width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: unquote(" 
+      [full-start] minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) 
+      [main-start] repeat(18, 1fr) [main-end]
+      minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) [full-end]");
+    grid-column-gap: $margin;
+  }
+  
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $margin_large;
+    
+    .footer_title {
+      margin-bottom: $margin_small;
+    }
+    
+    .footer_item {
+      color: $grey;
+       margin-bottom: $margin_small;
+    }
+    
+    a {
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      transition: all $base_duration $base_motion;
+
+      &:after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        bottom: -.1em;
+        left: 0;
+        background: currentColor;
+        transform: scale3d(0,1,1);
+        transform-origin: left;
+        transition: all $base_duration $base_motion;
+      }
+
+      &:hover {
+        color: inherit;
+
+        &:after {
+          transform: scale3d(1,1,1);
+        }
+      }
+    }
+  }
+}
+// Menu Specifics
+.footer__menu {
+  &.logo {
+    .logo_full {
+      margin-bottom: $margin;
+    }
+  }
+  
+  &.location {
+    .other_locations {
+      margin-top: $typo_hummingbird * $base_line_height;
+    }
+  }
+  
+  &.copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $margin_gap / 2;
+  }
+}
+
+// Grid Positioning
+.footer__menu {
+  &.logo {
+    grid-column: 2 / 6;
+  }
+  &.explore {
+    grid-column: 7 / 10;
+  }
+  &.location {
+    grid-column: 10 / 14;
+  }
+  &.updates {
+    grid-column: 14 / 17;
+  }
+  &.legal {
+    grid-column: 17 / 20;
+  }
+  &.contact {
+    grid-column: 10 / 14;
+    grid-row: 2;
+  }
+  &.copyright {
+    grid-column: 2 / 20;
+    grid-row: 3;
+  }
+}

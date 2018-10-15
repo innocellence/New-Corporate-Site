@@ -1,0 +1,98 @@
+// Masthead
+.masthead {
+  height: 100vh; // Controls the height of the Masthead
+  min-height: 500px;
+  width: 100% !important;
+//  -webkit-transform: translate3d(0,0,0);
+//  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+  background: var(--color_sky);
+  
+  &__panel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+//    -webkit-transform: translate3d(0,0,0);
+//    -webkit-backface-visibility: hidden;
+  }
+  
+  &__container {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+  
+  &__line {
+    padding: 0 var(--padding_horiz, $margin);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    max-width: $max_width;
+    margin: 0 auto !important;
+  }
+  
+  .section__bottom {
+    position: absolute;
+    display: block;
+    top: calc(100% - 10vh);
+    width: 100%;
+
+    svg {
+      display: block;  
+    }
+    polygon{
+      fill: var(--color_sky);
+    }
+  }
+}
+
+// Masthead Panels
+.masthead__panel--one {
+  background: var(--color_red);
+  color: var(--color_white);
+  
+  .masthead__container {
+    color: var(--color_black);
+    mix-blend-mode: overlay;
+  }
+  .masthead__line {
+    text-shadow: -0.4vw 0.5vw var(--color_grey);
+  }
+}
+
+.masthead__panel--two {
+  background: var(--color_white);
+  
+  .masthead__container {
+    color: var(--color_blue);
+    transform: translateX(-100%);
+    position: absolute;
+    max-width: 100%;
+    
+    .content {
+      max-width: 80vw;
+    }
+  }
+}
+
+// Animation Triggers
+.triggers {
+  position: absolute;
+  height: 70%;
+  width: calc(var(--page_gutter) /2);
+  z-index: 9999;
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+ 
+  a:not(:first-child) {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+  }
+  #trigger_menu {
+    top: 50%;
+  }
+}

@@ -1,0 +1,59 @@
+.button--primary {
+  --button_color: $blue;
+}
+.button--secondary {
+  --button_color: $red;
+}
+.button--inverted {
+  --button_color: $white;
+  --button_hover_color: $red;
+}
+
+.button, button {
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-size: $typo_sparrow;
+  color: var(--button_color, $black);
+  border: 2px solid var(--button_color, $black);
+  padding: $margin * .25 $margin * .65;
+  border-radius: $radius_small;
+  font-weight: 600;
+  margin-right: $margin;
+  
+  span {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    z-index: 1;
+    color: inherit;
+    transition: color .25s ease;
+  }
+  
+  &:before {
+    content: "";
+    transform-origin: center bottom;
+    transform: scale3d(1, 0, 1);
+    transition: transform .25s ease;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: calc(100% + 1px);
+    height: 100%;
+    background-color: var(--button_color, $black);
+  }
+  
+  &:hover {
+    color: var(--button_hover_color, $white);
+    
+    span {
+      color: var(--button_hover_color, $white);
+    }
+    
+    &:before {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}

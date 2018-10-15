@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="48px" viewBox="0 0 70 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_pen</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon_pen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M39,27 C39,29.209 37.209,31 35,31 C32.791,31 31,29.209 31,27 C31,24.791 32.791,23 35,23 C37.209,23 39,24.791 39,27 Z" id="Stroke-11" stroke="#999999"></path>
+        <path d="M23,22.8922954 C23,23.4239059 23,24.3397004 23,26.5 C23,31.5287707 23,31.7406776 23,39 L47,39 C47,31.7406776 47,31.5287704 47,26.5 C47,24.3458632 47,23.4291411 47,22.8968544 C43.538786,22.1922214 39.6100387,17.8785601 34.9925676,9.99331562 C30.3069895,17.8658166 26.3867399,22.1741702 23,22.8922954 Z" id="Rectangle-Copy" stroke="#375EB4" stroke-width="2"></path>
+        <path d="M35,31.4833731 L35,39.0096118" id="Line-2" stroke="#375EB4" stroke-linecap="square"></path>
+        <path d="M35,11.4833731 L35,22.5113406" id="Line-2-Copy" stroke="#375EB4" stroke-linecap="square"></path>
+        <circle id="Oval" stroke="#375EB4" cx="35" cy="27" r="4"></circle>
+        <rect id="Rectangle" stroke="#375EB4" stroke-width="2" x="22" y="39" width="26" height="8"></rect>
+        <path d="M23.5,43.5 L46.5,43.5" id="Line" stroke="#375EB4" stroke-linecap="square"></path>
+        <circle id="Oval-3" stroke="#375EB4" cx="53" cy="4" r="2.5"></circle>
+        <circle id="Oval-3-Copy" stroke="#375EB4" cx="18" cy="4" r="2.5"></circle>
+        <rect id="Rectangle-2" stroke="#375EB4" x="32.5" y="1.5" width="5" height="5"></rect>
+        <path d="M21,4 L32,4" id="Line-3" stroke="#375EB4" stroke-linecap="square"></path>
+        <path d="M38,4 L50,4" id="Line-3-Copy" stroke="#375EB4" stroke-linecap="square"></path>
+        <path d="M55,25 C55,14.8002932 47.3647868,6.38388593 37.4980768,5.15449467 M32.6581944,5.1356467 C22.7159487,6.29517357 15,14.7465086 15,25" id="Oval-4" stroke="#375EB4"></path>
+    </g>
+</svg>

@@ -1,0 +1,56 @@
+<!-- #footer -->
+<footer class="footer">
+  <div class="footer__container"> 
+    <ul class="footer__menu logo">
+      <li class="footer_item logo_full"><img src="{{ site.baseurl }}/assets/img/branding/logo_full.svg"></li>
+      <li class="footer_item">{{ site.data.meta[page.lang].masthead }}</li>
+    </ul> 
+    <ul class="footer__menu explore">
+      <li class="footer_title">{{ site.data.menus[page.lang].main.title }}</li>
+      {% for item in site.data.menus[page.lang].main.items %}
+      <li class="footer_item{% if item[1].class %} {{ item[1].class }}{% endif %}"><a href="{{ item[1].url | prepend: site.baseurl }}">{{ item[1].name }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__menu location">
+      <li class="footer_title">{{ site.data.menus[page.lang].location.title }}</li>
+      {% for item in site.data.menus[page.lang].location.items %}
+      <li class="footer_item{% if item[1].class %} {{ item[1].class }}{% endif %}">{% if item[1].url %}<a href="{{ item[1].url | prepend: site.baseurl }}">{{ item[1].name }}</a>{% else %}{{ item[1].name }}{% endif %}</li>
+      {% endfor %} 
+    </ul> 
+    <ul class="footer__menu updates">
+      <li class="footer_title">{{ site.data.menus[page.lang].updates.title }}</li>
+      {% for item in site.data.menus[page.lang].updates.items %}
+      <li class="footer_item{% if item[1].class %} {{ item[1].class }}{% endif %}"><a href="{% if item[1].external %}{{ item[1].url }}{% else %}{{ item[1].url | prepend: site.baseurl }}{% endif %}" {% if item[1].external %}target="_blank"{% endif %}>{{ item[1].name }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__menu legal">
+      <li class="footer_title">{{ site.data.menus[page.lang].legal.title }}</li>
+      {% for item in site.data.menus[page.lang].legal.items %}
+      <li class="footer_item{% if item[1].class %} {{ item[1].class }}{% endif %}">
+        <a href="{{ item[1].url | prepend: site.baseurl }}">{{ item[1].name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__menu contact">
+      <li class="footer_title">{{ site.data.menus[page.lang].contact.title }}</li>
+      {% for item in site.data.menus[page.lang].contact.items %}
+      <li class="footer_item{% if item[1].class %} {{ item[1].class }}{% endif %}">
+        {% if item[1].url %}<a href="{% if item[1].external %}{{ item[1].url }}{% else %}{{ item[1].url | prepend: site.baseurl }}{% endif %}" {% if item[1].external %}target="_blank"{% endif %}>{{ item[1].name }}</a>{% else %}
+        {{ item[1].name }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__menu copyright">
+      {% for item in site.data.menus[page.lang].copyright.items %}
+      {% if item[1].url %}<li class="footer_item"><a href="{{ item[1].url | prepend: site.baseurl }}" target="_blank">{{ item[1].name }}</a></li>
+      {% else %}<li>{{ item[1].name }}</li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</footer>
+<!-- Vendors -->  
+<script src="{{ site.baseurl }}/assets/js/libs/swiper-4.4.1.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/libs/imagesLoaded-4.1.4.pkgd.min.js"></script>
+
+<!-- Global Scripts -->
+<script src="{{ site.baseurl }}/assets/js/global.js"></script>

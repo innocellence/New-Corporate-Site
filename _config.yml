@@ -1,0 +1,55 @@
+site_title: InnoCellence
+
+#source: source
+#destination: dist
+port: 8888
+
+#Google Analytics ID, auto populated to all pages
+#google_analytics: xxxxxxxxxx
+
+
+#Facebook Sharing
+#facebook_app_id: xxxxxxxx
+
+#URL Prefixing
+siteurl: 
+baseurl:
+
+#Permalinks
+permalink: /:categories/:year/:month/:day/:slug/
+
+#Set Syntax Highlighter
+#highlighter: rouge
+
+#encoding
+encoding: UTF-8
+
+#sass import directory
+sass:
+  sass_dir: assets/_scss
+  style: compressed
+
+#Plugins
+plugins:  
+  - jekyll-redirect-from
+
+#Default Front Matter
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "pages"
+    values:
+      lang: en
+  
+  -
+    scope:
+      path: "cn"
+    values:
+      lang: zh
+      
+  -
+    scope:
+      path: "jp"
+    values:
+      lang: jp    
