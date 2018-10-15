@@ -27,7 +27,7 @@ encoding: UTF-8
 #sass import directory
 sass:
   sass_dir: assets/_scss
-  style: compressed
+#  style: compressed
 
 #Plugins
 plugins:  
