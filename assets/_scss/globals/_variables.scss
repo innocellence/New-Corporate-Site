@@ -88,12 +88,16 @@ $padding_large: 12px;
 
 
 
+
+
+
+
 // CSS Root Variables
 :root {
-  --columns: $columns;
-  --page_gutter: $margin_huge;
-  --gutter: $margin;
-  --padding_horiz: calc( 5vw + var(--page_gutter, $margin) );
+  --columns: #{$columns};
+  --page_gutter: #{$margin_huge};
+  --gutter: #{$margin};
+  --padding_horiz: calc( 5vw + var(--page_gutter, #{$margin}) );
   
   --color_red     : #{$red};
   --color_blue    : #{$blue};
@@ -113,7 +117,7 @@ $padding_large: 12px;
  }
 // Grid Calculations
 :root {
-  --grid_width: $grid_width;
+  --grid_width: #{$grid_width};
   --repeating_width: calc(100% / var(--columns));
   --column_width: calc( var(--repeating_width) - var(--gutter));
   --background_width: calc(100% + (var(--gutter))); // 1440px - 224px + 18px = 1234px 
