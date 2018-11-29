@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="60px" viewBox="0 0 70 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_cycle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon_cycle" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M36.9749337,32.3272775 C36.9749337,44.4505226 45.4792852,54.5526227 56.7487459,56.7936472" id="Oval-5" stroke="#696969" transform="translate(46.861840, 44.560462) rotate(270.000000) translate(-46.861840, -44.560462) "></path>
+        <polyline id="Path-3" stroke="#696969" transform="translate(35.928451, 54.164959) rotate(258.000000) translate(-35.928451, -54.164959) " points="32.425351 55.9477002 35.9413833 52.3822183 39.43155 55.9284799"></polyline>
+        <path d="M13.3877964,2.5141335 C13.3877964,14.7948234 21.7706571,25.0281196 32.8791255,27.2982482" id="Oval-5" stroke="#696969" transform="translate(23.133461, 14.906191) rotate(90.000000) translate(-23.133461, -14.906191) "></path>
+        <polyline id="Path-3" stroke="#696969" transform="translate(34.197330, 5.431294) rotate(78.000000) translate(-34.197330, -5.431294) " points="30.7400917 7.24483626 34.2298157 3.61775148 37.6545686 7.18652983"></polyline>
+        <path d="M40.0586709,5.5396492 C40.0586709,17.8203391 48.4415316,28.0536353 59.55,30.323764" id="Oval-5" stroke="#696969" transform="translate(49.804335, 17.931707) scale(-1, -1) translate(-49.804335, -17.931707) "></path>
+        <polyline id="Path-3" stroke="#696969" transform="translate(59.279232, 28.995576) scale(-1, -1) rotate(-12.000000) translate(-59.279232, -28.995576) " points="55.821994 30.8091182 59.311718 27.1820334 62.7364709 30.7508117"></polyline>
+        <path d="M10.45,29.676236 C10.45,41.9569259 18.8328607,52.1902221 29.9413291,54.4603508" id="Oval-5" stroke="#696969"></path>
+        <polyline id="Path-3" stroke="#696969" transform="translate(10.720768, 31.004424) rotate(-12.000000) translate(-10.720768, -31.004424) " points="7.26352913 32.8179666 10.7532531 29.1908818 14.178006 32.7596602"></polyline>
+        <path d="M42.596,41.551 C45.869,39.191 48,35.344 48,31 C48,23.82 42.18,18 35,18 C27.821,18 22,23.82 22,31 C22,35.345 24.132,39.192 27.407,41.552 L35.001,21.859 L42.596,41.551 Z" id="Stroke-20" fill="#EF4B46"></path>
+    </g>
+</svg>

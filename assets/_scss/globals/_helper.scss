@@ -1,43 +1,86 @@
-// Draw Grid
+///////////
+// Layout Helpers
+///////////
+
+// Variables 
+$out_color     : transparentize(green, .8);
+$guide_color   : transparentize(dodgerblue, .8);
+$baseline      : $base_line_height * 1rem;
+
+// Assign Root
 :root {
   --background_columns: repeating-linear-gradient(
       to right,
-      var(--color),
-      var(--color) var(--column_width),
-      transparent var(--column_width),
-      transparent var(--repeating_width)
+      transparent,
+      transparent calc(#{$column_w} - 1px),
+      #{$guide_color} calc(#{$column_w} - 1px),
+      #{$guide_color} #{$column_w}
   );
   --background_baseline: repeating-linear-gradient(
     to bottom,
-    var(--baseline_color),
-    var(--baseline_color) var(--line_thickness),
-    transparent var(--line_thickness),
-    transparent var(--baseline)
+    #{$guide_color},
+    #{$guide_color} 1px,
+    transparent 1px,
+    transparent #{$baseline}
   );
 }  
+
+
+///////////
+// Outer Grid
+///////////
+
 html::before {
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
   margin: auto;
-  width: calc(100% - (2 * var(--page_gutter)));
-  max-width: calc(#{$max_width} - (2 * var(--page_gutter)));
+  width: (100vw - $gap - $gap);
+  height: $content_h;
+  max-width: calc(#{$max-width} - #{$gap} - #{$gap});
   content: '';
-  box-shadow: inset 3px 0 0 var(--guide_outer_color), inset -3px 0 0 var(--guide_outer_color);
-  z-index: 1000;
+  box-shadow: inset 2px 0 0 $out_color, inset -2px 0 0 $out_color, inset 0 -2px 0 $out_color, inset 0 2px 0 $out_color;
+  box-shadow: inset -1px 0 0 $out_color, inset 1px 0 0 $out_color;
+  z-index: 1001;
   pointer-events: none;
   transform: translateZ(0);
 }
+
+
+///////////
+// Inner Grid
+///////////
+
 html::after {
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
   margin: auto;
-  width: var(--grid_width);
-  max-width: calc(#{$max_width} - (2 * var(--padding_horiz)));
-  box-shadow: inset 3px 0 0 var(--guide_color), inset -3px 0 0 var(--guide_color);
+  width: $content_w;
+  height: $content_h;
+  max-width: $content_max;
+  box-shadow: inset 1px 0 0 $guide_color, inset -1px 0 0 $guide_color;
   content: '';
   background-image: var(--background_columns), var(--background_baseline);
-  background-size: var(--background_width) 100%;
-  z-index: 1000;
+  background-size: 100%;
+  z-index: 1001;
   pointer-events: none;
   transform: translateZ(0);
+}
+
+
+///////////
+// Draw Areas
+///////////
+
+.section {
+  border: 1px solid transparentize(green, .5);
+}
+.section__i {
+  border-bottom: 1px solid transparentize(dodgerblue, .5);
+  background: transparentize(dodgerblue, .97);
+}
+.area {
+  box-shadow: inset 0 0 0 1px transparentize(tomato, .5);
+}
+.masthead .word {
+  border: 1px solid transparentize(pink, .5);
 }

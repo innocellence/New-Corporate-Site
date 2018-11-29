@@ -1,0 +1,35 @@
+#####################
+###### English ######
+#####################
+en:
+  - text: End-to-End Digital Service Partner
+    img:  icon_shake.svg
+  - text: Offices in Singapore, China & Japan
+    img:  icon_office.svg
+  - text: Diverse and experienced multi-national team
+    img:  icon_people.svg
+  - text: Global reach and delivery
+    img:  icon_globe.svg
+  - text: Dedicated Usability Lab
+    img:  icon_globe.svg
+  - text: Pharmaceutical and Healthcare SMEs
+    img:  icon_globe.svg
+
+#####################
+###### Chinese ######
+#####################
+zh:
+  - text:
+    img: 
+  - text: 
+    img: 
+  
+  
+######################
+###### Japanese ######
+######################
+jp:
+  - text:
+    img: 
+  - text: 
+    img: 

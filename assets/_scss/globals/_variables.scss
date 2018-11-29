@@ -1,125 +1,145 @@
-// Max Width
-$max_width: 1800px;
+///////////
+// Devices
+///////////
 
-//Devices
-$massive_screen   : 1500px;
-$huge_screen      : 1200px;
-$large_screen     : 1000px;
-$medium_screen    : 800px;
-$small_screen     : 480px;
+$screen_xxl   : 1600px;
+$screen_xl    : 1280px;
+$screen_lg    : 1024px;
+$screen_md    : 900px;
+$screen_sm    : 768px;
+$screen_mi    : 425px;
 
-//Type Systems
-$base-font-family: "ProximaNova Alt", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$icon: 'Material Icons';
 
-//Colors
-$black: #1D202B;
-$grey: dimgrey;
-$white: #FFFFFF;
-$red: #EF4B46;
-$blue: #375EB4;
-$sky: #F8F9FC;
+///////////
+// Type System
+///////////
 
-//Font Settings
-$base_font_size: 18px;
-$base_line_height: 1.6;
-$heading_line_height: 1.25;
-$base_font_color: $black;
+$base_font_family : "ProximaNova Alt", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$icon             : 'Material Icons';
 
-//Font Sizes
+
+///////////
+// Color
+///////////
+
+$black    : #1D202B;
+$grey     : dimgrey;
+$white    : #FFFFFF;
+$red      : #EF4B46;
+$blue     : #375EB4;
+$sky      : #F8F9FC;
+
+
+///////////
+// Font Settings
+///////////
+
+$base_font_size       : 18px;
+$base_line_height     : 1.6;
+$heading_line_height  : 1.25;
+$base_font_color      : $black;
+
+
+///////////
+// Font Size
+///////////
+
 $typo_ostrich     : 8vw;
-//$typo_albatros    : 2.4rem;
+$typo_albatros    : 3.5rem;
 $typo_eagle       : 2rem;
 $typo_hawk        : 1.75rem;
 $typo_crow        : 1rem;
 $typo_sparrow     : .875rem;
 $typo_hummingbird : .75rem;
 
-// Animations
-$base_duration: 650ms;
-$base_motion: cubic-bezier(0.19, 1, 0.22, 1);
 
-//Font Colors
+///////////
+// Animation
+///////////
+
+$base_duration    : 650ms;
+$base_motion      : cubic-bezier(0.19, 1, 0.22, 1);
 
 
-// Rem Margins
-$margin       : 1rem;
-$margin_small : $margin / 2;
-$margin_large : 1.5rem;
+///////////
+// Margin
+///////////
 
+$margin        : 1rem;
+$margin_sm     : $margin * .5;
+$margin_lg     : $margin * 1.5;
+
+
+///////////
 // Radius
-$radius       : 1rem;
-$radius_small : $radius / 3;
+///////////
+
+$radius        : 1rem;
+$radius_sm     : $radius / 3;
 
 
-// Grid
-$columns      : 18;
-$grid_width   : calc( 100vw - (2 * var(--padding_horiz) ));
-
-// Col
-$col_1        : 100% * (1/ $columns);
-$col_2        : 100% * (2/ $columns);
-$col_3        : 100% * (3/ $columns);
-$col_4        : 100% * (4/ $columns);
-$col_5        : 100% * (5/ $columns);
-$col_6        : 100% * (6/ $columns);
-$col_7        : 100% * (7/ $columns);
-$col_8        : 100% * (8/ $columns);
-$col_9        : 100% * (9/ $columns);
-$col_10       : 100% * (10/ $columns);
-$col_11       : 100% * (11/ $columns);
-$col_12       : 100% * (12/ $columns);
-$col_13       : 100% * (13/ $columns);
-$col_14       : 100% * (14/ $columns);
-$col_15       : 100% * (15/ $columns);
-$col_16       : 100% * (16/ $columns);
-$col_17       : 100% * (17/ $columns);
-$col_18       : 100% * (18/ $columns);
-
-
-// Margins
-$margin_huge: 40px;
-
-$margin_gap: 10vw;
-
+///////////
 // Padding
-$padding_small: 8px;
-$padding_large: 12px;
+///////////
+
+$padding_sm    : .45rem; 
+$padding_lg    : .7rem;  
 
 
+///////////
+// Gutters & Gaps
+///////////
+
+$gutter        : 3rem;
+$gutter_lg     : 4.5rem;
+$gap           : 5vw;
 
 
+///////////
+// Max Width
+///////////
+
+$max_width     : 1800px;
 
 
+///////////
+// Content
+///////////
 
+$columns         : 16;
+$column_w        : 100% / $columns;
+
+$content_w       : 100vw - (4 * $gap);
+$content_w--sm   : 100vw - (2 * $gap);
+
+$content_max     : calc( #{$max_width} - #{(4 * $gap)} );
+
+$content_h       : calc( 100vh - #{(2 * $gutter)} );
+
+
+///////////
 // CSS Root Variables
+///////////
+
 :root {
-  --columns: #{$columns};
-  --page_gutter: #{$margin_huge};
-  --gutter: #{$margin};
-  --padding_horiz: calc( 5vw + var(--page_gutter, #{$margin}) );
-  
-  --color_red     : #{$red};
-  --color_blue    : #{$blue};
-  --color_black   : #{$black};
-  --color_grey    : #{$grey};  
-  --color_white   : #{$white};
-  --color_sky     : #{$sky};
-}
- // Grid Settings
-:root {
-  --line_thickness: 1px;
-  --color: transparentize(dodgerblue, .95);
-  --guide_color: transparentize(dodgerblue, .8);
-  --guide_outer_color: transparentize(tomato, .8);
-  --baseline_color: transparentize(dodgerblue, .9);
-  --baseline: 2vh;
- }
-// Grid Calculations
-:root {
-  --grid_width: #{$grid_width};
-  --repeating_width: calc(100% / var(--columns));
-  --column_width: calc( var(--repeating_width) - var(--gutter));
-  --background_width: calc(100% + (var(--gutter))); // 1440px - 224px + 18px = 1234px 
-  --baseline_shift: calc(var(--baseline) / 2);
+  --red       : #{$red};
+  --blue      : #{$blue};
+  --black     : #{$black};
+  --grey      : #{$grey};  
+  --white     : #{$white};
+  --sky       : #{$sky};
+  --max_width : #{$max_width};
+  --massive   : #{$screen_xxl};
+  --huge      : #{$screen_xl};
+  --large     : #{$screen_lg};
+  --medium    : #{$screen_md};
+  --small     : #{$screen_sm};
+  --base_font : #{$base_font_family};
+  --margin    : #{$margin};
+  --margin_sm : #{$margin_sm};
+  --margin_lg : #{$margin_lg};
+  --gutter    : #{$gutter};
+  --gutter_lg : #{$gutter_lg};
+  --gap       : #{$gap};
+  --columns   : #{$columns}
 }

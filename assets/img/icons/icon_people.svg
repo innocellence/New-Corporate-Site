@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="48px" viewBox="0 0 70 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_people</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon_people" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M39,29 C39,31.209 37.209,33 35,33 C32.791,33 31,31.209 31,29 C31,26.791 32.791,25 35,25 C37.209,25 39,26.791 39,29 Z" id="Stroke-3" stroke="#375EB4" stroke-width="2"></path>
+        <path d="M62,23 C62,24.1045 61.1045,25 60,25 C58.8955,25 58,24.1045 58,23 C58,21.8955 58.8955,21 60,21 C61.1045,21 62,21.8955 62,23 Z" id="Stroke-3-Copy" stroke="#375EB4"></path>
+        <path d="M12,23 C12,24.1045 11.1045,25 10,25 C8.8955,25 8,24.1045 8,23 C8,21.8955 8.8955,21 10,21 C11.1045,21 12,21.8955 12,23 Z" id="Stroke-3-Copy-2" stroke="#375EB4"></path>
+        <path d="M42.987,44 C42.99,43.9176257 43,43.8362205 43,43.752877 C43,39.4703816 39.418,36 35,36 C30.582,36 27,39.4703816 27,43.752877 C27,43.8362205 27.01,43.9176257 27.013,44" id="Stroke-5" stroke="#375EB4" stroke-width="2"></path>
+        <path d="M63.9935,31.5 C63.995,31.4536644 64,31.407874 64,31.3609933 C64,28.9520896 62.209,27 60,27 C57.791,27 56,28.9520896 56,31.3609933 C56,31.407874 56.005,31.4536644 56.0065,31.5" id="Stroke-5-Copy" stroke="#375EB4"></path>
+        <path d="M13.9935,31.5 C13.995,31.4536644 14,31.407874 14,31.3609933 C14,28.9520896 12.209,27 10,27 C7.791,27 6,28.9520896 6,31.3609933 C6,31.407874 6.005,31.4536644 6.0065,31.5" id="Stroke-5-Copy-2" stroke="#375EB4"></path>
+        <polygon id="Stroke-19" stroke="#375EB4" points="35.4735 1.1298 36.8645 3.9468 39.9735 4.3998 37.7235 6.5918 38.2545 9.6898 35.4735 8.2268 32.6925 9.6898 33.2235 6.5918 30.9735 4.3998 34.0825 3.9468"></polygon>
+        <polygon id="Stroke-21" stroke="#375EB4" points="51.7865 7.2412 50.9215 10.2622 52.9195 12.6872 49.7795 12.7982 48.0915 15.4482 47.0155 12.4952 43.9735 11.7082 46.4485 9.7722 46.2575 6.6362 48.8625 8.3922"></polygon>
+        <polygon id="Stroke-23" stroke="#375EB4" points="19.16 7.2412 20.025 10.2622 18.027 12.6872 21.167 12.7982 22.855 15.4482 23.931 12.4952 26.973 11.7082 24.498 9.7722 24.689 6.6362 22.084 8.3922"></polygon>
+        <circle id="Oval-6" stroke="#375EB4" stroke-width="2" cx="35" cy="34" r="13"></circle>
+        <circle id="Oval-6-Copy" stroke="#375EB4" stroke-width="2" cx="60" cy="25" r="8"></circle>
+        <circle id="Oval-6-Copy-2" stroke="#375EB4" stroke-width="2" cx="10" cy="25" r="8"></circle>
+        <path d="M52,28 L48,30" id="Line-6" stroke="#375EB4" stroke-linecap="square"></path>
+        <path d="M22,28 L18,30" id="Line-6-Copy" stroke="#375EB4" stroke-linecap="square" transform="translate(20.000000, 29.000000) scale(-1, 1) translate(-20.000000, -29.000000) "></path>
+    </g>
+</svg>

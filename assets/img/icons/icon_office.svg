@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="48px" viewBox="0 0 70 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_office</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.5002 43.9998 0.5002 43.9998 1 0 1"></polygon>
+    </defs>
+    <g id="icon_office" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(13.000000, 46.044900)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M-0.0002,0.5002 L43.9998,0.5002" id="Stroke-1" stroke="#999999" mask="url(#mask-2)"></path>
+        </g>
+        <path d="M35,47 L35,33" id="Stroke-14" stroke="#375EB4"></path>
+        <path d="M45,18 L55,18" id="Stroke-14-Copy" stroke="#375EB4"></path>
+        <path d="M15,18 L25,18" id="Stroke-14-Copy-3" stroke="#375EB4"></path>
+        <path d="M45,15 L55,15" id="Stroke-14-Copy-2" stroke="#375EB4"></path>
+        <path d="M15,15 L25,15" id="Stroke-14-Copy-4" stroke="#375EB4"></path>
+        <path d="M12,47 L58,47" id="Line-5" stroke="#375EB4" stroke-width="2" stroke-linecap="square"></path>
+        <rect id="Rectangle-4" stroke="#375EB4" x="27.5" y="33.5" width="15" height="13"></rect>
+        <rect id="Rectangle-5" stroke="#375EB4" stroke-width="2" x="25" y="2" width="20" height="19"></rect>
+        <path d="M34.6955208,6 C31.5548479,6 29,8.55566156 29,11.6955208 C29,13.5213421 29.8852467,15.2495258 31.368523,16.3186565 L32.2236648,16.9354 L32.6028237,15.9508885 L34.6955208,10.5246845 L36.7890316,15.9508885 L37.1690042,16.9345864 L38.0241459,16.3178428 C39.5066086,15.2487122 40.3910417,13.5213421 40.3910417,11.6955208 C40.3910417,8.55566156 37.8361937,6 34.6955208,6" id="Path" stroke="#375EB4"></path>
+        <polygon id="Path" fill="#375EB4" fill-rule="nonzero" points="16 11 24 11 24 9 14 9 14 48 56 48 56 9 46 9 46 11 54 11 54 46 16 46"></polygon>
+    </g>
+</svg>

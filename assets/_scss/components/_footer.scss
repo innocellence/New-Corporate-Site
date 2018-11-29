@@ -1,112 +1,178 @@
+///////////
 // Footer 
+///////////
+
 .footer {
   height: auto;
   width: 100%;
   position: relative;
-  padding-top: $margin_gap / 2;
-  padding-bottom: $margin;
+  padding: $gutter 0;
   font-size: $typo_hummingbird;
 
-  &__container {
+  // Footer Inner
+  &__i {
     position: relative;
-    max-width: $max_width;
+    max-width: $content_max;
+    width: $content_w;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: unquote(" 
-      [full-start] minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) 
-      [main-start] repeat(18, 1fr) [main-end]
-      minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) [full-end]");
-    grid-column-gap: $margin;
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media only screen and (max-width: $screen_md) {
+      width: $content_w--sm;
+    }
   }
   
+  // Footer Menu
   &__menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: $margin_large;
+    margin-bottom: $margin_lg;
     
     .footer_title {
-      margin-bottom: $margin_small;
+      margin-bottom: $margin_sm;
     }
     
     .footer_item {
       color: $grey;
-       margin-bottom: $margin_small;
+      margin-bottom: $margin_sm;
+      
+      a {
+        color: $grey;
+      }
+      a:hover {
+        color: $black;
+        &:before {background: transparentize($black, .8);}
+      }
     }
     
-    a {
-      position: relative;
-      text-decoration: none;
-      color: inherit;
-      transition: all $base_duration $base_motion;
-
-      &:after {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        bottom: -.1em;
-        left: 0;
-        background: currentColor;
-        transform: scale3d(0,1,1);
-        transform-origin: left;
-        transition: all $base_duration $base_motion;
-      }
-
-      &:hover {
-        color: inherit;
-
-        &:after {
-          transform: scale3d(1,1,1);
-        }
-      }
-    }
   }
 }
-// Menu Specifics
+
+///////////
+// Specific Menus
+///////////
+
 .footer__menu {
+  
+  // Logo
   &.logo {
+    width: $column_w * 4;
+    margin-right: $column_w * 2;
+    
+    @media only screen and (max-width: $screen_lg) {
+      width: $column_w * 6;
+      margin-right: $column_w * 2;
+    }
+    @media only screen and (max-width: $screen_md) {
+      width: $column_w * 16;
+      margin-right: 0;
+    }
+    
     .logo_full {
       margin-bottom: $margin;
     }
   }
   
+  // Explore
+  &.explore {
+    width: $column_w * 2;
+    margin-right: $column_w;
+    
+    @media only screen and (max-width: $screen_lg) {
+      width: $column_w * 3;
+    }
+    @media only screen and (max-width: $screen_md) {
+      width: $column_w * 6;
+      margin-right: $column_w * 2;
+    }
+    @media only screen and (max-width: $screen_mi) {
+      width: $column_w * 16;
+      margin-right: 0;
+    }
+  }
+  
+  // Location
   &.location {
+    width: $column_w * 3;
+    margin-right: $column_w;
+    
+    @media only screen and (max-width: $screen_lg) {
+      width: $column_w * 4;
+      margin-right: 0;
+    }
+    @media only screen and (max-width: $screen_md) {
+      width: $column_w * 8;
+    }
+    @media only screen and (max-width: $screen_mi) {
+      width: $column_w * 16;
+    }
+    
     .other_locations {
       margin-top: $typo_hummingbird * $base_line_height;
     }
   }
   
-  &.copyright {
-    display: flex;
-    justify-content: space-between;
-    margin-top: $margin_gap / 2;
+  // Updates
+  &.updates {
+    width: $column_w * 2;
+    margin-right: $column_w;
+    
+    @media only screen and (max-width: $screen_lg) {
+      width: $column_w * 3;
+      margin-left: $column_w * 8;
+    }
+    @media only screen and (max-width: $screen_md) {
+      width: $column_w * 6;
+      margin-right: $column_w * 2;
+      margin-left: 0;
+    }
+    @media only screen and (max-width: $screen_mi) {
+      width: $column_w * 16;
+      margin-right: 0;
+    }
+  }
+  
+  // Contact
+  &.contact {
+    width: $column_w * 3;
+    margin-right: $column_w;
+    margin-left: $column_w * 9;
+    
+    @media only screen and (max-width: $screen_lg) {
+      width: $column_w * 4;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media only screen and (max-width: $screen_md) {
+      width: $column_w * 8;
+    }
+    @media only screen and (max-width: $screen_mi) {
+      width: $column_w * 16;
+    }
   }
 }
 
-// Grid Positioning
-.footer__menu {
-  &.logo {
-    grid-column: 2 / 6;
+///////////
+// Copyright Message
+///////////
+
+.footer .copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: $gutter $gap 0;
+  margin: 0;
+
+  .footer__menu {
+    display: flex;
+    margin-top: $margin_sm;
+    margin-bottom: 0;
   }
-  &.explore {
-    grid-column: 7 / 10;
-  }
-  &.location {
-    grid-column: 10 / 14;
-  }
-  &.updates {
-    grid-column: 14 / 17;
-  }
-  &.legal {
-    grid-column: 17 / 20;
-  }
-  &.contact {
-    grid-column: 10 / 14;
-    grid-row: 2;
-  }
-  &.copyright {
-    grid-column: 2 / 20;
-    grid-row: 3;
+
+  .footer_item:not(:first-child) {
+    margin-bottom: 0;
+    margin-left: $margin;
   }
 }

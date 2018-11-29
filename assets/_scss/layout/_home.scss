@@ -1,29 +1,11 @@
-body[data-page_layout="home"] {
+body[class="home"] {
   
-  #summary {
-    padding-bottom: 0;
-    
-    .tile {
-      margin-bottom: 0;
-    }
+  #about {
+    padding-top: 0 !important;  
   }
   
   #teamwork {
-    .tile--text {
-      margin-bottom: 0;
-    }
-    .tile--image {
-      position: relative;
-      z-index: 1;
-      margin-top: -$margin_huge;
-      margin-bottom: 0;
-      grid-column: 9 / 21;
 
-      img {
-        max-width: none;
-        width: 100%;
-      }
-    }  
     .lasers {
       // Variables
       $beam_width: 6px;
@@ -174,42 +156,34 @@ body[data-page_layout="home"] {
       }
     }
   }
+  
+  #team svg {
+    position: absolute;
 
-  #trust {
-    padding-bottom: $margin_gap;
-    
-    .grid {
-      padding-bottom: $margin_gap / 2;
-    
-      &__item {
-
-        .numeral {
-          font-size: 4vw;
-          color: var(--color_black);
-          text-shadow: -0.4vw 0.5vw var(--color_grey);
-          mix-blend-mode: overlay;
-          line-height: 1;
-        }
-      }
-      
-      &__item--image {
-        position: relative;
-        z-index: 1;
-        grid-column: 2 / 1;
-        grid-row: 2;
-
-        .image {
-          position: absolute;
-          transform: rotate(25deg);
-          box-shadow: -3px 6px 20px rgba(0,0,0,0.2);
-
-          img {
-            display: block;
-          }
-        }
-      }
+    path {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 10000;
+      stroke-opacity: 0;
+      animation: draw 50s linear;
+      animation-iteration-count: infinite;
     }
   }
-  
+  @keyframes draw {
+    0% {
+      stroke: $red;
+      stroke-dashoffset: 10000;
+      stroke-opacity: 0;
+    }
+    5% {
+      stroke-opacity: 1;
+    }
+    95% {
+      stroke-opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      stroke-opacity: 0;
+    }
+  }
   
 }

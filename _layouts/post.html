@@ -1,65 +1,22 @@
 ---
 layout: default
 ---
-{{ content }}
-<!--
-<div class="post_container">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide slide--header">
-        <div class="content"> 
-          <h1 class="huge" data-swiper-parallax="-50%">{{ page.title }}</h1>
-          <p data-swiper-parallax="-20%">{{ page.subtitle }}</p>
-        </div>
+<!-- #main -->
+<main class="wrapper">
+  <section id="article" class="section bg--white fade-e-below" data-title="{{ page.title }}">
+    <div class="section__i"> 
+      <div class="area w--16 g__b e">
+        {% if page.collection == 'whitepaper' %}  
+        <a href="{{ site.baseurl }}/whitepaper/"><i class="icon" data-icon="arrow_back"></i> Back to Whitepapers</a>
+        {% else %}
+        <a href="{{ site.baseurl }}/news/"><i class="icon" data-icon="arrow_back"></i> Back to News</a>
+        {% endif %}
       </div>
-      {% if page.landscape %}
-      <div class="swiper-slide slide--image">
-        <img class="content" src="{{ site.baseurl }}{{ page.folder | prepend: '/assets/img/' }}{{ page.landscape | prepend: '/' }}">
+      <div class="area w--10 g__b e"> 
+        <h2 class="heading">{{ page.title }}</h2>
+        {{ content }}
       </div>
-      {% endif %}
-      {% if page.portrait %}
-      <div class="swiper-slide slide--image">
-        <img class="content" src="{{ site.baseurl }}{{ page.folder | prepend: '/assets/img/' }}{{ page.portrait | prepend: '/' }}">
-      </div>
-      {% endif %}
-      {% if page.scenes %}{% for item in page.scenes %}
-      {% if item.type == 'image' %}
-      <div class="swiper-slide slide--image"> 
-        <img class="content" src="{{ site.baseurl }}{{ page.folder | prepend: '/assets/img/' }}{{ item.content | prepend: '/' }}">
-      </div>
-      {% elsif item.type == 'text' %}
-      <div class="swiper-slide slide--text"> 
-        <div class="content" data-swiper-parallax="30%">
-          <h1>{{ item.title }}</h1>
-          <p>{{ item.content }}</p>
-        </div>
-      </div>
-      {% elsif item.type == 'video' %}
-      <div class="swiper-slide slide--video"> 
-        <div class="content">      
-          <video class="slide__video" poster="{{ site.baseurl }}{{ page.folder | prepend: '/assets/img/' }}{{ item.poster | prepend: '/' }}" id="player" playsinline{% if item.autoplay %} autoplay{% endif %}{% if item.loop %} loop{% endif %}>
-            <source src="{{ site.baseurl }}{{ page.folder | prepend: '/assets/img/' }}{{ item.mp4 | prepend: '/' }}" type="video/mp4">
-          </video>
-        </div>
-      </div> 
-      {% endif %}
-      {% endfor %}{% endif %}
-    </div> 
-  </div> 
-</div> 
- Local Scripts   
-<script src="{{ site.baseurl }}/assets/js/libs/swiper-4.3.5.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/libs/plyr.min.js"></script>
-<script>
-  var player = new Plyr('#player', {
-    controls: [
-      'play-large',
-      'play', 
-      'progress',
-      'current-time', 
-      'fullscreen']
-  });
-  $('.plyr').on('play', function(event) {
-    $(this).addClass('plyr--init-play');
-  });
-</script>-->
+    </div>
+    {% include section__bottom.html %}
+  </section>
+</main>

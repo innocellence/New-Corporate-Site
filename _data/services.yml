@@ -1,0 +1,33 @@
+#####################
+###### English ######
+#####################
+en:
+  - text: Innovation Consulting
+    img:  icon_brain.svg
+  - text: Design & UX
+    img:  icon_pen.svg
+  - text: Technical Solutions
+    img:  icon_gear.svg
+  - text: Data Analysis
+    img:  icon_chart.svg
+  - text: Digital Services
+    img:  icon_content.svg
+
+#####################
+###### Chinese ######
+#####################
+zh:
+  - text:
+    img: 
+  - text: 
+    img: 
+  
+  
+######################
+###### Japanese ######
+######################
+jp:
+  - text:
+    img: 
+  - text: 
+    img: 

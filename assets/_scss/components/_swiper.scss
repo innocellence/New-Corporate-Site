@@ -1,0 +1,227 @@
+///////////
+// Swiper
+///////////
+
+// Variables 
+$softBounce: cubic-bezier(.17,.89,.49,1.14);
+
+///////////
+// Swiper Container (Overwrites)
+///////////
+
+.swiper-container {
+  overflow: visible;
+}
+
+///////////
+// Swiper Progrees (Overwrites)
+///////////
+
+.swiper-container-horizontal > .swiper-pagination-progressbar {
+  width: 4rem;
+  height: 6px;
+  border-radius: $radius_sm;
+  overflow: hidden;
+  right: 0;
+  left: auto;
+}
+.swiper-pagination-progressbar {
+  background: transparentize($grey, .8);
+  
+  .swiper-pagination-progressbar-fill {
+    background: $red;
+  }
+}
+
+
+///////////
+// Swiper Pagination (Overwrites)
+///////////
+
+// Buttons
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  align-items: center;
+  height: calc(100% - (#{$margin} * 2));
+  background: transparent;
+  top: 0;
+  margin: $margin 0;
+  width: auto;
+  transition: all $base_duration $base_motion;
+  
+  &:before {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: $radius;
+    text-align: center;
+    background: transparentize($grey, .8);
+    color: $white;
+    margin: 0;
+    transition: all $base_duration $base_motion;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.3 !important;
+  }
+  &:hover {
+    &:before {
+      padding-left: 1rem;
+      background: $red;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+// Next
+.swiper-button-next {
+  right: 0;
+  
+  &:before {
+    font-family: $icon;
+    content: 'chevron_right';
+    font-size: $typo_hawk;
+  }
+  &:hover {
+    &:before {
+      padding-right: 1rem;
+      padding-left: 0;
+    }
+  }
+}
+
+// Prev
+.swiper-button-prev {
+  left: 0;
+  
+  &:before {
+    font-family: $icon;
+    content: 'chevron_left';
+    font-size: $typo_hawk;
+  }
+}
+
+
+///////////
+// Swiper Defaults
+///////////
+
+.swiper {
+  
+  // Swiper Slide (Prevent Overflow)
+  .swiper-slide {
+    overflow-y: hidden;
+  }
+  
+  // Slide Area
+  .slide {}
+
+  // Slide Inner
+  .slide__i {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    background: $sky;
+    transition: background $base_duration $base_motion;
+    transition-delay: $base_duration;
+  }
+
+  // Content Area
+  .slide__content {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    * {
+      transform: translate3d(60%, 0, 0);
+      opacity: 0;
+      transition: transform $base_duration $softBounce, opacity 350ms 0s;
+    }
+    .footnote {
+      font-size: $typo_hummingbird;
+    }
+    // Delay Element Animations
+    @for $i from 1 through 4 {
+      *:nth-child(#{$i}n) {
+        transition-delay: #{$i * .25}s;
+      }
+    }
+  }
+
+  // Image Area
+  .slide__image {
+    position: relative;
+
+    .background {
+      width: 100%;
+      height: 85%;
+      background: transparent;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: scale3d(1, 0, 1);
+      transform-origin: bottom;
+      transition: transform 350ms $base_motion;
+    }
+    .graphic {
+      display: block;
+      width: 100%;
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+      transition: transform $base_duration $base_motion, opacity 350ms 0s;
+    }
+  }
+}
+
+
+///////////
+// Active Swiper Slide 
+///////////
+
+.swiper {
+  
+  // Swiper Slide (Active)
+  .swiper-slide-active {
+    
+    // Slide Inner
+    .slide__i {
+      background: transparent;
+      transition-delay: 0s;
+    }
+    
+    // Slide Content
+    .slide__content {
+
+      * {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+    
+    // Slide Image
+    .slide__image {
+
+      // Delay Element Animations
+      @for $i from 2 through 4 {
+        *:nth-child(#{$i}n) {
+          transition-delay: #{$i * .25}s;
+        }
+      }
+
+      .background {
+        transform: scale3d(1,1,1);
+      }
+      .graphic {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+  }
+}

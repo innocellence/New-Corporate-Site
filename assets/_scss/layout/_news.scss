@@ -1,0 +1,16 @@
+body[class="news"] {
+
+  .date {
+    display: inline-block;
+    margin: 0;
+    color: $red;
+    font-size: $typo_sparrow;
+    line-height: 1;
+    font-weight: normal;
+    letter-spacing: .01em;
+    margin-bottom: $margin_sm;
+  }
+  .heading {
+    margin-top: 0;
+  }
+}

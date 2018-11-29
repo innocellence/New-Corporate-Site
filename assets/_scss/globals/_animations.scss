@@ -1,0 +1,33 @@
+///////////
+// Load Animations
+///////////
+
+.fade-c-transparent, 
+.fade-c-below,
+.e {
+  opacity: 0;
+  transition: opacity, transform $base_duration ease;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.fade-c-below {
+  transform: translateY(50px);
+
+  &.loaded {
+    transform: translateY(0);
+  }
+}
+
+.fade-e-below {
+  
+  .e {
+    transform: translateY(50px);
+
+    &.loaded {
+      transform: translateY(0);
+    }
+  }
+}

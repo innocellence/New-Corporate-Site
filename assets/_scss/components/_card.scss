@@ -1,0 +1,48 @@
+///////////
+// Card
+///////////
+
+.card {  
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: $margin_lg;
+  box-shadow: 0 1px 4px transparentize($black, .85);
+  border-radius: $radius_sm;
+  color: $black;
+  
+  // Transparent
+  &.t {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    color: inherit;
+  }
+  // Centered
+  &.centered {
+    align-items: center;
+    text-align: center;
+  }
+  // Padding Variations
+  &.no--h__pad {
+    padding: $margin_lg 0;
+  }
+  &.no--v__pad {
+    padding: 0 $margin_lg;
+  }
+  &.no--pad {
+    padding: 0;
+  }
+  // Content
+  &__content {
+    width: 100%;
+  }
+  // Footer
+  &__footer {
+    width: 100%;
+    margin-top: auto;
+  }
+}

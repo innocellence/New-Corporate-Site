@@ -1,0 +1,58 @@
+---
+title: Whitepapers
+layout: whitepapers
+ref: whitepapers
+menu: initialize
+---
+
+<section id="whitepapers" data-title="{{ page.title }}" class="section bg--blue"> 
+  <div class="section__i fade-e-below"> 
+    <h2 class="area w--16 g__b heading e">{{ page.title }}</h2> 
+    {% assign whitepapers = site.whitepaper | reverse %}
+    {% for item in whitepapers %}{% if forloop.first %}
+    <div class="area w--8 m__b e">
+      <div class="card"> 
+        <div class="card__content"> 
+          <div class="latest">Latest</div>
+          <h2 class="heading">{{ item.title }}</h2>
+          <p>{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
+          <p><a class="button button--primary" href="{{ item.url }}"><span>Read Whitepaper</span></a></p>
+          <p class="small">{% for t in item.tags %}{{ t | prepend: '#' }} {% endfor %}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}{% endfor %}
+    <div class="area tail w--8">
+      <img class="i_shadow e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_shadow.svg">
+      <img class="i_people e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_people.svg">
+    </div>
+  </div>
+  {% include section__bottom.html %}
+</section>
+<section id="archive" class="section"> 
+  <div class="section__i g__t g__b">  
+  {% assign archive = whitepapers %}
+  {% assign rows = archive.size | divided_by: 12.0 | ceil %}
+  {% for i in (1..rows) %}     
+    <div class="grid grid--3 grid__md--2 grid--gap fade-e-below">
+    {% assign offset = forloop.index0 | times: 12 %}
+      {% for item in archive limit:13 offset:offset %}
+        {% unless forloop.first %}
+        <div class="card e">
+          <div class="card__content m__b">
+            <h3 class="heading match">{{ item.title }}</h3>
+            <p><a href="{{ item.url }}">Read Whitepaper</a></p>
+          </div>
+          <div class="card__footer">
+            <p class="small">{% for t in item.tags %}{{ t | prepend: '#' }} {% endfor %}</p>
+          </div>
+        </div>
+        {% endunless %}
+      {% endfor %}
+    {% unless forloop.last %}
+    </div>
+    {% include call.html %}
+    {% endunless %}
+  {% endfor %}
+  </div>
+</section>

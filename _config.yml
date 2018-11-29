@@ -12,7 +12,7 @@ port: 8888
 #facebook_app_id: xxxxxxxx
 
 #URL Prefixing
-siteurl: 
+siteurl:
 baseurl:
 
 #Permalinks
@@ -33,23 +33,55 @@ sass:
 plugins:  
   - jekyll-redirect-from
 
+#Collections
+collections:
+  jobs: 
+    output: false
+  whitepaper: 
+    output: true
+  news: 
+    output: true
+  
 #Default Front Matter
 defaults:
   -
     scope: 
-      path: ""
-      type: "pages"
+      path: ''
+      type: 'pages'
     values:
       lang: en
   
   -
     scope:
-      path: "cn"
+      path: 'cn'
     values:
       lang: zh
       
   -
     scope:
-      path: "jp"
+      path: 'jp'
     values:
-      lang: jp    
+      lang: jp   
+      
+  -
+    scope:
+      path: ''
+      type: 'jobs'
+    values:
+      lang: en
+      
+  -
+    scope:
+      path: ''
+      type: 'whitepaper'
+    values:
+      lang: en    
+      layout: 'post'
+  
+  -
+    scope:
+      path: ''
+      type: 'news'
+    values:
+      lang: en    
+      layout: 'post'

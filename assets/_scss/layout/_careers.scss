@@ -1,0 +1,117 @@
+body[class="careers"] {  
+  
+  .filters {
+    list-style: none;
+    padding: 0;
+    font-size: $typo_sparrow;
+    
+    > li {
+      margin: $margin_sm 0;
+    }
+    
+    &.active .filter:not(.active) {
+      color: $grey;
+      opacity: .5;
+    }
+    
+    .filter {
+      
+      &:after {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        right: -24px;
+        content: 'close';
+        font-family: $icon;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all $base_duration $base_motion;
+        line-height: 1;
+        font-size: 12px;
+        background: $blue;
+        border-radius: 50%;
+        padding: 2px;
+        color: $white;
+      }
+
+      &.active:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  
+  .department {
+    font-size: $typo_sparrow;
+  }
+  
+  .job {
+    display: block;
+    padding: $margin 0;
+    color: $black;
+    border-bottom: 1px solid transparentize($grey, .8);
+    transition: padding $base_duration $base_motion;
+    
+    &:before {
+      display: none;
+      content: none;
+    }
+    
+    &__title {
+      display: flex;
+      align-items: center;
+      transition: color $base_duration $base_motion;
+      
+      .heading {
+        margin-bottom: 0;
+      }
+      .location {
+        margin: 0;
+        margin-right: $margin;
+      }
+      .arrow {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 auto;
+        margin-left: auto;
+        text-align: right;
+        padding-left: $margin;
+        
+        .icon {
+          padding: 0;
+          transition: all $base_duration $base_motion;
+        }
+      }
+    }
+    
+    &__content {
+      display: none;
+      font-size: $typo_sparrow;
+    }
+    
+    // Hover State
+    &:hover {
+      color: $black;
+      
+      .job__title {
+        color: $blue
+      }
+    }
+    
+    // Open State {
+    &.open {
+      background: $white;
+      padding: $margin;
+      
+      .job__title {
+        color: $blue;
+          
+        .icon {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

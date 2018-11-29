@@ -1,13 +1,21 @@
+///////////
 // Mobile Check
+///////////
+
 .mobile {
   display: none;
 }
-@media only screen and (max-width: $huge_screen) {
+@media only screen and (max-width: $screen_xl) {
   .mobile {
     display: block;
   }
 }
+
+
+///////////
 // Resize Overlay
+///////////
+
 .resize {
   &__overlay {
     width: 100%;
@@ -18,7 +26,7 @@
     justify-content: center;
     padding: $margin;
     background: #2D2D2D;
-    z-index: 999999999;
+    z-index: 1002;
   }
   &__content {
     color: $white;
@@ -28,45 +36,61 @@
   
 }
 
-// Global
+
+///////////
+// Reset
+///////////
+
 html, body {
-//  height: 100%;
-//  position: relative;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font: normal normal #{$base_font_size} / #{$base_line_height} $base_font_family;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--color_sky);
+  background-color: $sky;
   
-  @media only screen and (max-width: $medium_screen) {
+  @media only screen and (max-width: $screen_md) {
     font-size: $base-font-size - 2px;
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-
+// Prevent Overflow
 .no_overflow {
   overflow: hidden;
   
-  @media only screen and (max-width: $large_screen) {
+  @media only screen and (max-width: $screen_lg) {
     overflow: auto;
   }
 }
 
+// Box Sizing
+* {
+  box-sizing: border-box;
+}
 
-// Type 
+// Type Select
+::selection {
+  color: $red;
+  background: transparentize($grey, .8);
+}
+::-moz-selection {
+  color: $red;
+  background: transparentize($grey, .8);
+}
+
+
+///////////
+// Headings
+///////////
+
 .heading {
   font-weight: bold;
 }
-.heading,
-h1, h2, h3, h4, h5, h6 {
+
+.heading, h1, h2, h3, h4, h5, h6 {
   line-height: $heading_line_height;
-  margin: $margin 0;
+  margin: $margin_lg 0;
   
   &:first-child {
     margin-top: 0;
@@ -74,98 +98,251 @@ h1, h2, h3, h4, h5, h6 {
   &:last-child {
     margin-bottom: 0;
   }
+  + h1, + h2, + h3, + h4, + h5, + h6  {
+    margin-top: $margin_lg;
+  }
 }
+
 h1, h2 {
   font-size: $typo_hawk;
-}
-h3, h4, h5, h6 {
-  font-size: $typo_crow;
 }
 .heading--super {
   font-size: $typo_ostrich;
   line-height: 1;
-  letter-spacing: -.01em;
-}
-p {
-  margin: $margin_large 0;
+  letter-spacing: -.005em;
   
-  &:first-child {
-    margin-top: 0;
+  @media only screen and (min-width: $screen_xxl + 1px) {
+    font-size: 6.5rem;
   }
-  
-  &:last-child {
-    margin-bottom: 0;
+  @media only screen and (max-width: $screen_lg) {
+    font-size: 5rem;
+  }
+  @media only screen and (max-width: $screen_md) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: $screen_sm) {
+    font-size: $typo_albatros;
   }
 }
 
-p a {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  font-weight: inherit;
-  transition: all $base_duration $base_motion;
+h3, h4, h5, h6 {
+  font-size: $typo_crow;
+}
+
+
+///////////
+// Paragraphs
+///////////
+
+p {
+  margin: $margin_lg 0;
   
-  &:after {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 100%;
-    bottom: -.1em;
-    left: 0;
-    background: currentColor;
-    transform: scale3d(0,1,1);
-    transform-origin: left;
-    transition: all $base_duration $base_motion;
+  // Remove 
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Bullet Styles
+  &.bullet {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      margin-left: -1.8rem;
+      width: .8rem;
+      display: inline-block;
+      height: 1px;
+      border-top: 1px solid $red;
+      top: .8rem;
+      
+      @media only screen and (max-width: $screen_lg) {
+        margin-left: -1.2rem;
+        width: .6rem;
+      }
+    }
+    @media only screen and (max-width: $screen_sm) {
+      padding-left: 1.2rem;
+    }
+
+    // Inverted 
+    &.inverted {
+      &:before {
+        border-color: $white;
+      }
+    }
   }
   
-  &:hover {
-    color: inherit;
-    
+  // Reset icons inside <p>
+  .icon {
+    line-height: 1;
+  }
+}
+
+
+
+///////////
+// Body Links
+///////////
+
+main, footer, .link {
+  
+  // Don't target buttons
+  a:not(.button) {
+    position: relative;
+    text-decoration: none;
+    color: $blue;
+    font-weight: inherit;
+    transition: all $base_duration $base_motion;
+
+    // Underline
+    &:before {
+      position: absolute;
+      content: '';
+      height: .3em;
+      width: 100%;
+      top: calc(50% + .15em);
+      left: 0;
+      background: transparent;
+      transform: scale3d(0,1,1);
+      transform-origin: left;
+      transition: all $base_duration $base_motion;
+    }
+
+    // Hover Effects
+    &:hover {
+      color: $blue;
+
+      &:before {
+        background: transparentize($blue, .8);
+        transform: scale3d(1,1,1);
+        transition: all $base_duration $base_motion;
+      }
+    }
+  }
+  // Terget External Links
+  a:not(.button).ext {
     &:after {
-      transform: scale3d(1,1,1);
+      content: ' open_in_new';
+      font-family: $icon;
+      line-height: 1;
+      font-size: inherit;
+      vertical-align: baseline;
+    }
+    &.button:after {
+      margin-left: $margin_sm;
     }
   }
 }
 
-p .icon {
-  line-height: 1;
+
+///////////
+// Lists
+///////////
+
+ul, ol {
+  margin: $margin_lg 0;
+  padding-left: $gutter;
 }
 
+
+///////////
+// Blockquote
+///////////
+
+blockquote {
+  margin: $margin_lg $gutter;
+  border-left: 2px solid $red;
+  padding-left: $margin_lg;
+  
+  .author {
+    font-size: $typo_sparrow;
+    color: $red;
+  }
+}
+
+
+///////////
 // Inline Styles
+///////////
+
 strong {
   font-weight: bold;
 }
 
+.small, small {
+  font-size: $typo_hummingbird;
+}
+
+
+///////////
+// Images
+///////////
+
 img {
   max-width: 100%;
 }
-
-
-//// Load Animations
-.fade-c-transparent, 
-.fade-c-below,
-.e {
-  opacity: 0;
-  transition: opacity, transform 650ms ease;
-
-  &.loaded {
-    opacity: 1;
-  }
+img.fluid {
+  width: 100%;
 }
-.fade-c-below {
-  transform: translateY(50px);
 
-  &.loaded {
-    transform: translateY(0);
-  }
+
+///////////
+// Horizontal Rule
+///////////
+
+hr {
+  margin: $gutter 0;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid darken($sky, 10%);
 }
-.fade-e-below {
+
+
+///////////
+// Visibility
+///////////
+
+.hide {
   
-  .e {
-    transform: translateY(50px);
-
-    &.loaded {
-      transform: translateY(0);
+  // XX-Large Screens < 1600px
+  @media only screen and (max-width: $screen_xxl) {
+    &--xxl {
+      display: none !important;
     }
   }
+  // X-Large Screens < 1280px
+  @media only screen and (max-width: $screen_xl) {
+    &--xl {
+      display: none !important;
+    }
+  }
+  // Large Screens < 1024px
+  @media only screen and (max-width: $screen_lg) {
+    &--lg {
+      display: none !important;
+    }
+  }
+  // Medium Screens < 900px
+  @media only screen and (max-width: $screen_md) {
+    &--md {
+      display: none !important;
+    }
+  }
+  // Small Screens < 768px
+  @media only screen and (max-width: $screen_sm) {
+    &--sm {
+      display: none !important;
+    }
+  }
+  // Mini Screens < 425px
+  @media only screen and (max-width: $screen_mi) {
+    &--mi {
+      display: none !important;
+    }
+  }
+  
 }

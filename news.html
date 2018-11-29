@@ -1,0 +1,26 @@
+---
+title: News
+layout: news
+ref: news
+redirect_from: 
+  - /d/assets/press-release/InnoCellence-Prestigious-Award-2016.pdf
+---
+<section id="latest"  data-title="{{ page.title }}" class="section bg--white"> 
+  <div class="section__i"> 
+    <h2 class="heading fade-c-below">{{ page.title }}</h2> 
+  </div>
+  {% assign news = site.news | reverse %}
+  <div class="section__i g__b fade-e-below">
+  {% for item in news %}
+    <div class="area w--16">
+      <p class="date w--8 e">{{ item.date | date: '%d %B %Y' }}</p>
+      <h2 class="heading w--8 e">{{ item.title }}</h2>
+    </div>
+    <div class="area w--10 m__t g__b">
+      {% if item.excerpt %}<p class="bullet e">{{ item.excerpt }}</p>{% else %}<p class="bullet e">{{ item.content | strip_html | truncatewords: 24 }}</p>{% endif %}
+      <p><a class="button button--primary e" href="{{ item.url }}"><span>Read full story</span></a></p>
+    </div>
+  {% endfor %}
+  </div>
+  {% include section__bottom.html %}
+</section>

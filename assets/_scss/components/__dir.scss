@@ -1,10 +1,12 @@
-//Components
-@import "main_navigation";
+///////////
+// Components
+///////////
+
+@import "navigation"; // Mobile Nav
 @import "footer";
-@import "masthead";
-@import "intro";
+@import "masthead"; // Panels
 @import "section";
-@import "cards";
-@import "gallery";
-@import "item_grid";
+@import "card";
+@import "swiper";
 @import "button";
+@import "cta";

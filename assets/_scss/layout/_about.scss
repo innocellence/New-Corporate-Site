@@ -1,67 +1,188 @@
-body[data-page_layout="about"] {
-
-  #snapshot {
-    padding-bottom: 0;
-  }
+body[class="about"] {
   
-  #timeZones {
-    padding-bottom: 0;
-    
-    .grid {
-      position: relative;
-      z-index: 1;
-    }
-  }
   #process {
-    .grid_main {
-      grid-column-start: 3;
-    }
+    $tri_h: 4rem;
+    $tri_w: 2.5rem;
+    $pie_d: 10rem;
+    $pie_r: 5rem;
+    $yellow: #FFC108;
+    $green: #5BD758;
     
     
     #discover .flow {
-      background: linear-gradient(180deg, $red, #5BD758);
+      background: linear-gradient(180deg, $red 50%, $green);
     }
     #design .flow {
-      background: linear-gradient(180deg, #5BD758, #FFC108);
+      background: linear-gradient(180deg, $green 50%, $yellow);
     }
     #iterate .flow {
-      background: linear-gradient(180deg, $red, $blue);
+      background: linear-gradient(180deg, $yellow, $yellow);
     }
-    #deliver .flow {
-      background: linear-gradient(180deg, $red, $blue);
+    #develop .flow {
+      background: linear-gradient(180deg, $yellow 10%, $grey);
     }
     #deploy .flow {
-      background: linear-gradient(180deg, #7E8694, #2096F3);
+      background: linear-gradient(180deg, $grey 10%, $blue);
+      height: calc(100% + 4rem);
     }
-    .grid_right {
+    
+    .chart:nth-of-type(2n) {
       display: flex;
       position: relative;
-      width: 100%;
+      min-height: 14rem;
       align-items: center;
     
       .notes {
         width: 50%;
-        padding-right: $margin_large * 2; 
+        padding-right: 4rem; 
         text-align: right;
+        
+        &.show p {
+          opacity: 1;
+        }
+        
+        p {
+          color: $grey;
+          font-size: $typo_sparrow;
+          opacity: 0;
+          position: relative;
+          transition: all $base_duration $base_motion;
+          
+          &:after {
+            content: '';
+            width: 1rem;
+            height: 1px;
+            background: $grey;
+            display: block;
+            position: absolute;
+            right: -2rem;
+            top: 50%;
+          }
+        }
+        // Delay the Animations
+        @for $i from 2 through 4 {
+          p:nth-child(#{$i}n) {
+            transition-delay: #{$i * .1}s;
+          }
+        }
       }
       .flow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 0;
-        height: 100%;
+        height: calc(100% + 1px);
         width: $margin * 2;
-        background: red;
+        background: $black;
         transform: translateX(-50%);
         left: 50%;
+        
+        .mask {
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          background: $white;
+          bottom: 0;
+          transition: width linear;
+          
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: calc(100% + -1px);
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background-image: linear-gradient(transparent, $white);
+          }
+        }
       }
     }
-    .grid_right.align_left {
+    .chart:nth-of-type(4n) {
       justify-content: flex-end;
       
       .notes {
         text-align: left;
         padding-right: 0;
-        padding-left: $margin_large * 2; 
+        padding-left: 4rem; 
+        
+        p:after {
+          left: -2rem;
+          right: auto;
+        }
+      }
+    }
+  
+    .section__bottom {
+      z-index: 1;
+      
+      @media only screen and (max-width: $screen_sm) {
+        z-index: 0;
+      }
+    }
+    
+    .pie {
+      position: relative;
+      display: block;
+      height: $pie_d;
+      width: $pie_d;
+      left: $tri_h;
+      border-radius: $pie_d;
+      transform: rotate(90deg);
+      opacity: 0;
+    
+      .triangle {
+        position: absolute;
+        width: $tri_h;
+        height: $tri_w;
+        background: $yellow;
+        margin-top: $tri_w;
+        margin-left: -1rem;
+        clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+        transform: rotate(-180deg);
+        transform-origin: bottom;
+      }
+      
+      &-l,
+      &-r {
+        overflow: hidden;
+        width: $pie_d;
+        height: $pie_d;
+        top:0 ;
+        left: 0;
+        position: absolute;
+        
+        .inner {
+          content: "";
+          position: absolute;
+          width: $pie_d;
+          height: $pie_d;
+          border: 2rem solid;
+          top: 0;
+          left: 0;
+          border-radius: $pie_d;
+          transform: rotate(180deg);
+        }
+      }
+    
+      &-l {
+        clip: rect(auto, #{$pie_r}, auto, auto);
+
+        .inner {
+          border-color: $yellow;
+          clip: rect(auto, #{$pie_r}, auto, auto);
+        }
+      }
+      &-r {
+        clip: rect(auto, auto, auto, #{$pie_r});
+
+        .inner {
+          border-color: $yellow;
+          clip: rect(auto, auto, auto, #{$pie_r});
+        }
       }
     }
   }
+  
 }

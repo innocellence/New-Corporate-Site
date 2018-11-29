@@ -1,0 +1,20 @@
+///////////
+// Call to Action Include (Contact Us)
+///////////
+
+section.cta {
+  padding-top: $gutter_lg; 
+  
+  .section__i {
+    max-width: 520px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    margin-top: 0;
+  }
+  .button {
+    margin-right: 0;
+  }
+}

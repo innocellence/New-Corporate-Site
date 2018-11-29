@@ -1,0 +1,52 @@
+######################
+###### Partners ######
+######################
+- name: Roambi
+  url: 
+  img: roambi
+- name: Quintiles
+  url: 
+  img: quintiles
+- name: Heroku
+  url: 
+  img: heroku
+- name: Contentful
+  url: 
+  img: contentful
+- name: Oracle
+  url: 
+  img: oracle
+- name: Tableau
+  url: 
+  img: tableau
+- name: Informatica
+  url: 
+  img: informatica
+- name: SAP 
+  url: 
+  img: sap
+- name: Veeva
+  url: 
+  img: veeva
+- name: Amazon
+  url: 
+  img: amazon
+- name: Salesforce
+  url: 
+  img: salesforce
+- name: Crownpeak
+  url: 
+  text: Preferred partner
+  img: crownpeak
+- name: SharePoint
+  url: 
+  img: sharepoint
+- name: Google
+  url: 
+  img: google
+- name: Box
+  url: 
+  img: box
+- name: SQL Server
+  url: 
+  img: sql

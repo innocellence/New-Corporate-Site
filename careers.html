@@ -1,0 +1,55 @@
+---
+title: Careers
+layout: careers
+ref: careers
+---
+{% assign jobs = site.jobs %}
+{% assign depts = jobs | group_by: "department" %}
+
+<!--
+      {% if jobSize != 0 %} 
+        <ul class="filters m__t g__b">
+          <li class="e">Filter by:</li> 
+          {% for dept in jobDept %}{% if dept.name != "" %}{% assign words = dept.name | split: '-' %}<li class="e"><a href="javascript:void(0);" class="filter" data-filter="{{ dept.name }}">{% for word in words %}{{ word | capitalize }} {% endfor %}</a></li>{% endif %}{% endfor %}
+        </ul>
+      {% endif %}
+-->
+
+<section id="jobs" data-title="Careers" class="section bg--white">
+  <div class="section__i"> 
+    <div class="area w--16 g__b fade-e-below">
+      <h2 class="heading e">Open Positions ({{ jobs.size }})</h2>
+    </div>
+    <div class="area w--16 m__b fade-e-below" id="openPositions">
+      {% for dept in depts %}
+      <h3 class="heading c--blue department e">{% if dept.name != "" %}{% assign words = dept.name | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endif %}</h3>
+      <div class="list g__b"> 
+        {% for job in dept.items %}
+        <a class="job e" href="javascript:void(0);" data-department="{{ job.department }}">
+          <div class="job__title">
+            <h3 class="heading">{{ job.title }}</h3>
+            <div class="arrow">
+              <p class="location">{{ job.location }}</p> 
+              <i class="icon" data-icon="chevron_right"></i>
+            </div>
+          </div>
+          <div class="job__content m__t">
+            {{ job.content }}
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% include section__bottom.html %}
+</section>
+<section id="apply" class="section fade-e-below">
+  <div class="section__i"> 
+    <div class="area w--16">
+      <h3 class="heading e">Apply Now</h3>
+      <p class="e">To apply for an open position please email us:</p>
+      <h1 class="heading e"><a href="mailto:careers@innocellence.com">careers@innocellence.com</a></h1>
+    </div>
+  </div>
+</section>

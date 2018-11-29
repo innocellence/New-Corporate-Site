@@ -1,58 +1,45 @@
 ---
 title: Home
 layout: home
-menu: initialize
+menu: i nitialize
 excerpt: InnoCellence designs and develops the digital solutions companies need to succeed. From Market Research to Maintenance, and everything inbetween, we have you covered with end-to-end capabilities.
 ref: home
 redirect_from: 
   - /d/
 ---
-<section id="summary" class="section">
-  <div class="section__container section__content--carousel swiper-container fade-e-below">
-    <div class="swiper-pagination e"></div> 
-    <div class="cards swiper-wrapper">
-      <div class="card tile tile--text swiper-slide e">
-        <h3 class="tile__heading">What we do</h3>
-        <div class="tile__content">
-          <p>From Market Research to Maintenance, and everything inbetween, we have you covered with end-to-end capabilities.</p>
+<section id="about" data-title="About us" class="section fade-e-below">
+  <div class="section__i">
+    <div class="area w--16">
+      <h2 class="heading e">About us.</h2>   
+      <p class="area w--6 w__xl--10 w__lg--10 w__sm--16 bullet e">We are a digital service provider, successfully combining innovative design with digital technology to create products our customers love.</p>
+    </div>
+    <div class="area w--10 w__xl--16 tail m__t">
+      <div class="grid grid--3">
+        {% for i in site.data.snapshot[page.lang] %}
+        <div class="card centered t e">
+          <img class="" src="{{ site.baseurl }}/assets/img/icons/{{ i.img }}">
+          <p>{{ i.text }}</p>
         </div>
-      </div>
-      <div class="card swiper-slide e">
-        <img src="{{ site.baseurl }}/assets/img/icons/icon_brain.svg"> 
-        <p>Innovation Consulting</p>
-      </div>
-      <div class="card swiper-slide e">
-        <img src="{{ site.baseurl }}/assets/img/icons/icon_pen.svg"> 
-        <p>Design &amp; UX</p>
-      </div>
-      <div class="card swiper-slide e">
-        <img src="{{ site.baseurl }}/assets/img/icons/icon_gear.svg"> 
-        <p>Technical Solutions</p>
-      </div>
-      <div class="card swiper-slide e">
-        <img src="{{ site.baseurl }}/assets/img/icons/icon_chart.svg"> 
-        <p>Data Analytics</p>
-      </div>
-      <div class="card swiper-slide e">
-        <img src="{{ site.baseurl }}/assets/img/icons/icon_content.svg"> 
-        <p>Digital Services</p>
+        {% endfor %}
       </div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
   </div>
 </section>
 
-<section id="teamwork" class="section">
-  <div class="section__grid fade-e-below"> 
-    <div class="grid_left tile tile--text e">
-      <h2 class="tile__heading">Agile, collaborative, determined.</h2>
-      <div class="tile__content">
-        <p>We believe that our design and development process has the power to create digital products that improve people's lives.</p>
-        <p><a href="mailto:info@innocellence.com" class="button button--primary e"><span>Contact us</span></a></p>
-      </div>
+<section id="agile" data-title="Agile, collaborative, determined"  class="section fade-e-below">
+  <div class="section__i"> 
+    <div class="area w--16">
+      <h2 class="area w--6 w__xl--16 heading e">Agile, collaborative, determined.</h2> 
+      <p class="area w--6 w__xl--10 w__sm--16 bullet e">We believe that our design and development process has the power to create digital products that improve people's lives.</p>
     </div>
-    <div class="grid_right tile tile--image e">
+    <p class="area w--6 w__sm--16 e"><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Learn more</span></a></p>
+    <div class="area w--12 w__sm--18 o--right e">
+      <img class="fluid" src="{{ site.baseurl }}/assets/img/home/teamwork.svg">  
+    </div>
+  </div>
+<!--
+  <div class="frame">
+    <div class="frame__right e">
       <div class="lasers">
         <div class="beam beam--one"></div>
         <div class="beam beam--two"></div>
@@ -60,18 +47,111 @@ redirect_from:
         <div class="beam beam--four"></div>
         <div class="beam beam--five"></div>
       </div> 
-      <img src="{{ site.baseurl }}/assets/img/home/teamwork.svg">
+      <img class="fluid" src="{{ site.baseurl }}/assets/img/home/teamwork.svg">
     </div>
-  </div>  
+  </div>
+-->
+  {% include section__bottom.html color="white" %}
 </section>
+
+
+<section id="trusted" data-title="Trusted by the best" class="section fade-e-below bg--white">
+  <div class="section__i">  
+    <div class="area w--16">
+      <h2 class="heading e">Trusted by the best.</h2> 
+    </div>
+    <p class="area w--6  w__xl--7 w__lg--10 w__sm--16 g__r g__r--lg bullet e">We have an award winning track record, delivering a best-in-class service to Fortune 500 companies across the globe.</p>
+    <p class="area w--6 w__xl--7 w__lg--10 w__sm--16 g__l g__l--lg bullet e">From Market Research to Maintenance, and everything inbetween, we have you covered with end-to-end capabilities. </p>
+  </div>
+</section>
+  
+  
+<section id="stories" class="section fade-e-below bg--white">
+  <div class="section__i g__b swiper swiper-container">
+    <div class="swiper-pagination e"></div> 
+    <div class="swiper-wrapper">
+      {% for i in site.data.stories[page.lang] %}
+      <div class="swiper-slide e">
+        <div class="slide__i w--14">
+          <div class="slide__content w--7">
+            <h2>{{ i.title }}</h2>
+            {% if i.content %}<p>{{ i.content }}</p>{% endif %}
+            {% if i.footnote %}<p class="footnote">{{ i.footnote }}</p>{% endif %}
+          </div>
+          <div class="slide__image w--10">
+            {% if i.bg %}
+            <img class="background" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.bg }}">
+            <img class="graphic" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.image }}">
+            {% else %}
+            <div class="background" style="background-color:#{{ i.color }};"></div>
+            <img class="graphic" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.image }}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-prev e"></div>
+    <div class="swiper-button-next e"></div>
+  </div>
+</section>
+
+<section id="services" class="section fade-e-below bg--white">
+  <div class="section__i"> 
+    <h2 class="heading e">Our service offering.</h2>   
+    <div class="w--16 grid grid--5">
+      {% for i in site.data.services[page.lang] %}
+      <div class="card centered t e">
+        <img class="" src="{{ site.baseurl }}/assets/img/icons/{{ i.img }}">
+        <p>{{ i.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="team" data-title="One team, global reach" class="section fade-e-below bg--white">
+  <div class="section__i"> 
+    <div class="area w--16">
+      <h2 class="area w--6 w__xl--16 heading e">One team, global reach.</h2> 
+      <p class="area w--6 w__xl--8 w__lg--10 w__sm--16 bullet e">Our Digital SMEs, Engineers, Designers and Project Managers provide expertise to build solutions from ideation to implementation.</p>
+    </div>
+    <div class="area w--6 w__xl--8 w__lg--10 w__sm--16 m__t">
+      <p class="bullet e">InnoCellence is headquartered in Singapore with offices in China and Japan.</p>
+      <p class="e"><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Contact us</span></a><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Join the team</span></a></p>
+    </div>
+    <div class="area w--8 w__lg--10 w__sm--16 tail e">
+      <svg viewBox="0 0 648 414" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path fill="none" stroke-linecap="round" stroke="#EF4B46" stroke-width="3" d="M253.185002,187 C268.070205,87.3206364 289.287227,28.1875449 316.836068,9.60072564 C344.38491,-8.98609363 372.163838,19.6700827 400.172854,95.5692546" id="beam"></path>
+      </svg>  
+      <img class="fluid" src="{{ site.baseurl }}/assets/img/home/reach_illustration.svg">
+    </div>
+  </div>
+  {% include section__bottom.html %}
+</section>
+
+{% include call.html %}
 
 
 <script>
 $(document).ready(function () {
-  var mySwiper = new Swiper ('.swiper-container', {
+  var swiper = new Swiper ('#stories .swiper-container', {
     direction: 'horizontal',
+    speed: 650,
+    spaceBetween: 0,
     slidesPerView: 'auto',
-    freeMode: true,
+    centeredSlides: true,
+    freeMode: false,
+    grabCursor: true,
+    watchSlidesVisibility: false,
+    disableOnInteraction: true,
+    parallax: true,
+//    autoplay: {
+//      delay: 4000,
+//    },
+    lazy: {
+      loadPrevNext: true,
+    },
 //    mousewheel: {
 //      enabled: true,
 //      releaseOnEdges: true,
@@ -86,5 +166,12 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   })
+  $("#our_capabilities").mouseenter(function() {
+    (this).swiper.autoplay.stop();
+  });
+
+  $("#our_capabilities").mouseleave(function() {
+    (this).swiper.autoplay.start();
+  });
 });
 </script>

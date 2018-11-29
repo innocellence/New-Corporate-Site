@@ -1,13 +1,6 @@
-.button--primary {
-  --button_color: $blue;
-}
-.button--secondary {
-  --button_color: $red;
-}
-.button--inverted {
-  --button_color: $white;
-  --button_hover_color: $red;
-}
+///////////
+// Button 
+///////////
 
 .button, button {
   text-decoration: none;
@@ -16,13 +9,16 @@
   display: inline-block;
   overflow: hidden;
   font-size: $typo_sparrow;
-  color: var(--button_color, $black);
-  border: 2px solid var(--button_color, $black);
-  padding: $margin * .25 $margin * .65;
-  border-radius: $radius_small;
+  color: $black;
+  border: 2px solid;
+//  padding: $margin * .25 $margin * .65;
+  padding: $padding_sm $padding_lg;
+  border-radius: $radius_sm;
   font-weight: 600;
   margin-right: $margin;
+  user-select: none;
   
+  // Button Content
   span {
     position: relative;
     display: inline-flex;
@@ -32,6 +28,7 @@
     transition: color .25s ease;
   }
   
+  // Button Background
   &:before {
     content: "";
     transform-origin: center bottom;
@@ -41,19 +38,63 @@
     top: 0;
     right: -1px;
     width: calc(100% + 1px);
-    height: 100%;
-    background-color: var(--button_color, $black);
+    height: calc(100% + 1px);
+    background-color: $black;
   }
   
-  &:hover {
-    color: var(--button_hover_color, $white);
-    
-    span {
-      color: var(--button_hover_color, $white);
-    }
+  // Hover Effects
+  &:hover,
+  &:focus {
+    color: $white;
+    border-color: $black;
     
     &:before {
       transform: scale3d(1, 1, 1);
+      transition-duration: .4;
+      transition-timing-function: cubic-bezier(.5, 0, .5, 1);
     }
+  }
+}
+
+
+///////////
+// Button Colors
+///////////
+
+// Primary (Blue)
+.button--primary {
+  color: $blue; 
+  
+  &:before {
+    background-color: $blue;
+  }
+  &:hover,
+  &:focus {
+    border-color: $blue;
+  }
+}
+// Secondary (Red)
+.button--secondary {
+  color: $red; 
+  
+  &:before {
+    background-color: $red;
+  }
+  &:hover,
+  &:focus {
+    border-color: $red;
+  }
+}
+// Inverted (White)
+.button--inverted {
+  color: $white; 
+  
+  &:before {
+    background-color: $white;
+  }
+  &:hover,
+  &:focus {
+    border-color: $white;
+    color: $blue;
   }
 }

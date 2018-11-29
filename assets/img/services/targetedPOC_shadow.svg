@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="302px" viewBox="0 0 299 302" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>poc</title>
+    <desc>Created with Sketch.</desc>
+    <g id="App" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.0552455357">
+        <g id="Our-Services" transform="translate(-1019.000000, -404.000000)" fill="#000000">
+            <g id="poc" transform="translate(1019.000000, 404.000000)">
+                <path d="M295.619834,213.748213 C298.777823,215.54417 298.794848,218.456394 295.661739,220.249127 L155.174743,300.655773 C152.04229,302.448505 146.937648,302.448505 143.779004,300.653193 L2.37728392,220.250416 C-0.780705716,218.454459 -0.791836926,215.54546 2.34061641,213.752727 L142.827613,133.346081 C145.960721,131.552704 151.060124,131.550124 154.218769,133.345437 L295.619834,213.748213 Z" id="shadow" style="mix-blend-mode: multiply;"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,95 +1,614 @@
-// Wrapper
-main {
-//  overflow-x: hidden;
-}
-
+///////////
 // Section
-.section {
-  --background: var(--color_sky); // Set the background variable
-  
+///////////
+
+.section {  
   height: auto;
   width: 100% !important;
   position: relative;
-  padding-top: $margin_gap;
-  padding-bottom: 0;
-  background: var(--background);
-
-  &__top,
-  &__top--right {
-    --background: var(--color_sky); // Set the background variable
-    position: absolute;
-    display: block;
-    top: calc(-10vh + 1px);
-    width: 100%;
-
-    svg {
-      display: block;  
-    }
-    polygon{
-      fill: var(--background);
+  margin: 0 auto;
+  padding-bottom: $gutter;
+  color: $black;
+  
+  // Section Inner 
+  &__i {
+    position: relative;
+    max-width: $content_max;
+    width: $content_w;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: $margin 0;
+    z-index: 1;
+    
+    @media only screen and (max-width: $screen_md) {
+      width: $content_w--sm;
     }
   }
-  &__bottom,
-  &__bottom--right {
-    --background: var(--color_sky); // Set the background variable
+  
+  // Section Bottom
+  &__bottom {
     position: absolute;
     display: block;
     top: calc(100% - 10vh + 1px);
     width: 100%;
+    background: transparent !important;
 
     svg {
       display: block;  
     }
-    polygon{
-      fill: var(--background);
+    polygon {
+      fill: $sky;
+    }
+  }
+}
+
+
+///////////
+// First Section Padding
+///////////
+
+.section:first-child .section__i:first-child {
+  padding-top: $gutter_lg;
+}
+
+
+///////////
+// Areas
+///////////
+
+.area {
+  // Used to group section contents 
+  
+  &.tail {
+    margin-left: auto;
+  }
+}
+
+///////////
+// Grids
+///////////
+
+.grid {
+  position: relative;
+  display: grid;
+  
+  // Columns
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @media only screen and (max-width: $screen_md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $screen_mi) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &--5 {
+    grid-template-columns: repeat(5, 1fr);
+    
+    @media only screen and (max-width: $screen_md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $screen_mi) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   
-  &__container {
-    position: relative;
-    max-width: $max_width;
-    margin: 0 auto;
+  // Gap
+  &--gap {
+    grid-gap: $margin_lg;
+    
+    @media only screen and (max-width: $screen_md) {
+      grid-gap: $margin;
+    }
   }
+}
 
-  &__grid {
-    position: relative;
-    max-width: $max_width;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: unquote(" 
-      [full-start] minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) 
-      [main-start] repeat(18, 1fr) [main-end]
-      minmax(calc(var(--padding_horiz, #{$margin}) - #{$margin}), 1fr) [full-end]");
-    grid-column-gap: $margin;  
-  }
+
+///////////
+// Widths 
+///////////
+
+.w {
+  // Convert widths to % when inside sections
   
-  &__content--carousel {
-    width: calc(100% - (2 * var(--padding_horiz)) );
-    max-width: calc(#{$max_width} - (2 * var(--padding_horiz)) );
+  &--4 {
+    width: $column_w * 4;
+  }
+  &--6 {
+    width: $column_w * 6;
+  }
+  &--7 {
+    width: $column_w * 7;
+  }
+  &--8 {
+    width: $column_w * 8;
+  }
+  &--9 {
+    width: $column_w * 9;
+  }
+  &--10 {
+    width: $column_w * 10;
+  }
+  &--12 {
+    width: $column_w * 12;
+  }
+  &--14 {
+    width: $column_w * 14;
+  }
+  &--16 {
+    width: $column_w * 16;
+  }
+  &--18 {
+    width: $column_w * 18; // 112.5%
+    max-width: none;
+  }
+  &--20 {
+    width: $column_w * 20; // 125%
+    max-width: none;
   }
 }
 
-// Background Colors
-.bg--red {
-  --background: var(--color_red);
-}
-.bg--white {
-  --background: var(--color_white);
-}
-.bg--blue {
-  --background: var(--color_blue);
-}
-.bg--sky {
-  --background: var(--color_sky);
+
+///////////
+// Responsive Widths 
+///////////
+
+// XX-Large Screens < 1600px
+@media only screen and (max-width: $screen_xxl) {
+  .w {
+    // Convert widths to % when inside sections
+    
+    &__xxl--4 {
+      width: $column_w * 4;
+    }
+    &__xxl--6 {
+      width: $column_w * 6;
+    }
+    &__xxl--7 {
+      width: $column_w * 7;
+    }
+    &__xxl--8 {
+      width: $column_w * 8;
+    }
+    &__xxl--9 {
+      width: $column_w * 9;
+    }
+    &__xxl--10 {
+      width: $column_w * 10;
+    }
+    &__xxl--12 {
+      width: $column_w * 12;
+    }
+    &__xxl--14 {
+      width: $column_w * 14;
+    }
+    &__xxl--16 {
+      width: $column_w * 16;
+    }
+    &__xxl--18 {
+      width: $column_w * 18; // 112.5%
+      max-width: none;
+    }
+    &__xxl--20 {
+      width: $column_w * 20; // 125%
+      max-width: none;
+    }
+  }
 }
 
+// X-Large Screens < 1280px
+@media only screen and (max-width: $screen_xl) {
+  .w {
+    // Convert widths to % when inside sections
+    
+    &__xl--4 {
+      width: $column_w * 4;
+    }
+    &__xl--6 {
+      width: $column_w * 6;
+    }
+    &__xl--7 {
+      width: $column_w * 7;
+    }
+    &__xl--8 {
+      width: $column_w * 8;
+    }
+    &__xl--9 {
+      width: $column_w * 9;
+    }
+    &__xl--10 {
+      width: $column_w * 10;
+    }
+    &__xl--12 {
+      width: $column_w * 12;
+    }
+    &__xl--14 {
+      width: $column_w * 14;
+    }
+    &__xl--16 {
+      width: $column_w * 16;
+    }
+    &__xl--18 {
+      width: $column_w * 18; // 112.5%
+      max-width: none;
+    }
+    &__xl--20 {
+      width: $column_w * 20; // 125%
+      max-width: none;
+    }
+  }
+}
+
+// Large Screens < 1024px
+@media only screen and (max-width: $screen_lg) {
+  .w {
+    // Convert widths to % when inside sections
+    
+    &__lg--4 {
+      width: $column_w * 4;
+    }
+    &__lg--6 {
+      width: $column_w * 6;
+    }
+    &__lg--7 {
+      width: $column_w * 7;
+    }
+    &__lg--8 {
+      width: $column_w * 8;
+    }
+    &__lg--9 {
+      width: $column_w * 9;
+    }
+    &__lg--10 {
+      width: $column_w * 10;
+    }
+    &__lg--12 {
+      width: $column_w * 12;
+    }
+    &__lg--14 {
+      width: $column_w * 14;
+    }
+    &__lg--16 {
+      width: $column_w * 16;
+    }
+    &__lg--18 {
+      width: $column_w * 18; // 112.5%
+      max-width: none;
+    }
+    &__lg--20 {
+      width: $column_w * 20; // 125%
+      max-width: none;
+    }
+  }
+}
+
+// Medium Screens < 900px
+@media only screen and (max-width: $screen_md) {
+  .w {
+    // Convert widths to % when inside sections
+    
+    &__md--4 {
+      width: $column_w * 4;
+    }
+    &__md--6 {
+      width: $column_w * 6;
+    }
+    &__md--7 {
+      width: $column_w * 7;
+    }
+    &__md--8 {
+      width: $column_w * 8;
+    }
+    &__md--9 {
+      width: $column_w * 9;
+    }
+    &__md--10 {
+      width: $column_w * 10;
+    }
+    &__md--12 {
+      width: $column_w * 12;
+    }
+    &__md--14 {
+      width: $column_w * 14;
+    }
+    &__md--16 {
+      width: $column_w * 16;
+    }
+    &__md--18 {
+      width: $column_w * 18; // 112.5%
+      max-width: none;
+    }
+    &__md--20 {
+      width: $column_w * 20; // 125%
+      max-width: none;
+    }
+  }
+}
+
+// Small Screens < 768px
+@media only screen and (max-width: $screen_sm) {
+  .w {
+    // Convert widths to % when inside sections
+    
+    &__sm--4 {
+      width: $column_w * 4;
+    }
+    &__sm--6 {
+      width: $column_w * 6;
+    }
+    &__sm--7 {
+      width: $column_w * 7;
+    }
+    &__sm--8 {
+      width: $column_w * 8;
+    }
+    &__sm--9 {
+      width: $column_w * 9;
+    }
+    &__sm--10 {
+      width: $column_w * 10;
+    }
+    &__sm--12 {
+      width: $column_w * 12;
+    }
+    &__sm--14 {
+      width: $column_w * 14;
+    }
+    &__sm--16 {
+      width: $column_w * 16;
+    }
+    &__sm--18 {
+      width: $column_w * 18; // 112.5%
+      max-width: none;
+    }
+    &__sm--20 {
+      width: $column_w * 20; // 125%
+      max-width: none;
+    }
+  }
+}
+
+// Mini Screens < 425px
+@media only screen and (max-width: $screen_mi) {
+  .w {
+    // Convert widths to % when inside sections
+    
+    &__mi--4 {
+      width: $column_w * 4;
+    }
+    &__mi--6 {
+      width: $column_w * 6;
+    }
+    &__mi--7 {
+      width: $column_w * 7;
+    }
+    &__mi--8 {
+      width: $column_w * 8;
+    }
+    &__mi--9 {
+      width: $column_w * 9;
+    }
+    &__mi--10 {
+      width: $column_w * 10;
+    }
+    &__mi--12 {
+      width: $column_w * 12;
+    }
+    &__mi--14 {
+      width: $column_w * 14;
+    }
+    &__mi--16 {
+      width: $column_w * 16;
+    }
+    &__mi--18 {
+      width: $column_w * 18; // 112.5%
+      max-width: none;
+    }
+    &__mi--20 {
+      width: $column_w * 20; // 125%
+      max-width: none;
+    }
+  }
+}
+
+///////////
+// Overflow
+///////////
+
+.o {
+  // Convert overflow to % when inside sections
+  
+  &--left {
+    margin-left: - ($column_w * 2);
+  }
+  &--right {
+    margin-right: - ($column_w * 2);
+  }
+  &--left--4 {
+    margin-left: - ($column_w * 4);
+  }
+  &--right--4 {
+    margin-right: - ($column_w * 4);
+  }
+}
+
+///////////
+// Margins
+///////////
+
+.m {
+  // Fixed margins
+  
+  &__t {
+    margin-top: $margin_lg;
+  }
+  &__b {
+    margin-bottom: $margin_lg;
+  }
+  &__l {
+    margin-left: $margin_lg;
+  }
+  &__r {
+    margin-right: $margin_lg;
+  }
+}
+
+///////////
+// Gutters 
+///////////
+
+.g {
+  // Apply fixed gutter to top and bottom
+  // Convert left & right gutters to %
+  
+  &__t {
+    margin-top: $gutter_lg;
+  }
+  &__b {
+    margin-bottom: $gutter_lg;
+  }
+  &__l {
+    margin-left: $column_w;
+  }
+  &__r {
+    margin-right: $column_w;
+  }
+}
+
+
+///////////
+// Gutter Resets 
+///////////
+
+// XX-Large Screens < 1600px
+@media only screen and (max-width: $screen_xxl) {
+  .g {
+    // Convert left & right gutters to %
+    
+    &__l--xxl {
+      margin-left: 0;
+    }
+    &__r--xxl {
+      margin-right: 0;
+    }
+  }
+}
+
+// X-Large Screens < 1280px
+@media only screen and (max-width: $screen_xl) {
+  .g {
+    // Convert left & right gutters to %
+    
+    &__l--xl {
+      margin-left: 0;
+    }
+    &__r--xl {
+      margin-right: 0;
+    }
+  }
+}
+
+// Large Screens < 1024px
+@media only screen and (max-width: $screen_lg) {
+  .g {
+    // Convert left & right gutters to %
+    
+    &__l--lg {
+      margin-left: 0;
+    }
+    &__r--lg {
+      margin-right: 0;
+    }
+  }
+}
+
+// Medium Screens < 900px
+@media only screen and (max-width: $screen_md) {
+  .g {
+    // Convert left & right gutters to %
+    
+    &__l--md {
+      margin-left: 0;
+    }
+    &__r--md {
+      margin-right: 0;
+    }
+  }
+}
+
+// Small Screens < 768px
+@media only screen and (max-width: $screen_sm) {
+  .g {
+    // Convert left & right gutters to %
+    
+    &__l--sm {
+      margin-left: 0;
+    }
+    &__r--sm {
+      margin-right: 0;
+    }
+  }
+}
+
+// Mini Screens < 425px
+@media only screen and (max-width: $screen_mi) {
+  .g {
+    // Convert left & right gutters to %
+    
+    &__l--mi {
+      margin-left: 0;
+    }
+    &__r--mi {
+      margin-right: 0;
+    }
+  }
+}
+
+
+///////////
 // Colors
-.color--red {
-  --color: var(--color_red);
+///////////
+
+// Background
+.bg {
+  &--red {    
+    background: $red;
+    color: $white;
+  }
+  &--white {
+    background: $white;
+  }
+  &--blue {
+    background: $blue;
+    color: $white;
+  }
 }
-.color--white {
-  --color: var(--color_white);
+
+// Section Bottom Background
+.section__bottom.bg {
+  &--red polygon {    
+    fill: $red;
+  }
+  &--white polygon {
+    fill: $white;
+  }
+  &--blue polygon {
+    fill: $blue;
+  }
 }
-.color--blue {
-  --color: var(--color_blue);
+
+// Color
+.c {
+  &--red {
+    color: $red;
+  }
+  &--white {
+    color: $white;
+  }
+  &--blue {
+    color: $blue;
+  }
 }

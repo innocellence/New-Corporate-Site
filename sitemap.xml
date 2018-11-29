@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /sitemap.xml
+redirect_from:
+  - /d/sitemap.html
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.pages %}{% unless page.exclude == true %}
+  <url>
+    <loc>{{ site.siteurl }}{{ site.baseurl }}{{ page.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>{% endunless %}{% endfor %}
+  {% for post in site.posts %}{% unless page.exclude == true %}
+  <url>
+    <loc>{{ site.siteurl }}{{ site.baseurl }}{{ post.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>{% endunless %}{% endfor %}
+</urlset>

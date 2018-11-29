@@ -1,0 +1,216 @@
+---
+title: Our Services
+layout: services
+menu: initialize
+ref: services
+redirect_from:
+  - /d/en/capabilities/
+  - /d/en/capabilities/index.html
+  - /d/en/capabilities/digital_consultation.html
+  - /d/en/capabilities/design_user_experience.html
+  - /d/en/capabilities/rapid_prototyping.html
+  - /d/en/capabilities/mobile_solutions.html
+  - /d/en/capabilities/customer_insights_analytics.html
+  - /d/en/capabilities/website_application_development.html
+---
+
+<section id="innovation" data-title="Innovation Consulting" class="section bg--blue fade-e-below">
+  <div class="section__i"> 
+    <div class="area w--6">
+      <h2 class="heading e">Our approach to innovation underpins the products
+we&nbsp;build.</h2>
+      <p class="bullet inverted e">We analyze the threat of competiton, evaluate industry trends, identify strategic opportunities, and develop targeted POC’s, to ensure we deliver digitally innovative solutions that transform businesses.</p>
+      <p><a href="{{ site.baseurl }}/about/#process" class="button button--inverted e"><span>Our approach to innovation</span></a></p>
+    </div>  
+    <div class="area w--12 o--right">
+      <div class="graphic research">
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/marketResearch.svg">
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/marketResearch_shadow.svg"> 
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/marketResearch_flash.svg">
+        <p class="e">Market Research &amp; Analysis</p>
+      </div>
+      <div class="graphic ideation">
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/ideationWorkshops.svg"> 
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/ideationWorkshops_shadow.svg">
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/ideationWorkshops_flash.svg">
+        <p class="e">Ideation Workshops</p>
+      </div>
+      <div class="graphic poc">
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/targetedPOC.svg"> 
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/targetedPOC_shadow.svg">
+        <img class="e" src="{{ site.baseurl }}/assets/img/services/targetedPOC_flash.svg">
+        <p class="e">Targeted PoC's</p>
+      </div>
+    </div>
+  </div>
+  {% include section__bottom.html %}
+</section>
+
+<!--
+<section id="projects" class="section g__t fade-e-below">
+  <div class="grid">
+    <div class="grid__quart"> 
+      <h3 class="heading e">Capabilities that deliver.</h3>
+      <p class="e">Our end-to-end service offering has produced industry leading products for our partners.</p>
+    </div>
+  </div>
+  <div class="container gallery g__t">
+    <div class="swiper-container gallery__thumbs fade-e-below">
+      <div class="swiper-pagination e"></div> 
+      <div class="swiper-wrapper e">
+        {% assign p = site.data.projects %}
+        {% for i in p %}
+        <a href="javascript:void(0)" class="gallery__thumb swiper-slide">
+          <h3 class="match">{{ i.name }}</h3> 
+          <div class="control"></div>
+          <img src="{{ site.baseurl }}/assets/img/services/projects/{{ i.thumb }}.jpg">
+        </a>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev e"></div>
+      <div class="swiper-button-next e"></div>
+    </div>
+    <div class="swiper-container gallery__showcase fade-c-transparent">
+      <div class="swiper-wrapper swiper-no-swiping"> 
+        {% for i in p %}
+        <div class="swiper-slide">
+          <div class="grid g">
+            <div class="grid__quart grid__right g__b">
+              <h3>{{ i.name }}</h3>
+              {% if i.text %}<p>{{ i.text }}</p>{% endif %}
+            </div>
+          </div> 
+          <img src="{{ site.baseurl }}/assets/img/services/projects/{{ i.img }}.jpg">
+        </div> 
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include section__bottom.html color="white" %}
+</section>
+-->
+
+<section id="web" data-title="Web Design" class="section bg--white">
+  <div class="section__i g__t fade-e-below">
+    <div class="area g__t w--6">
+        <h2 class="area heading e">We build beautifully designed, mobile-ready websites.</h2>    
+      <p class="bullet e">Deliver consistent and intuative experiences across multiple devices with responsive design.</p>
+      <p class="bullet e">Increase brand awareness and outrank competitors online with advanced SEO.</p>
+      <p class="bullet e">Improve productivity by storing data in a cost-effective Content Management System (CMS).</p>
+    </div>
+    <div class="area w--14 o--right--4">
+      <div class="laptop e">
+        <div class="laptop__screen">
+          <div class="area content g__b g__t">
+            <h2 class="heading e">Our Platform Expertise.</h2>
+            <p class="e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>
+          </div>  
+          {% assign p = site.data.partners %}
+          <div class="feed">
+            <div class="cards e">
+              {% for i in p %}
+              <a href="{{ i.url }}" class="card t centered">
+                {% if i.text %}<p>{{ i.text }}</p>{% endif %}
+                <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
+              </a>
+              {% endfor %}
+            </div>
+          </div> 
+          <div class="feed">
+            <div class="cards e">
+              {% for i in p %}
+              <a href="{{ i.url }}" class="card t centered">
+                {% if i.text %}<p>{{ i.text }}</p>{% endif %}
+                <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
+              </a>
+              {% endfor %}
+            </div>
+          </div> 
+        </div> 
+        <script>
+          var $feed = $(".feed .cards");
+          $feed.each(function(){
+            var e = $(this);
+            for (var i = 0; i < 2; i++) {
+              e.clone().addClass("cloned").insertBefore(this);
+            }
+          });
+        </script>
+        <img src="{{ site.baseurl }}/assets/img/services/laptop.png">
+      </div> 
+<!--      <img src="{{ site.baseurl }}/assets/img/services/laptop.png">-->
+<!--
+      <h2 class="heading e">Our Platform Expertise.</h2>
+      <p class="e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>
+-->
+    </div>
+  </div>
+<!--
+  <div class="container fade-e-below">
+    <div class="laptop e">
+      <div class="laptop__screen">
+        {% assign p = site.data.partners %}
+        <div class="feed">
+          <div class="cards e">
+            {% for i in p %}
+            <a href="{{ i.url }}" class="card">
+              {% if i.text %}<p>{{ i.text }}</p>{% endif %}
+              <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
+            </a>
+            {% endfor %}
+          </div>
+        </div> 
+        <div class="content">
+          <h2 class="heading e">Our Platform Expertise.</h2>
+          <p class="e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>
+        </div> 
+        <div class="feed">
+          <div class="cards e">
+            {% for i in p %}
+            <a href="{{ i.url }}" class="card">
+              {% if i.text %}<p>{{ i.text }}</p>{% endif %}
+              <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
+            </a>
+            {% endfor %}
+          </div>
+        </div> 
+      </div> 
+      <script>
+        var $feed = $(".feed .cards");
+        $feed.each(function(){
+          var e = $(this);
+          for (var i = 0; i < 2; i++) {
+            e.clone().addClass("cloned").insertBefore(this);
+          }
+        });
+      </script>
+      <img src="{{ site.baseurl }}/assets/img/services/laptop.png">
+    </div>
+  </div>
+-->
+  {% include section__bottom.html %}
+</section>
+
+{% include call.html %}
+
+<section id="mobile" data-title="Mobile Solutions" class="section fade-e-below">
+  <div class="section__i"> 
+    <div class="area w--16">
+      <h2 class="area w--6 heading e">“The only thing worse than not having a mobile app is having one your customers hate using.”</h2>
+    </div>
+    
+    <div class="area w--16">
+      <h2 class="area tail w--6 heading e">We create user-friendly mobile applications.</h2>
+    </div>
+    
+    <p class="area w--4 g__r bullet e">Increase connectivity, reaching more users with multi-channel products and services.</p>
+    <p class="area w--4 g__r bullet e">Digitize your content, tailoring messaging for the right audience to improve engagement.</p>
+    <p class="area w--4 bullet e">Leverage platform-specific technologies such as AR, wearables and machine learning.</p>
+    
+    <div class="area w--16">
+      <h4 class="area w--16 c--red">Native or Hybrid?</h4>
+      <h2 class="area w--6 heading e">We support the industry’s most popular platforms and frameworks.</h2>
+    </div>
+  </div>
+  {% include section__bottom.html %}
+</section>

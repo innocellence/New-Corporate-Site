@@ -7,7 +7,7 @@
     {% assign meta = site.data.meta[page.lang] %}
     <title>{% if page.layout == 'home' %}{{ meta.title }} | {{ meta.byline }}{% else %}{{ page.title }} | {{ meta.title }} - {{ meta.byline }}{% endif %}</title>
     <!-- Meta -->
-    <meta name="keywords" content="{{ meta.keywords }}" />
+    <meta name="keywords" content="{{ meta.keywords}}" />
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ page.content | markdownify | strip_html | normalize_whitespace | truncate: 200 }}{% endif %}" />
     <meta name="author" content="{{ meta.author }}" />
     <!-- XXXXXXX -->
@@ -29,11 +29,7 @@
     <!-- Library Core -->
     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/libs/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/assets/js/libs/prefixfree.min.js"></script>
-    <!-- ScrollMagic -->
-    <script src="{{ site.baseurl }}/assets/js/libs/scrollMagic/plugins/tweenMax.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/libs/scrollMagic/scrollMagic.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/libs/scrollMagic/plugins/animation.gsap.min.js"></script>
-<!--    <script src="{{ site.baseurl }}/assets/js/libs/scrollMagic/plugins/debug.addIndicators.min.js"></script>-->
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
@@ -46,10 +42,12 @@
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <body data-page_layout="{{ page.layout }}">
+  <body class="{{ page.layout }}" data-page_layout="{{ page.layout }}">
     <div class="mobile"></div> 
     {% include main_nav.html %}
-    {{ content }}
+    <div id="store">
+      {{ content }}
+    </div>
     {% include footer.html %}
   </body>
 </html>

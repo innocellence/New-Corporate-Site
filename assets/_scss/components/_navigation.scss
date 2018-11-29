@@ -1,0 +1,471 @@
+///////////
+// Progress Bar
+///////////
+
+.progress {
+  width: 100vw;
+  height: 2px;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  background: transparentize($grey, .8);
+  
+  @media only screen and (max-width: $screen_md) {
+    transform: translateY(72px);
+    transition: transform .4s;
+    
+    &.invisible {
+      transform: translateY(0);
+      transition: transform .3s;
+    }
+  }
+  
+  // Indicator
+  
+  &__indicate {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    background: $red;
+    padding: 0 $margin_sm;
+    height: 100%;
+    transition: width linear;
+  }
+}
+
+
+///////////
+// Page Name
+///////////
+
+.pagename {
+  position: fixed;
+  top: 10vh;
+  width: 2rem;
+  left: $gap / 2;
+  height: 80vh;
+  overflow: hidden;
+  font-weight: bold;
+  letter-spacing: .01em;
+  font-size: $typo_sparrow;
+  color: $red;
+  opacity: 1;
+  z-index: 1000;
+  transition: all $base_motion $base_duration;
+  
+  @media only screen and (max-width: $screen_lg) {
+    display: none;
+  }
+  
+  // Inner Titles
+  div {
+    width: 50vh;
+    height: 2rem;
+    line-height: 2rem;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotate(-90deg) translateY(100%);
+    transition: transform $base_duration $base_motion;
+    transform-origin: 1rem 1rem;
+    -webkit-transform-origin: 1rem 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  div.active {
+    transform: rotate(-90deg) translateY(0);
+  }
+}
+
+
+///////////
+// Prevent Scrolling
+///////////
+
+html.no_scroll {
+  @media only screen and (max-width: $screen_md) {
+    overflow: hidden;  
+  }
+}
+
+
+///////////
+// Nav Bar
+///////////
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  right: 0;
+  z-index: 1000;
+  transform: translate(0,0);
+  transition: all $base_duration $base_motion;
+  animation: firstFadeInAndDrop $base_duration;
+  
+  @media only screen and (max-width: $screen_md) {
+    transition: transform .4s, background .2s .3s, padding .3s 0s;
+    animation: none;
+    overflow: hidden;
+  }
+  
+  //  When Scrolling apply invisibility
+  &.invisible {
+    transition: transform .3s;
+    transform: translateY(-148px);
+    
+    @media only screen and (max-width: $screen_md) {
+      transform: translateY(-72px);
+    }
+  }
+  
+  // On load fade in the menu
+  @keyframes firstFadeInAndDrop {
+    0%   {
+      opacity: 0;
+      transform: translate(0,-100%);
+    }
+    25% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+}
+
+
+///////////
+// Main Navigation
+///////////
+
+.main_navigation {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: $gutter $gap;
+  
+  @media only screen and (max-width: $screen_md) {
+    padding: $margin $gap;
+    background: $white;
+  }
+  
+  // Logo
+  .logo {
+    height: 40px;
+    margin-right: $margin;
+    pointer-events: auto;
+    
+    a {
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      text-decoration: none;
+    }
+    
+    #innoLogo {
+      transition: all $base_motion $base_duration;
+      
+      @media only screen and (max-width: $screen_md) {
+        fill: $red;
+      }
+    }
+  }
+
+  // Mobile Menu
+  .mobileTrigger {
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    margin-left: $margin_lg;
+    display: none;
+    
+    @media only screen and (max-width: $screen_md) {
+      display: block;
+    }
+    
+    &__top,
+    &__bottom {
+      height: 3px;
+      width: 30px;
+      background: $white;
+      margin: 12px 0;
+      transition: $base_duration $base_motion;
+      
+      @media only screen and (max-width: $screen_md) {
+        background: $black;
+      }
+    }
+    
+    // Mobile Menu Hover & Active
+    &:hover {
+      .mobileTrigger__top {
+        transform: translateY(2px);
+      }
+      .mobileTrigger__bottom {
+        transform: translateY(-2px);
+      }
+      
+      @media only screen and (max-width: $screen_md) {
+        .mobileTrigger__top,
+        .mobileTrigger__bottom {
+          background: $red;
+        }
+      }
+    }
+  }
+
+  // Default Nav Theme
+  &.default {
+
+    .logo #innoLogo {
+      fill: $red;
+    }
+    .menu__item {
+      background: transparentize($white, .05);
+      color: $black;
+
+      &.active {
+        color: $red;
+        background: $white;
+      }
+    }
+    .mobileTrigger {
+      &:hover {
+        .mobileTrigger__top,
+        .mobileTrigger__middle,
+        .mobileTrigger__bottom {
+          background: $red;
+        }
+      }
+      
+      .mobileTrigger__top,
+      .mobileTrigger__middle,
+      .mobileTrigger__bottom {
+        background: $black;
+      }
+    }
+  }
+
+  // Menus
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    line-height: 1;
+
+    // Menu Items
+    &__item {
+      display: block;
+      margin: 0 $padding_sm;
+      padding: $padding_sm $padding_lg;
+      background: transparent;
+      color: $white;
+      border-radius: $radius;
+      font-size: $typo_sparrow;
+      font-weight: normal;
+      letter-spacing: .01em;
+      text-decoration: none;
+      pointer-events: auto;
+      transition: all $base_motion $base_duration;
+      
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background: $white;
+        box-shadow: 0 1px 8px transparentize($black, .8);
+        color: $red;
+      }
+      &.active {
+        color: $white;
+        background: transparentize($white, .9);
+
+        &:hover {
+          background: $white;
+          color: $red;
+        }
+      }
+    }
+  }
+
+  // Menu Areas
+  .menu--right {
+    flex: 0 1 auto;
+    color: $white;
+    
+    .menu__item {
+      padding: $padding_sm;
+      text-transform: uppercase;
+    }
+    
+    // Mobile styles
+    @media only screen and (max-width: $screen_md) {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s 0s;
+      
+      .menu__item {
+        background: $black;
+        color: $white;
+        
+        &:hover {
+          background: $white;
+          box-shadow: none;
+          color: $red;
+        }
+        &.active {
+          color: $white;
+          background: $red;
+
+          &:hover {
+            background: $white;
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+  .menu--left {
+    @media only screen and (max-width: $screen_md) {
+      display: none;
+    }
+  }
+}
+
+
+///////////
+// Expanded Nav (Mobile)
+///////////
+
+@media only screen and (min-width: $screen_md + 1px) {
+  nav .mobile_navigation {
+    display: none !important; // Prevent mobile nav appearing on large screens
+  }
+}
+@media only screen and (max-width: $screen_md) {
+  nav.expanded {
+    background: $white;
+    padding: $gap;
+    height: 100vh;
+    z-index: 1001;
+    transition: transform .4s, background .2s, padding .3s .2s;
+
+    // Mobile Menu Active
+    .mobileTrigger__top {
+      transform-origin: 26px;
+      transform: rotate(-45deg);
+    }
+    .mobileTrigger__bottom {
+      transform: rotate(45deg);
+      transform-origin: 26px;
+    }
+    .mobileTrigger__top,
+    .mobileTrigger__bottom {
+      background: $red !important;
+    }
+    .mobile_navigation {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .4s .5s;
+    }
+    .menu--right {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .4s .5s;
+    }
+  }    
+}
+
+
+///////////
+// Mobile Navigation
+///////////
+
+.mobile_navigation {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s 0s;
+  
+  > div {
+    width: 85vw;
+  }
+  .swiper-slide {
+    height: 50vh;
+    padding: $gap $gap /2;
+    
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: $black;
+      text-decoration: none;
+    }
+    h1 {
+      margin-bottom: $gutter;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity .2s 0s $base_motion, transform .2s .3s $base_motion;
+    }
+    .porthole {
+      border-radius: $radius;
+      background: $sky;
+    }
+    
+    &-active {
+      h1 {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity .2s .3s $base_motion, transform .2s .3s $base_motion;
+      }
+    }
+  }
+  
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    width: 100%;
+    
+    &.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: $margin_sm;
+    }
+
+    .swiper-pagination-bullet {
+      width: $margin;
+      height: 6px;
+      border-radius: $radius_sm;
+      display: block;
+      background: transparentize($grey, .8);
+      opacity: 1;
+      transition: all $base_duration $base_motion;
+      
+      &-active {
+        opacity: 1;
+        background: $red;
+        width: $margin_sm;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,97 @@
+body[class="error"] {
+  background-color: $black;
+  min-height: 100vh;
+  
+  .progress,
+  .pagename {
+    display: none;
+  }
+  .section {
+    background: $black;
+  }
+  .section__i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    a {
+      color: $white;
+    }
+    a:hover {
+      color: $white;
+      
+      &:before {
+        background: transparentize($white, .8);
+      }
+    }
+  }
+  .footer {
+    color: $white;
+    
+    .footer__i {
+      display: none;
+    }
+
+    a {
+      color: transparentize($white, .4);
+    }
+    a:hover {
+      color: $white;
+      &:before {
+        background: transparentize($white, .8);
+      }
+    }
+  }
+
+  // Error Glitch
+  .glitch {
+    $offset1: 2px;
+    $offset2: -2px;
+    $highlight1: #49FC00;
+    $highlight2: adjust-hue($highlight1, 180);
+
+    position: relative;
+    display: inline-block;
+
+    &::before,
+    &::after  {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &::before {
+      left: $offset1;
+      text-shadow: -2px 0 $highlight1;
+      clip: rect(24px, 550px, 90px, 0);
+      animation: glitch-anim-2 3s infinite linear alternate-reverse;
+    }
+    &::after {
+      left: $offset2;
+      text-shadow: -2px 0 $highlight2;
+      clip: rect(85px, 550px, 140px, 0);
+      animation: glitch-anim 2.5s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitch-anim{
+      $steps:24;
+      @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+          clip:rect(random()*150+px,9999px,random()*150+px,0);
+        }
+      }
+    }
+
+    @keyframes glitch-anim-2{
+      $steps:30;
+      @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+          clip:rect(random()*150+px,9999px,random()*150+px,0);
+        }
+      }
+    }
+  }
+}

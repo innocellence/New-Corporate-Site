@@ -1,0 +1,16 @@
+body[class="contact"] {  
+  .card {
+    .heading span {
+      color: $grey;
+      font-size: $typo_hummingbird;
+      font-weight: normal;
+
+      &:before {
+        content: '___'
+      }
+    }
+    .card__footer {
+      padding-top: $margin_lg;
+    }
+  }
+}

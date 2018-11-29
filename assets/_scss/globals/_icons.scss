@@ -1,4 +1,7 @@
+///////////
 // Font Face
+///////////
+
 @font-face {
   font-family: $icon;
   font-style: normal;
@@ -10,7 +13,11 @@
        url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
 }
 
-// Icons
+
+///////////
+// Icon Styles
+///////////
+
 i.icon {
   height: auto;
   width: auto;
@@ -36,13 +43,17 @@ i.icon:not(.button):not(.input) {
 }
 
 i.icon.left {
-  margin-right: $margin_small;
+  margin-right: $margin_sm;
 }
 i.icon.right {
-  margin-left: $margin_small;
+  margin-left: $margin_sm;
 }
 
+
+///////////
 // Sizes
+///////////
+
 i.icon {
   &.i12:before { font-size: 12px !important; }
   &.i14:before { font-size: 14px !important; }
@@ -52,7 +63,11 @@ i.icon {
   &.i48:before { font-size: 48px !important; }
 }
 
+
+///////////
 // Icon Map
+///////////
+
 i.icon:before {
    content: attr(data-icon);
 }
