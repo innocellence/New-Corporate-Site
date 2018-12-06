@@ -82,7 +82,7 @@ en:
         url: /terms/
       3:
         name: Sitemap
-        url: /sitemap.xml           
+        url: /sitemap/           
         
 #####################
 ###### Chinese ######
@@ -97,10 +97,10 @@ zh:
         url: /cn/
       2:
         name: 关于我们
-        url: /cn/关于我们/
+        url: /cn/about/
       3:
         name: 联系我们
-        url: /cn/联系我们/ 
+        url: /cn/contact/ 
         
   ## Location ##      
   location: 
@@ -110,7 +110,7 @@ zh:
         name: "InnoCellence Dalian<br>大连高新园区<br>汇贤园区<br>7号腾飞软件园<br>2号11-05"
       2:
         name: XOther LocationsX
-        url: /cn/联系我们/
+        url: /cn/contact/
         class: other_locations
         
   ## Updates ##      
@@ -148,21 +148,21 @@ zh:
     title: Copyright
     items: 
       1: 
-        name: © 2018 InnoCellence. All Rights Reserved.XX
+        name: © 2018 InnoCellence. 版权所有
         
   ## Legal ##
   legal: 
     title: Legal
     items: 
       1: 
-        name: 条款
-        url: /cn/xxx/
+        name: 免责声明
+        url: /cn/disclaimer/
       2:
         name: 隐私政策
-        url: /cn/xxx/
+        url: /cn/privacy/
       3:
-        name: XSitemapX
-        url: /sitemap.xml         
+        name: 站点地图
+        url: /sitemap/         
  
 ######################
 ###### Japanese ######
@@ -177,17 +177,17 @@ jp:
         url: /jp/
       3:
         name: 問い合わせ
-        url: /jp/問い合わせ/ 
+        url: /jp/contact/ 
   
   ## Location ##
   location: 
     title: 訪問して
     items: 
       1: 
-        name: "InnoCellence Systems Japan, K.K.<br>〒163-1030<br>東京都新宿区西新宿3-7-1<br>新宿パークタワーＮ棟30階"
+        name: "イノセレンス・システムズ・ジャパン株式会社<br>〒163-1030<br>東京都新宿区西新宿3-7-1<br>新宿パークタワーＮ棟30階"
       2:
         name: その他の場所
-        url: /jp/コンタクト/
+        url: /jp/contact/
         class: other_locations
         
   ## Updates ##      
@@ -200,10 +200,10 @@ jp:
         external: true
       2:
         name: ニュース
-        url: /jp/xxxx/
+        url: /news/
       3:
         name: 白書
-        url: /jp/xxxx/      
+        url: /whitepaper/      
   
   ## Contact ##
   contact: 
@@ -229,10 +229,10 @@ jp:
     items: 
       1: 
         name: 個人情報保護方針
-        url: /jp/xxx/
+        url: /jp/privacy/
       3: 
-        name: 利用規約
-        url: /jp/xxx/
+        name: 免責事項
+        url: /jp/disclaimer/
       4:
         name: サイトマップ
-        url: /sitemap.xml
+        url: /sitemap/

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="648px" height="345px" viewBox="0 0 648 345" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="35.1135968%" cy="45.9162417%" fx="35.1135968%" fy="45.9162417%" r="100%" gradientTransform="translate(0.351136,0.459162),scale(0.532407,1.000000),rotate(90.000000),translate(-0.351136,-0.459162)" id="radialGradient-1">
+            <stop stop-color="#126094" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="58" width="648" height="345"></rect>
+    </defs>
+    <g id="Projects" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Diabetes-App" transform="translate(-360.000000, -58.000000)">
+            <g id="slide">
+                <g id="graphicArea" transform="translate(360.000000, 0.000000)">
+                    <g id="background">
+                        <use fill="#5AB8E5" xlink:href="#path-2"></use>
+                        <use fill="url(#radialGradient-1)" style="mix-blend-mode: multiply;" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

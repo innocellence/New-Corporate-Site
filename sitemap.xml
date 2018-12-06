@@ -13,7 +13,21 @@ redirect_from:
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>{% endunless %}{% endfor %}
-  {% for post in site.posts %}{% unless page.exclude == true %}
+{% for page in site.whitepaper %}{% unless page.exclude == true %}
+  <url>
+    <loc>{{ site.siteurl }}{{ site.baseurl }}{{ page.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>{% endunless %}{% endfor %}  
+{% for page in site.news %}{% unless page.exclude == true %}
+  <url>
+    <loc>{{ site.siteurl }}{{ site.baseurl }}{{ page.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>{% endunless %}{% endfor %}    
+{% for post in site.posts %}{% unless page.exclude == true %}
   <url>
     <loc>{{ site.siteurl }}{{ site.baseurl }}{{ post.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>

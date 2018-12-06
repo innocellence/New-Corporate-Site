@@ -10,10 +10,10 @@ menu: initialize
     <h2 class="area w--16 g__b heading e">{{ page.title }}</h2> 
     {% assign whitepapers = site.whitepaper | reverse %}
     {% for item in whitepapers %}{% if forloop.first %}
-    <div class="area w--8 m__b e">
+    <div class="area w--8 w__xl--9 w__lg--16 m__b e">
       <div class="card"> 
         <div class="card__content"> 
-          <div class="latest">Latest</div>
+          <div class="c--red">Latest</div>
           <h2 class="heading">{{ item.title }}</h2>
           <p>{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
           <p><a class="button button--primary" href="{{ item.url }}"><span>Read Whitepaper</span></a></p>
@@ -22,9 +22,9 @@ menu: initialize
       </div>
     </div>
     {% endif %}{% endfor %}
-    <div class="area tail w--8">
-      <img class="i_shadow e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_shadow.svg">
-      <img class="i_people e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_people.svg">
+    <div class="latest area w--6 hide--lg tail">
+      <img class="fluid i_shadow e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_shadow.svg">
+      <img class="fluid i_people e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_people.svg">
     </div>
   </div>
   {% include section__bottom.html %}

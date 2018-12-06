@@ -2,41 +2,49 @@
 ###### English ######
 #####################
 en:
+  - title: Award-winning Diabetes Patient Mobile Apps.
+    content: "Best New App and Editor's Choice - Apple China."
+    color: CFD8FF
+    bg: blueBg.svg
+    image: diaApp.png 
   - title: InnoCellence Wins Eli Lilly Global Supplier of the Year Award.
     content: '<a class="button button--primary" href="/news/2016-11-01-innocellence-wins-prestigious-2016-lilly-global-supplier-award/"><span>Read press release.</span></a>'
     color: D52B1E
-    image: customer01.png
+    bg: stripeBg.svg
+    image: winning.svg  
   - title: “I don’t know what I would do without you guys – you are my superheroes!!”
-    footnote:  "<strong>Cheryl Stevens</strong><br>Director, Application Development<br>General Cable Corporation"
+    footnote:  "<strong>Application Development Director</strong><br>Global Manufacturing Company"
     color: CFD8FF
-    bg: green_noise.png
-    image: customer01.png
-  - title: Award-winning Diabetes Patient Mobile Apps
-    content: "Best New App and Editor's Choice - Apple China."
-    color: CFD8FF
-    image: customer01.png 
+    bg: greenBg.svg
+    image: customerSuperHero.png
   - title: Pioneering Next-Generation HCP Engagament Tools.
     content: Connecting Multi-national Pharmaceuticals to over 100,000 physicians worldwide. 
     color: F2F3F3
-    bg: hospital.png
-    image: doctor.png 
-  - title: Improving compliance with gamified training apps
+    bg: hospitalBg.jpg
+    image: hcpEngagement.png 
+  - title: Improving compliance with gamified training applications.
     content: 
-    color: CFD8FF
-    image: customer01.png
-  - title: Building in-house innovation and user experience labs
+    bg: waveBg.svg
+    image: salesRepGame.png
+  - title: Building in-house innovation and user experience labs.
     content: '<a class="button button--primary" href="/about#lab"><span>Explore our Lab</span></a>'
+    bg: labBg.jpg
+    image: desk.png 
+  - title: “Our new platform will change the way we engage nurses and provide premium support to our patients!”
+    footnote:  "<strong>Diabetes Business Unit</strong><br>Fortune 500 Pharamceutical"
     color: CFD8FF
-    image: customer01.png 
+    bg: brownBg.svg
+    image: customerPremPlatform.png 
 
 #####################
 ###### Chinese ######
 #####################
 zh:
-  - title:
-    content:
-    color: 
-    image:
+  - title: 英诺瑞新荣获礼来环球年度供应商奖
+    content: '<a class="button button--primary" href="/news/2016-11-01-innocellence-wins-prestigious-2016-lilly-global-supplier-award/"><span>阅读新闻</span></a>'
+    color: D52B1E
+    bg: stripeBg.svg
+    image: winning.svg  
   
   
 ######################

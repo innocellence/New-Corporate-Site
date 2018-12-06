@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% assign meta = site.data.meta[page.lang] %}
@@ -22,7 +22,7 @@
     <!-- Translations -->
     {% assign translations = site.pages | where:"ref", page.ref | sort: 'lang' %}
     {% for item in translations %}
-    <link rel="alternate" hreflang="{{ item.lang }}" href="{{ item.url | prepend: site.baseurl_ }}" /> 
+    <link rel="alternate" hreflang="{{ item.lang }}" href="{{ item.url | prepend: site.baseurl }}"/> 
     {% endfor %}
     <!-- Style Core -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />  

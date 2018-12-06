@@ -17,10 +17,16 @@ en:
 ###### Chinese ######
 #####################
 zh:
-  - text:
-    img: 
-  - text: 
-    img: 
+  - text: 创新顾问
+    img:  icon_brain.svg
+  - text: 设计与用户体验
+    img:  icon_pen.svg
+  - text: 技术决绝方案
+    img:  icon_gear.svg
+  - text: 数据分析
+    img:  icon_chart.svg
+  - text: 数字服务
+    img:  icon_content.svg
   
   
 ######################

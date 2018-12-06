@@ -5,7 +5,7 @@ site_title: InnoCellence
 port: 8888
 
 #Google Analytics ID, auto populated to all pages
-#google_analytics: xxxxxxxxxx
+google_analytics: UA-29851112-1
 
 
 #Facebook Sharing
@@ -17,6 +17,7 @@ baseurl:
 
 #Permalinks
 permalink: /:categories/:year/:month/:day/:slug/
+
 
 #Set Syntax Highlighter
 #highlighter: rouge

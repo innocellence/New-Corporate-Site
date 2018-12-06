@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="648px" height="345px" viewBox="0 0 648 345" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="11.7422524%" cy="24.2174949%" fx="11.7422524%" fy="24.2174949%" r="146.436123%" gradientTransform="translate(0.117423,0.242175),scale(0.532407,1.000000),rotate(24.898139),scale(1.000000,1.072328),translate(-0.117423,-0.242175)" id="radialGradient-1">
+            <stop stop-color="#EAD6AF" offset="0%"></stop>
+            <stop stop-color="#EEC38C" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="58" width="648" height="345"></rect>
+    </defs>
+    <g id="Projects" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Premium-Platform" transform="translate(-360.000000, -58.000000)">
+            <g id="slide">
+                <g id="graphicArea" transform="translate(360.000000, 0.000000)">
+                    <g id="background">
+                        <use fill="#EED6AF" xlink:href="#path-2"></use>
+                        <use fill="url(#radialGradient-1)" style="mix-blend-mode: darken;" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

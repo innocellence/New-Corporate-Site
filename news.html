@@ -13,10 +13,10 @@ redirect_from:
   <div class="section__i g__b fade-e-below">
   {% for item in news %}
     <div class="area w--16">
-      <p class="date w--8 e">{{ item.date | date: '%d %B %Y' }}</p>
-      <h2 class="heading w--8 e">{{ item.title }}</h2>
+      <p class="date w--8 w__xl--12 w__lg--16 e">{{ item.date | date: '%d %B %Y' }}</p>
+      <h2 class="heading w--8 w__xl--12 w__lg--16 e">{{ item.title }}</h2>
     </div>
-    <div class="area w--10 m__t g__b">
+    <div class="area w--10 w__xl--12 w__lg--16 m__t g__b">
       {% if item.excerpt %}<p class="bullet e">{{ item.excerpt }}</p>{% else %}<p class="bullet e">{{ item.content | strip_html | truncatewords: 24 }}</p>{% endif %}
       <p><a class="button button--primary e" href="{{ item.url }}"><span>Read full story</span></a></p>
     </div>

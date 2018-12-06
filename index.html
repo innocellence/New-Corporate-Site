@@ -1,7 +1,6 @@
 ---
 title: Home
 layout: home
-menu: i nitialize
 excerpt: InnoCellence designs and develops the digital solutions companies need to succeed. From Market Research to Maintenance, and everything inbetween, we have you covered with end-to-end capabilities.
 ref: home
 redirect_from: 
@@ -28,32 +27,28 @@ redirect_from:
 
 <section id="agile" data-title="Agile, collaborative, determined"  class="section fade-e-below">
   <div class="section__i"> 
-    <div class="area w--16">
-      <h2 class="area w--6 w__xl--16 heading e">Agile, collaborative, determined.</h2> 
-      <p class="area w--6 w__xl--10 w__sm--16 bullet e">We believe that our design and development process has the power to create digital products that improve people's lives.</p>
+    <h2 class="area w--16 heading e">Agile, collaborative, determined.</h2> 
+    <div class="area w--6 w__xl--10 w__sm--16 m__b">
+      <p class="bullet e">We believe that our design and development process has the power to create digital products that improve people's lives.</p>
+      <p class="e"><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Learn more</span></a></p>
     </div>
-    <p class="area w--6 w__sm--16 e"><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Learn more</span></a></p>
-    <div class="area w--12 w__sm--18 o--right e">
+    <div class="area w--14 w__lg--20 o--right--4 tail e">
+      <svg viewBox="0 0 1011 510" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="lasers" stroke="#EF4B46" stroke-width="3" stroke-dasharray="78" stroke-linecap="round" stroke-linejoin="round">
+          <g id="lasers" transform="translate(143.000000, 0.000000)">
+              <path d="M1.5,55.5 L1.5,2.20240493e-13" id="beam"></path>
+              <path d="M185.5,145.5 L185.5,39.5" id="beam-1"></path>
+              <path d="M313.5,202.5 L313.5,23.5" id="beam-2"></path>
+              <path d="M505.5,92.5 L505.5,3.30402372e-13" id="beam-3"></path>
+              <path d="M684.5,145 L684.5,23.5" id="beam-4"></path>
+          </g>
+        </g>
+      </svg>
       <img class="fluid" src="{{ site.baseurl }}/assets/img/home/teamwork.svg">  
     </div>
   </div>
-<!--
-  <div class="frame">
-    <div class="frame__right e">
-      <div class="lasers">
-        <div class="beam beam--one"></div>
-        <div class="beam beam--two"></div>
-        <div class="beam beam--three"></div>
-        <div class="beam beam--four"></div>
-        <div class="beam beam--five"></div>
-      </div> 
-      <img class="fluid" src="{{ site.baseurl }}/assets/img/home/teamwork.svg">
-    </div>
-  </div>
--->
   {% include section__bottom.html color="white" %}
 </section>
-
 
 <section id="trusted" data-title="Trusted by the best" class="section fade-e-below bg--white">
   <div class="section__i">  
@@ -64,7 +59,6 @@ redirect_from:
     <p class="area w--6 w__xl--7 w__lg--10 w__sm--16 g__l g__l--lg bullet e">From Market Research to Maintenance, and everything inbetween, we have you covered with end-to-end capabilities. </p>
   </div>
 </section>
-  
   
 <section id="stories" class="section fade-e-below bg--white">
   <div class="section__i g__b swiper swiper-container">
@@ -80,7 +74,7 @@ redirect_from:
           </div>
           <div class="slide__image w--10">
             {% if i.bg %}
-            <img class="background" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.bg }}">
+            <img class="background" src="{{ site.baseurl }}/assets/img/home/stories/bg/{{ i.bg }}">
             <img class="graphic" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.image }}">
             {% else %}
             <div class="background" style="background-color:#{{ i.color }};"></div>
@@ -118,7 +112,7 @@ redirect_from:
     </div>
     <div class="area w--6 w__xl--8 w__lg--10 w__sm--16 m__t">
       <p class="bullet e">InnoCellence is headquartered in Singapore with offices in China and Japan.</p>
-      <p class="e"><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Contact us</span></a><a href="{{ site.baseurl }}/about/" class="button button--primary e"><span>Join the team</span></a></p>
+      <p class="e"><a href="{{ site.baseurl }}/contact/" class="button button--primary e"><span>Contact us</span></a><a href="{{ site.baseurl }}/careers/" class="button button--primary e"><span>Join the team</span></a></p>
     </div>
     <div class="area w--8 w__lg--10 w__sm--16 tail e">
       <svg viewBox="0 0 648 414" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -131,47 +125,3 @@ redirect_from:
 </section>
 
 {% include call.html %}
-
-
-<script>
-$(document).ready(function () {
-  var swiper = new Swiper ('#stories .swiper-container', {
-    direction: 'horizontal',
-    speed: 650,
-    spaceBetween: 0,
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    freeMode: false,
-    grabCursor: true,
-    watchSlidesVisibility: false,
-    disableOnInteraction: true,
-    parallax: true,
-//    autoplay: {
-//      delay: 4000,
-//    },
-    lazy: {
-      loadPrevNext: true,
-    },
-//    mousewheel: {
-//      enabled: true,
-//      releaseOnEdges: true,
-//    },
-
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'progressbar',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
-  $("#our_capabilities").mouseenter(function() {
-    (this).swiper.autoplay.stop();
-  });
-
-  $("#our_capabilities").mouseleave(function() {
-    (this).swiper.autoplay.start();
-  });
-});
-</script>

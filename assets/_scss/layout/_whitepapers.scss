@@ -1,24 +1,14 @@
 body[class="whitepapers"] {
 
   
-  #latest {
+  #whitepapers {
     .latest {
-      display: inline-block;
-      margin: 0;
-      padding: $padding_sm $padding_lg;
-      background: $red;
-      color: $white;
-      border-radius: $radius;
-      font-size: $typo_sparrow;
-      line-height: 1;
-      font-weight: normal;
-      letter-spacing: .01em;
-      text-decoration: none;
-    }
-
-    img {
-      right: 0;
-      position: absolute;
+      position: relative;
+      
+      .i_shadow {
+        right: 0;
+        position: absolute;
+      }
     }
   }
   

@@ -163,10 +163,11 @@ p {
         margin-left: -1.2rem;
         width: .6rem;
       }
+      @media only screen and (max-width: $screen_md) {
+        display: none;
+      }
     }
-    @media only screen and (max-width: $screen_sm) {
-      padding-left: 1.2rem;
-    }
+    
 
     // Inverted 
     &.inverted {
@@ -277,6 +278,9 @@ strong {
   font-size: $typo_hummingbird;
 }
 
+sup {
+  font-size: $typo_crow;
+}
 
 ///////////
 // Images

@@ -12,7 +12,6 @@
   background: transparentize($grey, .8);
   
   @media only screen and (max-width: $screen_md) {
-    transform: translateY(72px);
     transition: transform .4s;
     
     &.invisible {
@@ -102,6 +101,7 @@ nav {
   height: auto;
   right: 0;
   z-index: 1000;
+  overflow: hidden;
   transform: translate(0,0);
   transition: all $base_duration $base_motion;
   animation: firstFadeInAndDrop $base_duration;
@@ -149,11 +149,13 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: $gutter $gap;
+  padding: $margin_lg $gap;
+  background: $white;
   
   @media only screen and (max-width: $screen_md) {
     padding: $margin $gap;
     background: $white;
+    top: 2px;
   }
   
   // Logo
@@ -170,11 +172,12 @@ nav {
     }
     
     #innoLogo {
+      fill: $red;
       transition: all $base_motion $base_duration;
       
-      @media only screen and (max-width: $screen_md) {
-        fill: $red;
-      }
+//      @media only screen and (max-width: $screen_md) {
+//        fill: $red;
+//      }
     }
   }
 
@@ -192,10 +195,10 @@ nav {
     
     &__top,
     &__bottom {
-      height: 3px;
-      width: 30px;
+      height: 2px;
+      width: 36px;
       background: $white;
-      margin: 12px 0;
+      margin: 13px 0;
       transition: $base_duration $base_motion;
       
       @media only screen and (max-width: $screen_md) {
@@ -213,45 +216,32 @@ nav {
       }
       
       @media only screen and (max-width: $screen_md) {
-        .mobileTrigger__top,
-        .mobileTrigger__bottom {
+        .mobileTrigger__top {
           background: $red;
+        }
+        .mobileTrigger__bottom {
+          background: $blue;
         }
       }
     }
   }
 
   // Default Nav Theme
-  &.default {
-
-    .logo #innoLogo {
-      fill: $red;
-    }
-    .menu__item {
-      background: transparentize($white, .05);
-      color: $black;
-
-      &.active {
-        color: $red;
-        background: $white;
-      }
-    }
-    .mobileTrigger {
-      &:hover {
-        .mobileTrigger__top,
-        .mobileTrigger__middle,
-        .mobileTrigger__bottom {
-          background: $red;
-        }
-      }
-      
-      .mobileTrigger__top,
-      .mobileTrigger__middle,
-      .mobileTrigger__bottom {
-        background: $black;
-      }
-    }
-  }
+//  &.default {
+//
+//    .logo #innoLogo {
+//      fill: $red;
+//    }
+//    .menu__item {
+//      background: transparentize($white, .05);
+//      color: $black;
+//
+//      &.active {
+//        color: $red;
+//        background: $white;
+//      }
+//    }
+//  }
 
   // Menus
   .menu {
@@ -269,15 +259,17 @@ nav {
       display: block;
       margin: 0 $padding_sm;
       padding: $padding_sm $padding_lg;
-      background: transparent;
-      color: $white;
+//      background: transparent;
+//      color: $white;
+      background: transparentize($white, .05);
+      color: $black;
       border-radius: $radius;
       font-size: $typo_sparrow;
       font-weight: normal;
       letter-spacing: .01em;
       text-decoration: none;
       pointer-events: auto;
-      transition: all $base_motion $base_duration;
+      transition: color $base_motion $base_duration, background $base_motion $base_duration;
       
       a {
         color: inherit;
@@ -294,8 +286,10 @@ nav {
         color: $red;
       }
       &.active {
-        color: $white;
-        background: transparentize($white, .9);
+//        color: $white;
+//        background: transparentize($white, .9);
+        color: $red;
+        background: $white;
 
         &:hover {
           background: $white;
@@ -318,14 +312,13 @@ nav {
     // Mobile styles
     @media only screen and (max-width: $screen_md) {
       flex: 1 1 auto;
-      justify-content: flex-end;
+      justify-content: center;
       opacity: 0;
       visibility: hidden;
-      transition: opacity .2s 0s;
       
       .menu__item {
-        background: $black;
-        color: $white;
+        background: $white;
+        color: $black;
         
         &:hover {
           background: $white;
@@ -364,33 +357,47 @@ nav {
 @media only screen and (max-width: $screen_md) {
   nav.expanded {
     background: $white;
-    padding: $gap;
+    padding: $gap 0;
     height: 100vh;
+    overflow-y: scroll;
     z-index: 1001;
     transition: transform .4s, background .2s, padding .3s .2s;
 
     // Mobile Menu Active
-    .mobileTrigger__top {
-      transform-origin: 26px;
-      transform: rotate(-45deg);
+    .mobileTrigger {
+      &:hover {
+      }
+      &__top {
+        transform-origin: 28px;
+        transform: rotate(-45deg) !important;
+        background: $red !important;
+      }
+      &__bottom {
+        transform: rotate(45deg) !important;
+        transform-origin: 28px;
+        background: $blue !important;
+      }
     }
-    .mobileTrigger__bottom {
-      transform: rotate(45deg);
-      transform-origin: 26px;
-    }
-    .mobileTrigger__top,
-    .mobileTrigger__bottom {
-      background: $red !important;
-    }
+
     .mobile_navigation {
       opacity: 1;
+      height: auto;
       visibility: visible;
       transition: opacity .4s .5s;
+    }
+    .main_navigation {
+      flex-wrap: wrap;
     }
     .menu--right {
       opacity: 1;
       visibility: visible;
       transition: opacity .4s .5s;
+      padding-top: $margin_lg;
+      margin-top: $margin_lg;
+      border-top: 1px solid transparentize($grey, .8);
+      flex: 1 1 100%;
+      justify-content: flex-start;
+      order: 3;
     }
   }    
 }
@@ -406,66 +413,87 @@ nav {
   visibility: hidden;
   transition: opacity .2s 0s;
   
-  > div {
-    width: 85vw;
-  }
-  .swiper-slide {
-    height: 50vh;
-    padding: $gap $gap /2;
+  ul {
+    padding: $margin_lg $gap;
+    margin: 0;
+    list-style: none;
     
+    li {
+      margin-bottom: $margin;
+    }
     a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      color: $black;
+      color: inherit;
       text-decoration: none;
-    }
-    h1 {
-      margin-bottom: $gutter;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity .2s 0s $base_motion, transform .2s .3s $base_motion;
-    }
-    .porthole {
-      border-radius: $radius;
-      background: $sky;
-    }
-    
-    &-active {
-      h1 {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity .2s .3s $base_motion, transform .2s .3s $base_motion;
+      transition: all $base_duration $base_motion;
+      
+      &:hover {
+        color: $red;
       }
     }
   }
   
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    width: 100%;
-    
-    &.swiper-pagination-bullets .swiper-pagination-bullet {
-      margin: $margin_sm;
-    }
-
-    .swiper-pagination-bullet {
-      width: $margin;
-      height: 6px;
-      border-radius: $radius_sm;
-      display: block;
-      background: transparentize($grey, .8);
-      opacity: 1;
-      transition: all $base_duration $base_motion;
-      
-      &-active {
-        opacity: 1;
-        background: $red;
-        width: $margin_sm;
-      }
-    }
-  }
+  
+//  PENDING >>> swiper version
+//  > div {
+//    width: 85vw;
+//  }
+//  .swiper-slide {
+//    height: 50vh;
+//    padding: $gap $gap /2;
+//    
+//    a {
+//      display: block;
+//      width: 100%;
+//      height: 100%;
+//      color: $black;
+//      text-decoration: none;
+//    }
+//    h1 {
+//      margin-bottom: $gutter;
+//      opacity: 0;
+//      transform: translateY(50px);
+//      transition: opacity .2s 0s $base_motion, transform .2s .3s $base_motion;
+//    }
+//    .porthole {
+//      border-radius: $radius;
+//      background: $sky;
+//    }
+//    
+//    &-active {
+//      h1 {
+//        opacity: 1;
+//        transform: translateY(0);
+//        transition: opacity .2s .3s $base_motion, transform .2s .3s $base_motion;
+//      }
+//    }
+//  }
+//  
+//  &__pagination {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    opacity: 1;
+//    width: 100%;
+//    
+//    &.swiper-pagination-bullets .swiper-pagination-bullet {
+//      margin: $margin_sm;
+//    }
+//
+//    .swiper-pagination-bullet {
+//      width: $margin;
+//      height: 6px;
+//      border-radius: $radius_sm;
+//      display: block;
+//      background: transparentize($grey, .8);
+//      opacity: 1;
+//      transition: all $base_duration $base_motion;
+//      
+//      &-active {
+//        opacity: 1;
+//        background: $red;
+//        width: $margin_sm;
+//      }
+//    }
+//  }
   
 }

@@ -11,18 +11,26 @@ en:
   - text: Global reach and delivery
     img:  icon_globe.svg
   - text: Dedicated Usability Lab
-    img:  icon_globe.svg
+    img:  icon_lab.svg
   - text: Pharmaceutical and Healthcare SMEs
-    img:  icon_globe.svg
+    img:  icon_sme.svg
 
 #####################
 ###### Chinese ######
 #####################
 zh:
-  - text:
-    img: 
-  - text: 
-    img: 
+  - text: 全方位的技术服务合作伙伴
+    img:  icon_shake.svg
+  - text: 办公室坐落于新加坡，中国和日本
+    img:  icon_office.svg
+  - text: 全能资深团队遍布全球
+    img:  icon_people.svg
+  - text: 环球视野服务全球
+    img:  icon_globe.svg
+  - text: 专业用户研究实验室
+    img:  icon_lab.svg
+  - text: 制药与健康领域数字服务专家
+    img:  icon_sme.svg
   
   
 ######################

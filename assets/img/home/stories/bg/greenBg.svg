@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="648px" height="345px" viewBox="0 0 648 345" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="74.4928469%" cy="80.1212746%" fx="74.4928469%" fy="80.1212746%" r="150.920789%" gradientTransform="translate(0.744928,0.801213),scale(0.532407,1.000000),rotate(-162.458349),scale(1.000000,1.072328),translate(-0.744928,-0.801213)" id="radialGradient-1">
+            <stop stop-color="#AFEEEA" offset="0%"></stop>
+            <stop stop-color="#95CFCC" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="0" y="0" width="648" height="345"></rect>
+    </defs>
+    <g id="Projects" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Super-Heroes" transform="translate(-360.000000, -58.000000)">
+            <g id="slide">
+                <g id="graphicArea" transform="translate(360.000000, 0.000000)">
+                    <g id="Bitmap" transform="translate(0.000000, 58.000000)">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <g id="Mask">
+                            <use fill="#AFEEEE" xlink:href="#path-2"></use>
+                            <use fill="url(#radialGradient-1)" style="mix-blend-mode: darken;" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

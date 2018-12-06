@@ -1,5 +1,5 @@
 ---
-title: User Interface (UI) / Visual Designer
+title: Visual Design Lead
 location: Singapore
 department: creative
 ---

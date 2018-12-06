@@ -3,9 +3,12 @@ layout: default
 ---
 <!-- #main -->
 <main class="wrapper">
-  <div class="section"> 
-    <div class="container g"> 
-    {{ content }}
+  <section class="section bg--white"> 
+    <div class="section__i g__b"> 
+      <div class="area w--16">
+      {{ content }}
+      </div>
     </div>
-  </div>
+    {% include section__bottom.html %}
+  </section>
 </main>

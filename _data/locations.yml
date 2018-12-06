@@ -4,32 +4,32 @@
 en:
   - country: Singapore
     time: sgTime
-    address: 'InnoCellence Systems Pte. Ltd.<br>24 Peck Seah Street #05-01,<br>Singapore, 079314.'
+    address: 'InnoCellence Systems Pte. Ltd.<br>24 Peck Seah Street #05-01<br>Singapore, 079314'
     phone: +65 6222 6959
   - country: Dalian
     time: dlTime
-    address: 'InnoCellence Dalian<br>大连高新园区<br>汇贤园区<br>7号腾飞软件园<br>2号11-05'
+    address: 'InnoCellence Dalian<br>Building 2 #11-05<br>No. 7 Hui Xian Yuan<br>Dalian Hi-tech Industrial Zone<br>Dalian 116025'
     phone: +86-411-6683-8010
   - country: Tokyo
     time: jpTime
-    address: 'InnoCellence Systems Japan, K.K.<br>〒163-1030<br>東京都新宿区西新宿3-7-1<br>新宿パークタワーＮ棟30階'
+    address: 'InnoCellence Systems Japan, K.K.<br>Shinjuku Park Tower<br>3-7-1 Nishi Shinjuku, Shinjuku-ku<br> Tokyo<br>〒163-1030'
     phone: +81 (0)3-5326-3124
 
 #####################
 ###### Chinese ######
 #####################
 zh:
-  - country: Singapore
+  - country: 新加坡
     time: sgTime
     address: 'InnoCellence Systems Pte. Ltd.<br>24 Peck Seah Street #05-01,<br>Singapore, 079314.'
     phone: +65 6222 6959
-  - country: Dalian
+  - country: 大连
     time: dlTime
     address: 'InnoCellence Dalian<br>大连高新园区<br>汇贤园区<br>7号腾飞软件园<br>2号11-05'
     phone: +86-411-6683-8010
-  - country: Tokyo
+  - country: 东京
     time: jpTime
-    address: 'InnoCellence Systems Japan, K.K.<br>〒163-1030<br>東京都新宿区西新宿3-7-1<br>新宿パークタワーＮ棟30階'
+    address: 'InnoCellence Systems Japan, K.K.<br>Shinjuku Park Tower<br>3-7-1 Nishi Shinjuku, Shinjuku-ku<br>Tokyo<br>〒163-1030'
     phone: +81 (0)3-5326-3124
   
   
@@ -37,15 +37,15 @@ zh:
 ###### Japanese ######
 ######################
 jp:
-  - country: Singapore
+  - country: シンガポール
     time: sgTime
-    address: 'InnoCellence Systems Pte. Ltd.<br>24 Peck Seah Street #05-01,<br>Singapore, 079314.'
+    address: 'InnoCellence Systems Pte. Ltd.<br>24 Peck Seah Street #05-01<br>Singapore, 079314'
     phone: +65 6222 6959
-  - country: Dalian
+  - country: 大连
     time: dlTime
     address: 'InnoCellence Dalian<br>大连高新园区<br>汇贤园区<br>7号腾飞软件园<br>2号11-05'
     phone: +86-411-6683-8010
-  - country: Tokyo
+  - country: 東京
     time: jpTime
-    address: 'InnoCellence Systems Japan, K.K.<br>〒163-1030<br>東京都新宿区西新宿3-7-1<br>新宿パークタワーＮ棟30階'
+    address: 'イノセレンス・システムズ・ジャパン株式会社<br>〒163-1030<br>東京都新宿区西新宿3-7-1<br>新宿パークタワーＮ棟30階'
     phone: +81 (0)3-5326-3124

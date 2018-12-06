@@ -1,6 +1,22 @@
+{% if page.lang == 'jp' %}
+<section id="contact" class="section cta fade-e-below">
+  <div class="section__i">
+    <h2 class="heading e">XXXXXX We're the digital solutions partner you're looking for.</h2>
+    <p class="e"><a href="{{ site.baseurl }}/jp/contact/" class="button button--primary"><span>問い合わせ</span></a></p>
+  </div>
+</section>
+{% elsif page.lang == 'zh' %}
+<section id="contact" class="section cta fade-e-below">
+  <div class="section__i">
+    <h2 class="heading e">XXXXXX We're the digital solutions partner you're looking for.</h2>
+    <p class="e"><a href="{{ site.baseurl }}/cn/contact/" class="button button--primary"><span>联系我们</span></a></p>
+  </div>
+</section>
+{% else %}
 <section id="contact" class="section cta fade-e-below">
   <div class="section__i">
     <h2 class="heading e">We're the digital solutions partner you're looking for.</h2>
     <p class="e"><a href="{{ site.baseurl }}/contact/" class="button button--primary"><span>Contact us</span></a></p>
   </div>
 </section>
+{% endif %}

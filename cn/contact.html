@@ -1,0 +1,38 @@
+---
+title: 联系我们
+layout: contact
+ref: contact
+redirect_from:
+  - /d/cn/contact/
+---
+<section id="contact" data-title="联系我们" class="section bg--white fade-e-below">
+  <div class="section__i"> 
+    <div class="area w--16">
+      <h4 class="heading e">XXNew Business:</h4>
+      <h1 class="heading e"><a href="mailto:info@innocellence.com">info@innocellence.com</a></h1>
+    </div>
+    <div class="area m__t g__b w--16">
+      <h4 class="heading e">XXJoin the Team:</h4>
+      <h1 class="heading e"><a href="mailto:careers@innocellence.com">careers@innocellence.com</a></h1>
+    </div>
+  </div>
+  {% include section__bottom.html %}
+</section>
+<section id="locations" class="section fade-e-below"> 
+  <div class="section__i"> 
+    <h4 class="area w--16 heading e">XXOur Locations</h4> 
+    <div class="w--16 grid grid--3 grid--gap">
+      {% for i in site.data.locations[page.lang] %}
+      <div class="card t no--h__pad e">
+        <div class="card__content">
+          <h3 class="heading">{{ i.country }} <span id="{{ i.time }}"></span></h3>
+          <p>{{ i.address }}</p>
+        </div>
+        <div class="card__footer">
+          <p><i class="icon" data-icon="phone"></i> {{ i.phone }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div> 
+  </div>
+</section>

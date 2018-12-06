@@ -123,6 +123,7 @@ function navigation () {
   // Variables
   var $n = $('nav'),
       $t = $('#mobileMenuTrigger'),
+      $l = $('.mobile_navigation a'),
       $h = $('html'),
       $b = $('body'),
       $p = $('.progress'),
@@ -133,38 +134,47 @@ function navigation () {
       hideShowOffset = 6; // scrolling value after which triggers hide/show menu
   
   // Populate the swiper
-  var menuSwiper = new Swiper ('#menu_swiper', {
-    direction: 'horizontal',
-    slidesPerView: '1',
-    initialSlide: "{% for item in site.data.menus[page.lang].main.items %}{{}}{% if page.title == item.name %}{{ forloop.index | minus: 1 }}{% endif %}{% endfor %}",
-//    "{% for item in site.data.menus[page.lang].main.items %}{% if page.title == item.name %}{{ forloop.index | minus: 1 }}{% endif %}{% endfor %}",
-//    {{ site.data.menus[page.lang].main.items.size }}
-//    grabCursor: true,
-    watchSlidesVisibility: true,
-    mousewheel: {
-      enabled: true,
-      releaseOnEdges: true,
-    },
-    pagination: {
-      el: '.mobile_navigation__pagination',
-      type: 'bullets',
-    },
-  })
-  var menuSwiper = document.querySelector('#menu_swiper').swiper
+//  var menuSwiper = new Swiper ('#menu_swiper', {
+//    direction: 'horizontal',
+//    slidesPerView: '1',
+//    initialSlide: "{% for item in site.data.menus[page.lang].main.items %}{{}}{% if page.title == item.name %}{{ forloop.index | minus: 1 }}{% endif %}{% endfor %}",
+////    "{% for item in site.data.menus[page.lang].main.items %}{% if page.title == item.name %}{{ forloop.index | minus: 1 }}{% endif %}{% endfor %}",
+////    {{ site.data.menus[page.lang].main.items.size }}
+////    grabCursor: true,
+//    watchSlidesVisibility: true,
+//    mousewheel: {
+//      enabled: true,
+//      releaseOnEdges: true,
+//    },
+//    pagination: {
+//      el: '.mobile_navigation__pagination',
+//      type: 'bullets',
+//    },
+//  })
+//  var menuSwiper = document.querySelector('#menu_swiper').swiper
 
+  // Close Moble Menu on link select
+  $l.click(function() {
+    $n.removeClass('expanded');
+    $h.removeClass('no_scroll');
+    $('.mobile_navigation').slideUp();
+    console.log('Shut the front🚪');
+  })
 
   // Define mobile trigger
   $t.click(function() {
     if ($n.hasClass('expanded')) {
       $n.removeClass('expanded');
       $h.removeClass('no_scroll');
-      menuSwiper.update();
+//      menuSwiper.update();
       $('.mobile_navigation').slideUp();
+      console.log('Shut the front🚪');
     } else {
       $n.removeClass('invisible').addClass('expanded');
       $h.addClass('no_scroll');
       $('.mobile_navigation').slideDown();
-      menuSwiper.update();
+//      menuSwiper.update();
+      console.log('🧞 Open sesame');
     }
   })
 
@@ -426,6 +436,42 @@ function layout() {
         .setTween(scatter).addTo(c);
       })
     });
+    
+    ///////////
+    // Stories Swiper
+    ///////////
+    
+    if ($('#stories').length ) {
+      
+      $('#stories').imagesLoaded( function() {
+        // Story images loaded > Intiate Swiper
+        console.log('#stories 🖼️ loaded');
+
+        var swiper = new Swiper ('#stories .swiper-container', {
+          direction: 'horizontal',
+          speed: 650,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          freeMode: false,
+          grabCursor: true,
+          watchSlidesVisibility: true,
+          disableOnInteraction: true,
+          parallax: true,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        })
+      });
+    }
     
   } else {}
   
