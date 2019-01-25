@@ -4,17 +4,24 @@
 // Detect                                                         //
 // -------------------------------------------------------------- //
 
+///////////
 // Layout Check
-//var $pageLayout = $('body').attr('class');
+///////////
+var $pageLayout = $('body').attr('class');
 
+
+///////////
 // Mobile Check
+///////////
 if ($('.mobile').css('display') === 'block') {
   
 	var isMobile = true;
 
 } else {}
 
+///////////
 // Touch Device Check
+///////////
 function isTouchDevice() {
 
   return 'ontouchstart' in window ||
@@ -22,7 +29,9 @@ function isTouchDevice() {
 
 }
 
+///////////
 // Resize Check
+///////////
 var browser_w = $(window).innerWidth(), 
     browser_h = $(window).innerHeight(),
     resizeOverlay = "<div class='resize__content'><h2>Oops, your browser window is too small!</h2><p>We have optimized our site for windows wider than 360px. Please resize your browser window.</p></div>";
@@ -74,14 +83,34 @@ $(window).resize(function() {
 // -------------------------------------------------------------- //
 // Basic Functions                                                //
 // -------------------------------------------------------------- //
+
+///////////
+// IE9+ support forEach
+///////////
+function forEach() {
+  if (typeof NodeList.prototype.forEach === "function")
+    return false;
+  else
+    NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
+///////////
+// External Links
+///////////
 function externalLinks() {
   $("a[href^='http']").attr("target","_blank").addClass("ext");
 }
 
+///////////
+// Custom Generator
+///////////
 function cursorGenerate() {
   $('body').prepend('<div class="cursor"></div>');
 }
 
+///////////
+// Replace Cursor
+///////////
 function cursorReplace() {
   $('a').on({
     mouseenter: function() {
@@ -99,6 +128,9 @@ function cursorReplace() {
   });
 }
 
+///////////
+// Smooth Scroll
+///////////
 function smoothScroll () {
   $('a[href^="#"]').click(function() {
     var $target = $(this.hash);
@@ -118,6 +150,7 @@ function smoothScroll () {
 // -------------------------------------------------------------- //
 // Navigation + Progress                                          //
 // -------------------------------------------------------------- //
+
 function navigation () {
 
   // Variables
@@ -133,26 +166,6 @@ function navigation () {
       menuOffset = $('.main_navigation').outerHeight(),
       hideShowOffset = 6; // scrolling value after which triggers hide/show menu
   
-  // Populate the swiper
-//  var menuSwiper = new Swiper ('#menu_swiper', {
-//    direction: 'horizontal',
-//    slidesPerView: '1',
-//    initialSlide: "{% for item in site.data.menus[page.lang].main.items %}{{}}{% if page.title == item.name %}{{ forloop.index | minus: 1 }}{% endif %}{% endfor %}",
-////    "{% for item in site.data.menus[page.lang].main.items %}{% if page.title == item.name %}{{ forloop.index | minus: 1 }}{% endif %}{% endfor %}",
-////    {{ site.data.menus[page.lang].main.items.size }}
-////    grabCursor: true,
-//    watchSlidesVisibility: true,
-//    mousewheel: {
-//      enabled: true,
-//      releaseOnEdges: true,
-//    },
-//    pagination: {
-//      el: '.mobile_navigation__pagination',
-//      type: 'bullets',
-//    },
-//  })
-//  var menuSwiper = document.querySelector('#menu_swiper').swiper
-
   // Close Moble Menu on link select
   $l.click(function() {
     $n.removeClass('expanded');
@@ -166,14 +179,12 @@ function navigation () {
     if ($n.hasClass('expanded')) {
       $n.removeClass('expanded');
       $h.removeClass('no_scroll');
-//      menuSwiper.update();
       $('.mobile_navigation').slideUp();
       console.log('Shut the front🚪');
     } else {
       $n.removeClass('invisible').addClass('expanded');
       $h.addClass('no_scroll');
       $('.mobile_navigation').slideDown();
-//      menuSwiper.update();
       console.log('🧞 Open sesame');
     }
   })
@@ -292,79 +303,89 @@ function navigation () {
 // Parallax / Movement                                            //
 // -------------------------------------------------------------- //
 
-//// Parallax
-//window.requestAnimFrame = (function() {
-//  return window.requestAnimationFrame ||
-//    window.webkitRequestAnimationFrame ||
-//    window.mozRequestAnimationFrame ||
-//    window.oRequestAnimationFrame ||
-//    window.msRequestAnimationFrame ||
-//    function(callback) {
-//      window.setTimeout(callback, 1000 / 60);
-//    };
-//})();
-//
-//// Home Parallax
-//function homeParallax() {
-//  if (isMobile === true) {
-//  } else {
-//    var viewportTop = $(window).scrollTop(),
-//      windowHeight = $(window).height(),
-//      viewportBottom = windowHeight + viewportTop,
-//      sym = '-';
-//
-//    if ($(window).width()) {
-////      $('.headline').each(function() {
-////        var distance = (viewportTop * .2).toFixed(2);
-////        $(this).css('transform', 'translate3d(0, ' + distance + 'px,0)');
-////      });
-////      $('.section--one').each(function() {
-////        var distance = (viewportTop * .2).toFixed(2);
-////        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
-////      });
-////      $('.section--two').each(function() {
-////        var distance = (viewportTop * .3).toFixed(2);
-////        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
-////      });
-////      $('.home__item.content').each(function() {
-////        var distance = (viewportTop * .1).toFixed(2);
-////        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
-////      });
-////      $('.home__item.support').each(function() {
-////        var distance = (viewportTop * .15).toFixed(2);
-////        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
-////      });
-//    }
-//  }
-//}
-//// Menu Parallax
-//function menuParallax() {
-//  if (isMobile === true) {
-//  } else {
-//    var viewportTop = $(window).scrollTop(),
-//      windowHeight = $(window).height(),
-//      viewportBottom = windowHeight + viewportTop,
-//      sym = '-';
-//
-//    if ($(window).width()) {
-//      $('.main_nav').each(function() {
-//        var distance = (viewportTop * .1).toFixed(2);
-//        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
-//      });   
-//    }
-//  }
-//}
-//
-//
-//// Movements
-//function menuMove() {
-//  requestAnimFrame(menuMove);
-//  menuParallax();
-//}
-//function homeMove() {
-//  requestAnimFrame(homeMove);
-//  homeParallax();
-//}
+///////////
+// Set Animation Frame
+///////////
+
+window.requestAnimFrame = (function() {
+return window.requestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame ||
+  function(callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
+})();
+
+///////////
+// Parallax
+///////////
+
+function servicesParallax() {
+  if (isMobile === true) {
+  } else {
+    var viewportTop = $(window).scrollTop(),
+      windowHeight = $(window).height(),
+      viewportBottom = windowHeight + viewportTop,
+      sym = '-';
+
+    if ($(window).width()) {
+      $('#innovation-consulting img.fluid').each(function() {
+        var distance = (viewportTop * .1).toFixed(2);
+        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
+      });
+    }
+  }
+}
+
+function aboutParallax() {
+  if (isMobile === true) {
+  } else {
+    var viewportTop = $(window).scrollTop(),
+      windowHeight = $(window).height(),
+      viewportBottom = windowHeight + viewportTop,
+      sym = '-';
+
+    if ($(window).width()) {
+      $('#about img.fluid').each(function() {
+        var distance = (viewportTop * .1).toFixed(2);
+        $(this).css('transform', 'translate3d(0, ' + sym + distance + 'px,0)');
+      });
+    }
+  }
+}
+
+function homeParallax() {
+  if (isMobile === true) {
+  } else {
+    var viewportTop = $(window).scrollTop(),
+      windowHeight = $(window).height(),
+      viewportBottom = windowHeight + viewportTop,
+      sym = '-';
+
+    if ($(window).width()) {
+      // Add homeParallax here
+    }
+  }
+}
+
+///////////
+// Movement
+///////////
+
+function servicesMove() {
+  requestAnimFrame(servicesMove);
+  servicesParallax();
+}
+function aboutMove() {
+  requestAnimFrame(aboutMove);
+  aboutParallax();
+}
+function homeMove() {
+  requestAnimFrame(homeMove);
+  homeParallax();
+}
 
 
 // -------------------------------------------------------------- //
@@ -399,15 +420,20 @@ function layout() {
         // Loading
         var load = new TimelineMax()
         .add([
-          TweenMax.staggerFromTo(".masthead__panel--top .word", 1, { y: "20px", autoAlpha: 0 }, { y: 0, autoAlpha: 1, className:"+=load" }, .1),
-          TweenMax.staggerFromTo(".masthead__panel--bottom .word", 1, { y: "20px", autoAlpha: 0 }, { y: 0, autoAlpha: 1, className:"+=load" }, .1),
+          TweenMax.fromTo(".masthead__panel--top", .5, {autoAlpha: 0 }, { autoAlpha: 1 }),
+          TweenMax.fromTo(".masthead__panel--bottom", .5, { autoAlpha: 0 }, { autoAlpha: 1 }),
+          TweenMax.staggerFromTo(".masthead__panel--top .word", 1, { autoAlpha: 1 }, { autoAlpha: 1, className:"+=load" }, .1),
+          TweenMax.staggerFromTo(".masthead__panel--bottom .word", 1, { autoAlpha: 1 }, { autoAlpha: 1, className:"+=load" }, .1),
         ])
         .add([
-          TweenMax.to(".masthead__panel .word", 1, { className:"+=high" }),
-          TweenMax.to($('.masthead__panel--top .word[data-word="design"] .char'), 1, { textShadow: "-1px -1px 0 #375EB4, 1px -1px 0 #375EB4, -1px 1px 0 #375EB4, 1px 1px 0 #375EB4" }),
-          TweenMax.to($('.masthead__panel--top .word[data-word="develop"] .char'), 1, { textShadow: "-1px -1px 0 #375EB4, 1px -1px 0 #375EB4, -1px 1px 0 #375EB4, 1px 1px 0 #375EB4" }),
-          TweenMax.to($('.masthead__panel--top .word[data-word="succeed."] .char'), 1, { textShadow: "-1px -1px 0 #375EB4, 1px -1px 0 #375EB4, -1px 1px 0 #375EB4, 1px 1px 0 #375EB4" }),
-          TweenMax.to(".masthead .link", 1, { className:"+=load", ease: Power2.easeInOut }),
+          TweenMax.fromTo(".masthead__panel--top .masthead__subline", .5, { autoAlpha: 0 }, { autoAlpha: 1 }),
+          TweenMax.to($('.masthead__panel--top .word[data-word="design"] .char'), 1, { color: "#FFFFFF", textShadow: "-1px -1px 0 #375EB4, 1px -1px 0 #375EB4, -1px 1px 0 #375EB4, 1px 1px 0 #375EB4", ease: Power2.easeInOut, delay: .65 }),
+          TweenMax.to($('.masthead__panel--bottom .word[data-word="design"] .char'), 1, { color: "#375EB4", ease: Power2.easeInOut, delay: .65 }),
+          TweenMax.to($('.masthead__panel--top .word[data-word="develop"] .char'), 1, { color: "#FFFFFF", textShadow: "-1px -1px 0 #375EB4, 1px -1px 0 #375EB4, -1px 1px 0 #375EB4, 1px 1px 0 #375EB4", ease: Power2.easeInOut, delay: .65 }),
+          TweenMax.to($('.masthead__panel--bottom .word[data-word="develop"] .char'), 1, { color: "#375EB4", ease: Power2.easeInOut, delay: .65 }),
+          TweenMax.to($('.masthead__panel--top .word[data-word="succeed."] .char'), 1, { color: "#FFFFFF", textShadow: "-1px -1px 0 #375EB4, 1px -1px 0 #375EB4, -1px 1px 0 #375EB4, 1px 1px 0 #375EB4", ease: Power2.easeInOut, delay: .65 }),
+          TweenMax.to($('.masthead__panel--bottom .word[data-word="succeed."] .char'), 1, { color: "#375EB4", ease: Power2.easeInOut, delay: .65 }),
+          TweenMax.to(".masthead .link", 1, { className:"+=load", ease: Power2.easeInOut, delay: .65 }),
         ]);
         
         // Scatter
@@ -415,7 +441,6 @@ function layout() {
           .add([
             TweenMax.staggerFromTo(".masthead__panel--top .word", 1, { y: 0, autoAlpha: 1 }, { y: "-80%", autoAlpha: 1, ease: Power2.easeInOut }, .1),
             TweenMax.staggerFromTo(".masthead__panel--bottom .word", 1, { y: 0, autoAlpha: 1 }, { y: "-80%", autoAlpha: 0, ease: Power2.easeInOut }, .1),
-//            TweenMax.to(".masthead .link", 1, { autoAlpha: 0, ease: Power2.easeInOut }),
           ]);
         
         // Build Scene
@@ -452,6 +477,7 @@ function layout() {
           speed: 650,
           spaceBetween: 0,
           slidesPerView: 'auto',
+          autoHeight: true,
           centeredSlides: true,
           freeMode: false,
           grabCursor: true,
@@ -472,6 +498,12 @@ function layout() {
         })
       });
     }
+    
+    ///////////
+    // Load Movement
+    ///////////
+    
+    homeMove();
     
   } else {}
   
@@ -534,6 +566,50 @@ function layout() {
       })
     });  
     
+    
+    ///////////
+    // Voices Swiper
+    ///////////
+    
+    if ($('#voices').length ) {
+      
+      $('#voices').imagesLoaded( function() {
+        // Voices images loaded > Intiate Swiper
+        console.log('#voices 🖼️ loaded');
+
+        var swiper = new Swiper ('#voices .swiper-container', {
+          direction: 'horizontal',
+          speed: 650,
+          spaceBetween: 0,
+          slidesPerView: 'auto',
+          autoHeight: true,
+          centeredSlides: true,
+          freeMode: false,
+          grabCursor: true,
+          watchSlidesVisibility: true,
+          disableOnInteraction: true,
+          parallax: true,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        })
+      });
+    }
+    
+    ///////////
+    // Load Movement
+    ///////////
+    
+    aboutMove();
+    
   } else {}
   
   
@@ -541,46 +617,70 @@ function layout() {
   // Services Layout --------------------------------------------------
   ///////////
   
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
-  
   if ($pageLayout === 'services') {
-//      // Movement
-//      var controller = new ScrollMagic.Controller({
-//        globalSceneOptions: {triggerHook: "onLeave"}
-//      });
-//
-//      $(function () {
-//        // Ready the Menu
-//        var $w = $(window).height(),
-//            $o = $w * .15; 
-//        new ScrollMagic.Scene({
-//          triggerElement: "#projects",
-//          offset: -$o,
-//          })
-//        .setClassToggle(".main_navigation", "default")
-//        .addTo(controller);      
-//      });  
     
-    //    // Load Images
-//    $('.item_inner__image').imagesLoaded({ background: true }, function( imgLoad ) {
-//        var $itemInner = $(".item_inner");
-//        $itemInner.each(function() {
-//          $(this).addClass("show");
-//        });
-//      }
-//    );
-//    // Load Movement
-//    homeMove();
+    ///////////
+    // Partners Swiper
+    ///////////
+    
+    if ($('#partners').length ) {
+      
+      $('#partners').imagesLoaded( function() {
+        // Story images loaded > Intiate Swiper
+        console.log('#partners 🖼️ loaded');
 
+        var swiper = new Swiper ('#partners .swiper-container', {
+          direction: 'horizontal',
+          speed: 650,
+          spaceBetween: 0,
+          slidesPerView: 5,
+          breakpoints: {
+            // when window width is mi
+            425: {
+              slidesPerView: 1
+            },
+            // when window width is sm
+            768: {
+              slidesPerView: 2
+            },
+            // when window width is xl
+            1280: {
+              slidesPerView: 3
+            },
+            // when window width is xxl
+            1600: {
+              slidesPerView: 4
+            }
+          },
+          autoHeight: false,
+          centeredSlides: false,
+          freeMode: false,
+          grabCursor: true,
+          watchSlidesVisibility: true,
+          disableOnInteraction: true,
+          parallax: true,
+          autoplay: {
+            delay: 4000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        })
+      });
+    }
+    
+    ///////////
+    // Load Movement
+    ///////////
+    
+    servicesMove();
+    
   } else {}
-  
-  ///////////////////////////////////////////////////////  REQUIRES FORMATTING
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
-///////////////////////////////////////////////////////  REQUIRES FORMATTING
   
   
   ///////////
@@ -650,37 +750,6 @@ function layout() {
         $(this).toggleClass('open');
         $(this).children('.job__content').slideToggle();
       });    
-      
-//      // Set list options
-//      var options = {
-//        valueNames: [ 
-//          'name',
-//          { data: ['department'] },
-//        ]
-//      };
-//      
-//      // Initialize the list + sort
-//      var openPositions = new List('openPositions', options);
-//      openPositions.sort("name", {
-//        order: "asc"
-//      })
-//      
-//      // Create list filters
-//      $('.filter').on('click',function(){
-//        var $q = $(this).attr('data-filter');
-//        if($(this).hasClass('active')){
-//          openPositions.filter();
-//          $('.filter').removeClass('active');
-//          $('.filters').removeClass('active');
-//        } else {
-//          openPositions.filter(function(item) {
-//            return (item.values().department == $q);
-//          });
-//          $('.filter').removeClass('active');
-//          $(this).addClass('active');
-//          $('.filters').addClass('active');
-//        }
-//      });
     });
   
   } else {}
@@ -871,6 +940,7 @@ function ajaxify() {
 // -------------------------------------------------------------- //
 
 function init() {
+  forEach();
   cursorGenerate();
   cursorReplace();
   loadingAnimations();

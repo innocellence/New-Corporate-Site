@@ -3,6 +3,22 @@ body[class="whitepapers"] {
   
   #whitepapers {
     .latest {
+      display: inline-block;
+      margin: 0 $padding_sm;
+      margin-left: 0;
+      padding: $padding_sm $padding_lg;
+      background: $red;
+      color: $white;
+      border-radius: $radius;
+      font-size: $typo_sparrow;
+      line-height: 1;
+      font-weight: normal;
+      letter-spacing: .01em;
+      text-decoration: none;
+      pointer-events: auto;
+      transition: color $base_motion $base_duration, background $base_motion $base_duration;
+    }
+    .tail {
       position: relative;
       
       .i_shadow {

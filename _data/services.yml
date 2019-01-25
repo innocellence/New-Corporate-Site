@@ -3,15 +3,23 @@
 #####################
 en:
   - text: Innovation Consulting
-    img:  icon_brain.svg
+    img:  icon_innovation.svg
+    url:  innovation-consulting
   - text: Design & UX
-    img:  icon_pen.svg
-  - text: Technical Solutions
-    img:  icon_gear.svg
-  - text: Data Analysis
-    img:  icon_chart.svg
+    img:  icon_design.svg
+    url:
+  - text: Application Development
+    img:  icon_development.svg
+    url:  application-development
+  - text: Rapid Prototyping
+    img:  icon_prototype.svg
+    url: 
   - text: Digital Services
-    img:  icon_content.svg
+    img:  icon_digital.svg  
+    url: 
+  - text: Data Analytics
+    img:  icon_analytics.svg
+    url:
 
 #####################
 ###### Chinese ######

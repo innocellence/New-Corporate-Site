@@ -25,7 +25,7 @@ en:
   - title: Improving compliance with gamified training applications.
     content: 
     bg: waveBg.svg
-    image: salesRepGame.png
+    image: salesGame.png
   - title: Building in-house innovation and user experience labs.
     content: '<a class="button button--primary" href="/about#lab"><span>Explore our Lab</span></a>'
     bg: labBg.jpg

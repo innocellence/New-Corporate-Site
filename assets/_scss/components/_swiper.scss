@@ -126,17 +126,30 @@ $softBounce: cubic-bezier(.17,.89,.49,1.14);
     justify-content: flex-end;
     align-items: center;
     margin: auto;
+    padding: $margin 0;
     background: $sky;
     transition: background $base_duration $base_motion;
     transition-delay: $base_duration;
+    
+    @media only screen and (max-width: $screen_sm) {
+      flex-direction: column;
+    }
   }
 
   // Content Area
   .slide__content {
-    position: absolute;
-    left: 0;
+    position: relative;
     z-index: 1;
+    width: 42%;
 
+    @media only screen and (max-width: $screen_lg) {
+      width: 60%;
+    }
+    @media only screen and (max-width: $screen_sm) {
+      width: 100%;
+      padding-bottom: $margin_lg;
+    }
+    
     * {
       transform: translate3d(60%, 0, 0);
       opacity: 0;
@@ -156,6 +169,16 @@ $softBounce: cubic-bezier(.17,.89,.49,1.14);
   // Image Area
   .slide__image {
     position: relative;
+    width: 65%;
+    margin-left: -7%;
+    
+    @media only screen and (max-width: $screen_lg) {
+      width: 53%;
+    }
+    @media only screen and (max-width: $screen_sm) {
+      width: 100%;
+      margin-left: 0;
+    }
 
     .background {
       width: 100%;
@@ -222,5 +245,25 @@ $softBounce: cubic-bezier(.17,.89,.49,1.14);
         transform: translate3d(0,0,0);
       }
     }
+  }
+}
+
+
+///////////
+// Swiper Carousel 
+///////////
+
+
+.swiper.carousel {
+  
+  // Swiper Slide (Prevent Overflow)
+  .swiper-slide {}
+  
+  // Slide Area
+  .slide {}
+
+  // Slide Inner
+  .slide__i {
+    background: transparent;
   }
 }

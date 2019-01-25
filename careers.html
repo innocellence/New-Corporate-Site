@@ -3,37 +3,29 @@ title: Careers
 layout: careers
 ref: careers
 ---
-{% assign jobs = site.jobs %}
-{% assign depts = jobs | group_by: "department" %}
-
-<!--
-      {% if jobSize != 0 %} 
-        <ul class="filters m__t g__b">
-          <li class="e">Filter by:</li> 
-          {% for dept in jobDept %}{% if dept.name != "" %}{% assign words = dept.name | split: '-' %}<li class="e"><a href="javascript:void(0);" class="filter" data-filter="{{ dept.name }}">{% for word in words %}{{ word | capitalize }} {% endfor %}</a></li>{% endif %}{% endfor %}
-        </ul>
-      {% endif %}
--->
+{% assign jobs = site.jobs | where: "published","true" %}
+{% assign depts = jobs | group_by: "department" | reverse %}
+{% assign locations = jobs | group_by: "location" %}
 
 <section id="jobs" data-title="Careers" class="section bg--white">
   <div class="section__i"> 
     <div class="area w--16 g__b fade-e-below">
       <h2 class="heading e">Open Positions <sup>{{ jobs.size }}</sup></h2>
     </div>
-    <div class="area w--16 m__b fade-e-below" id="openPositions">
+    <div class="area w--16 m__b fade-e-below">
       {% for dept in depts %}
-      <h3 class="heading c--blue department e">{% if dept.name != "" %}{% assign words = dept.name | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endif %}</h3>
+      <h3 class="heading c--red department e">{% if dept.name != "" %}{% assign words = dept.name | split: '-' %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endif %}</h3>
       <div class="list g__b"> 
         {% for job in dept.items %}
         <a class="job e" href="javascript:void(0);" data-department="{{ job.department }}">
           <div class="job__title">
             <h3 class="heading">{{ job.title }}</h3>
             <div class="arrow">
-              <p class="location">{{ job.location }}</p> 
+              <p class="location" data-location="{{ job.location }}">{{ job.location }}</p> 
               <i class="icon" data-icon="chevron_right"></i>
             </div>
           </div>
-          <div class="job__content m__t">
+          <div class="job__content m__t m__b">
             {{ job.content }}
           </div>
         </a>

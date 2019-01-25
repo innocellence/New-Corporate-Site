@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_digital</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 60 60 60 60 0 0 0"></polygon>
+        <linearGradient x1="50%" y1="18.835802%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#375EB4" offset="0%"></stop>
+            <stop stop-color="#3394C3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon_digital" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-20" transform="translate(5.000000, 5.000000)">
+            <path d="M60,30 C60,46.568 46.568,60 30,60 C13.432,60 0,46.568 0,30 C0,13.432 13.432,0 30,0 C46.568,0 60,13.432 60,30" id="Fill-1" fill="#F1F1F1"></path>
+            <path d="M57.4375,16.1128 L41.3855,16.1128" id="Stroke-3" stroke="#6D6E71" stroke-linecap="round"></path>
+            <path d="M57.4375,11.1128 L51.3855,11.1128" id="Stroke-5" stroke="#6D6E71" stroke-linecap="round"></path>
+            <path d="M47.4375,11.1128 L27.3855,11.1128" id="Stroke-7" stroke="#6D6E71" stroke-linecap="round"></path>
+            <path d="M23.2158,50.0923 C23.0478,50.0923 22.8818,50.0883 22.7158,50.0783" id="Stroke-9" stroke="#6D6E71" stroke-linecap="round"></path>
+            <path d="M20.1484,49.5557 C17.2344,48.4997 15.0214,45.9807 14.3944,42.8877" id="Stroke-11" stroke="#6D6E71" stroke-linecap="round" stroke-dasharray="0.876,2.627"></path>
+            <path d="M14.2295,41.5923 C14.2205,41.4263 14.2155,41.2603 14.2155,41.0923" id="Stroke-13" stroke="#6D6E71" stroke-linecap="round"></path>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-16"></g>
+            <polygon id="Fill-15" fill="#EF4B46" mask="url(#mask-2)" points="28.5 52.5 56.5 52.5 56.5 35.5 28.5 35.5"></polygon>
+            <polygon id="Stroke-17" stroke="#EF4B46" mask="url(#mask-2)" points="28.5 52.5 56.5 52.5 56.5 35.5 28.5 35.5"></polygon>
+            <polygon id="Stroke-18" stroke="#EF4B46" style="mix-blend-mode: multiply;" mask="url(#mask-2)" points="28.5 52.5 56.5 52.5 56.5 35.5 28.5 35.5"></polygon>
+            <polygon id="Fill-19" fill="#FFFFFF" mask="url(#mask-2)" points="40 48.0264 40 39.9734 46.533 44.0004"></polygon>
+        </g>
+        <polygon id="Fill-21" fill="url(#linearGradient-3)" points="8.5 41.5 38.5 41.5 38.5 22.5 8.5 22.5"></polygon>
+        <g id="Group-31" transform="translate(8.000000, 22.000000)">
+            <polygon id="Stroke-23" stroke="#375EB4" points="0.5 19.5 30.5 19.5 30.5 0.5 0.5 0.5"></polygon>
+            <polygon id="Stroke-25" stroke="#375EB4" style="mix-blend-mode: multiply;" points="0.5 19.5 30.5 19.5 30.5 0.5 0.5 0.5"></polygon>
+            <path d="M8.792,8 C8.792,9.104 7.896,10 6.792,10 C5.688,10 4.792,9.104 4.792,8 C4.792,6.896 5.688,6 6.792,6 C7.896,6 8.792,6.896 8.792,8" id="Fill-26" fill="#EFB453"></path>
+            <path d="M8.792,8 C8.792,9.104 7.896,10 6.792,10 C5.688,10 4.792,9.104 4.792,8 C4.792,6.896 5.688,6 6.792,6 C7.896,6 8.792,6.896 8.792,8 Z" id="Stroke-27" stroke="#EFB453"></path>
+            <path d="M8.792,8 C8.792,9.104 7.896,10 6.792,10 C5.688,10 4.792,9.104 4.792,8 C4.792,6.896 5.688,6 6.792,6 C7.896,6 8.792,6.896 8.792,8 Z" id="Stroke-28" stroke="#EFB453"></path>
+            <polygon id="Fill-29" fill="#F1F1F1" points="30 13.9663 23.288 8.0933 16.577 15.6443 12.382 12.2883 5.671 19.0003 30 19.0003"></polygon>
+            <polygon id="Fill-30" fill="#FFFFFF" points="23.2881 8.0937 27.2161 11.5307 26.2431 12.6467 25.1961 11.8077 22.8551 14.4187 19.9751 11.8207"></polygon>
+        </g>
+    </g>
+</svg>

@@ -2,51 +2,51 @@
 ###### Partners ######
 ######################
 - name: Roambi
-  url: 
+  url: http://www.roambi.com/
   img: roambi
-- name: Quintiles
-  url: 
-  img: quintiles
+- name: IQVIA
+  text: formerly Quintiles
+  url: http://www.iqvia.com/
+  img: iqvia
 - name: Heroku
-  url: 
+  url: https://www.heroku.com/
   img: heroku
 - name: Contentful
-  url: 
+  url: https://www.contentful.com/
   img: contentful
 - name: Oracle
-  url: 
+  url: https://www.oracle.com/index.html
   img: oracle
 - name: Tableau
-  url: 
+  url: https://www.tableau.com/
   img: tableau
 - name: Informatica
-  url: 
+  url: https://www.informatica.com/
   img: informatica
 - name: SAP 
-  url: 
+  url: https://www.sap.com/
   img: sap
 - name: Veeva
-  url: 
+  url: https://www.veeva.com/
   img: veeva
-- name: Amazon
-  url: 
-  img: amazon
+- name: AWS
+  url: http://aws.amazon.com/
+  img: aws
 - name: Salesforce
-  url: 
+  url: https://www.salesforce.com/
   img: salesforce
 - name: Crownpeak
-  url: 
-  text: Preferred partner
+  url: http://www.crownpeak.com/
   img: crownpeak
 - name: SharePoint
-  url: 
+  url: https://products.office.com/en-us/sharepoint/collaboration
   img: sharepoint
-- name: Google
-  url: 
+- name: Google Cloud
+  url: https://cloud.google.com/
   img: google
 - name: Box
-  url: 
+  url: https://www.box.com/home
   img: box
 - name: SQL Server
-  url: 
+  url: https://www.microsoft.com/en-us/sql-server/
   img: sql

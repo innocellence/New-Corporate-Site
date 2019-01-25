@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_design</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M60,30 C60,46.568 46.568,60 30,60 C13.432,60 0,46.568 0,30 C0,13.432 13.432,0 30,0 C46.568,0 60,13.432 60,30" id="path-1"></path>
+        <linearGradient x1="50%" y1="18.835802%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#375EB4" offset="0%"></stop>
+            <stop stop-color="#3394C3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon_design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-21" transform="translate(5.000000, 3.500000)">
+            <path d="M60,30.5 C60,47.068 46.568,60.5 30,60.5 C13.432,60.5 0,47.068 0,30.5 C0,13.932 13.432,0.5 30,0.5 C46.568,0.5 60,13.932 60,30.5" id="Fill-1" fill="#F1F1F1"></path>
+            <g id="Group-6" transform="translate(19.000000, 17.000000)">
+                <path d="M18.4219,32 L21.9999,27.5 L21.9999,14.5 C10.9999,5.5 10.9999,0.422 10.9999,0.422 C10.9999,0.422 10.9999,5.5 -0.0001,14.5 L-0.0001,27.5 L3.5779,32" id="Fill-3" fill="#EFB453"></path>
+                <path d="M18.4219,32 L21.9999,27.5 L21.9999,14.5 C10.9999,5.5 10.9999,0.422 10.9999,0.422 C10.9999,0.422 10.9999,5.5 -0.0001,14.5 L-0.0001,27.5 L3.5779,32" id="Stroke-5" stroke="#EFB453" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <path d="M37.4219,49 L40.9999,44.5 L40.9999,31.5 C29.9999,22.5 29.9999,17.422 29.9999,17.422 C29.9999,17.422 29.9999,22.5 18.9999,31.5 L18.9999,44.5 L22.5779,49" id="Stroke-7" stroke="#EFB453" style="mix-blend-mode: multiply;" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M30,48.5 L30,40.5" id="Stroke-9" stroke="#F1F1F1"></path>
+            <path d="M30,32.5 L30,22.5" id="Stroke-11" stroke="#F1F1F1" stroke-linecap="round"></path>
+            <path d="M34,36.5 C34,38.709 32.209,40.5 30,40.5 C27.791,40.5 26,38.709 26,36.5 C26,34.291 27.791,32.5 30,32.5 C32.209,32.5 34,34.291 34,36.5" id="Fill-13" fill="#F1F1F1"></path>
+            <path d="M34,36.5 C34,38.709 32.209,40.5 30,40.5 C27.791,40.5 26,38.709 26,36.5 C26,34.291 27.791,32.5 30,32.5 C32.209,32.5 34,34.291 34,36.5 Z" id="Stroke-15" stroke="#F1F1F1"></path>
+            <path d="M28.5,11.5 C18.958,12.208 11,20.826 11,30.5" id="Stroke-17" stroke="#6D6E71" stroke-linecap="round"></path>
+            <path d="M31.5,11.5 C41.042,12.208 49,20.826 49,30.5" id="Stroke-19" stroke="#6D6E71" stroke-linecap="round"></path>
+        </g>
+        <g id="Group" transform="translate(5.000000, 4.000000)">
+            <g id="Fill-22-+-Stroke-25-+-Stroke-28-Mask">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <path d="M19.009,48.5 L19.009,57.914 C22.412,59.258 26.119,60 30,60 C33.887,60 37.6,59.255 41.008,57.907 L41.008,48.5 L19.009,48.5 Z" id="Fill-22" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+                <path d="M19.0088,59.062 C22.4368,60.315 26.1378,61 29.9998,61 C33.8678,61 37.5758,60.313 41.0088,59.056 L41.0088,48.5 L19.0088,48.5 L19.0088,59.062 Z" id="Stroke-25" stroke="#375EB4" mask="url(#mask-2)"></path>
+                <path d="M19.0088,59.062 C22.4368,60.315 26.1378,61 29.9998,61 C33.8678,61 37.5758,60.313 41.0088,59.056 L41.0088,48.5 L19.0088,48.5 L19.0088,59.062 Z" id="Stroke-28" stroke="#375EB4" style="mix-blend-mode: multiply;" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+        <g id="Group-43" transform="translate(17.000000, 13.500000)">
+            <g id="Group-35" transform="translate(2.000000, 1.000000)">
+                <path d="M0,0.5 L32,0.5" id="Fill-32" fill="#EF4B46"></path>
+                <path d="M0,0.5 L32,0.5" id="Stroke-34" stroke="#EF4B46"></path>
+            </g>
+            <polygon id="Fill-36" fill="#EF4B46" points="17 2.5 19 2.5 19 0.5 17 0.5"></polygon>
+            <path d="M16.5,3 L19.5,3 L19.5,0 L16.5,0 L16.5,3 Z M17.5,2 L18.5,2 L18.5,1 L17.5,1 L17.5,2 Z" id="Fill-38" fill="#EF4B46"></path>
+            <path d="M34.5,2.5 C33.948,2.5 33.5,2.051 33.5,1.5 C33.5,0.949 33.948,0.5 34.5,0.5 C35.052,0.5 35.5,0.949 35.5,1.5 C35.5,2.051 35.052,2.5 34.5,2.5" id="Fill-39" fill="#EF4B46"></path>
+            <path d="M34.5,0 C33.672,0 33,0.672 33,1.5 C33,2.328 33.672,3 34.5,3 C35.328,3 36,2.328 36,1.5 C36,0.672 35.328,0 34.5,0 M34.5,1 C34.775,1 35,1.224 35,1.5 C35,1.776 34.775,2 34.5,2 C34.225,2 34,1.776 34,1.5 C34,1.224 34.225,1 34.5,1" id="Fill-40" fill="#EF4B46"></path>
+            <path d="M1.5,2.5 C0.948,2.5 0.5,2.051 0.5,1.5 C0.5,0.949 0.948,0.5 1.5,0.5 C2.052,0.5 2.5,0.949 2.5,1.5 C2.5,2.051 2.052,2.5 1.5,2.5" id="Fill-41" fill="#EF4B46"></path>
+            <path d="M1.5,0 C0.672,0 0,0.672 0,1.5 C0,2.328 0.672,3 1.5,3 C2.328,3 3,2.328 3,1.5 C3,0.672 2.328,0 1.5,0 M1.5,1 C1.775,1 2,1.224 2,1.5 C2,1.776 1.775,2 1.5,2 C1.225,2 1,1.776 1,1.5 C1,1.224 1.225,1 1.5,1" id="Fill-42" fill="#EF4B46"></path>
+        </g>
+    </g>
+</svg>

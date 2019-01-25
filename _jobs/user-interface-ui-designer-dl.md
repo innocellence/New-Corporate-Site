@@ -2,6 +2,7 @@
 title: User Interface (UI) Designer
 location: Dalian
 department: creative
+published: true
 ---
 
 Working alongside our project delivery and development teams you will be responsible for creating web and app interfaces for our clients in China. You will work as part of the studio design team in Dalian, reporting to a design manager.

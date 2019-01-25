@@ -1,7 +1,7 @@
 ---
-title: Quality Assurance (QA) Analyst
+title: Quality Assurance (QA) Analyst TBC
 location: Dalian
-department: project-delivery
+department: technology
 ---
 
 TBC

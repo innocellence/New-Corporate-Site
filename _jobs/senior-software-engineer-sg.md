@@ -1,7 +1,8 @@
 ---
-title: Senior Software Engineer
+title: Senior Software Engineer TBC
 location: Singapore
-department: engineering
+department: technology
+published: true
 ---
 Senior Software Engineers deliver high-quality functional applications and websites that satisfy the business needs and requirements of our clients. You will actively participate in the software development lifecycle, debug applications, and configure existing systems. We like people who love to code and have a history of building their own programs or applications. You should actively research creative solutions to problems.
 

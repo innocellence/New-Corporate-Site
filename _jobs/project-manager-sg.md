@@ -1,7 +1,8 @@
 ---
 title: Project Manager
 location: Singapore
-department: project-delivery
+department: client-services
+published: true
 ---
 
 Project Managers oversee the delivery of digital projects and expand our current team. This will be a client facing role, so the successful candidate should have a history of delivering high quality, enterprise-level, digital solutions and enjoy working with both internal and client teams to make a project successful.

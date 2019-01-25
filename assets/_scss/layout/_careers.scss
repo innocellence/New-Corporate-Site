@@ -4,9 +4,16 @@ body[class="careers"] {
     list-style: none;
     padding: 0;
     font-size: $typo_sparrow;
+    display: flex;
     
     > li {
       margin: $margin_sm 0;
+      list-style: none;
+      
+      &:before {
+        content: "";
+        display: none;
+      }
     }
     
     &.active .filter:not(.active) {
@@ -49,7 +56,7 @@ body[class="careers"] {
   .job {
     display: block;
     padding: $margin 0;
-    color: $black;
+    color: $black !important;
     border-bottom: 1px solid transparentize($grey, .8);
     transition: padding $base_duration $base_motion;
     
@@ -103,7 +110,7 @@ body[class="careers"] {
     // Open State {
     &.open {
       background: $white;
-      padding: $margin;
+      padding: $margin 0;
       
       .job__title {
         color: $blue;

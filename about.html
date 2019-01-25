@@ -1,17 +1,73 @@
 ---
-title: Our Process
+title: About us
 layout: about
 excerpt: InnoCellence is a digital service provider - we believe in leveraging innovative design and technology to create digital products that improve the lives of Patients and Healthcare Professionals.
 ref: about
 redirect_from:
   - /d/en/about/
 ---
- 
-<section id="process" data-title="Our Process" class="section bg--white">
+
+<section id="about" data-title="About Us"  class="section bg--white fade-e-below">
+  <div class="section__i"> 
+    <h2 class="area w--16 g__b heading heading--super fade-c-below">About Us.</h2> 
+    <div class="area w--6 w__xl--8 w__lg--12 w__sm--16 g__b">
+    <p class="bullet e">InnoCellence is a digital solutions innovator headquartered in Singapore, with offices throughout Asia.</p> 
+    <p class="bullet e">We research, design and build digital solutions for some of the biggest multinational corporations around the world.</p> 
+    <p class="bullet e">Our dedication to technology innovation, user-centric design, and delivery excellence has forged lasting partnerships with major Fortune 500 Companies.</p>
+      <p class="e"><a href="{{ site.baseurl }}/about/#process" class="button button--primary e"><span>Explore our process</span></a><a href="{{ site.baseurl }}/careers/" class="button button--primary e"><span>Join our team</span></a></p>
+    </div>
+    <div class="area w--12 w__xl--10 w__lg--16 o--right--4 g__r--lg tail e">
+      <img class="fluid" src="{{ site.baseurl }}/assets/img/about/office.svg">  
+    </div>
+  </div>
+</section>
+
+<section id="voices" class="section fade-e-below bg--white">
+  <div class="section__i">  
+    <div class="area w--16 m__t">
+      <h4 class="area w--16 c--red e">Our Clients</h4>
+      <h2 class="area w--6 w__xl--10 w__sm--16 heading e">A proven history of delivering excellence.</h2>
+    </div>
+  </div>
+  <div class="section__i g__b swiper swiper-container">
+    <div class="swiper-pagination e"></div> 
+    <div class="swiper-wrapper">
+      {% for i in site.data.voices[page.lang] %}
+      <div class="swiper-slide e">
+        <div class="slide__i w--14">
+          <div class="slide__content">
+            <h2>{{ i.title }}</h2>
+            {% if i.content %}<p>{{ i.content }}</p>{% endif %}
+            {% if i.footnote %}<p class="footnote">{{ i.footnote }}</p>{% endif %}
+          </div>
+          <div class="slide__image">
+            {% if i.bg %}
+            <img class="background" src="{{ site.baseurl }}/assets/img/home/stories/bg/{{ i.bg }}">
+            <img class="graphic" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.image }}">
+            {% else %}
+            <div class="background" style="background-color:#{{ i.color }};"></div>
+            <img class="graphic" src="{{ site.baseurl }}/assets/img/home/stories/{{ i.image }}">
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-button-prev e"></div>
+    <div class="swiper-button-next e"></div>
+  </div>
+</section>
+  
+<section id="process" data-title="Our Process" class="section bg--white fade-e-below">
   <div class="section__i">
-    <h2 class="area w--16 g__b heading heading--super fade-c-below">Our Process</h2>
+    <div class="area w--16 m__b">
+      <h4 class="area w--16 c--red e">Our Process</h4>
+      <h2 class="area w--6 w__xl--10 w__sm--16 heading e">Five phases that provide <nobr>end-to-end</nobr> innovation.</h2>
+    </div>
+  </div>
+  <div class="section__i">
     <div class="area w--6 w__sm--16 g__l g__l--sm m__t fade-e-below">
-      <h2 class="heading e">01 Discover</h2>
+      <h2 class="heading e"><small>01</small> Discover</h2>
       <p class="bullet e">We conduct extensive independent market research to understand your business challenges — and how to solve them.</p>
     </div> 
     <div id="discover" class="area w--8 g__l chart hide--sm">
@@ -23,7 +79,7 @@ redirect_from:
       <div class="flow"><div class="mask"></div></div> 
     </div>
     <div class="area w--6 w__sm--16 g__l g__l--sm m__t fade-e-below">
-      <h2 class="heading e">02 Design</h2>
+      <h2 class="heading e"><small>02</small> Design</h2>
       <p class="bullet e">We deliver a seamless and enjoyable user experience through innovative design and advanced technical architecture.</p>
     </div>
     <div id="design" class="area w--8 g__l chart hide--sm">
@@ -34,7 +90,7 @@ redirect_from:
       <div class="flow"><div class="mask"></div></div> 
     </div>
     <div class="area w--6 w__sm--16 g__l g__l--sm m__t fade-e-below">
-      <h2 class="heading e">03 Iterate</h2>
+      <h2 class="heading e"><small>03</small> Iterate</h2>
       <p class="bullet e">We utilize an agile and iterative approach that enables us to review, validate, and deliver a fantastic user experience (UX).</p>
     </div>
     <div id="iterate" class="area w--8 g__l chart hide--sm">
@@ -47,12 +103,12 @@ redirect_from:
         <div class="pie">
           <div class="pie-r"><div class="inner"></div></div>
           <div class="pie-l"><div class="inner"></div></div>
-          <div class="triangle"></div>
+          <div class="triangle"><img src="{{ site.baseurl }}/assets/img/about/triangle.svg"></div>
         </div>
       </div> 
     </div>
     <div class="area w--6 w__sm--16 g__l g__l--sm m__t fade-e-below">
-      <h2 class="heading e">04 Develop</h2>
+      <h2 class="heading e"><small>04</small> Develop</h2>
       <p class="bullet e">We will develop a final deliverable and showcase it once it has undergone a thorough quality assurance check.</p>
     </div>
     <div id="develop" class="area w--8 g__l chart hide--sm">
@@ -63,7 +119,7 @@ redirect_from:
       <div class="flow"><div class="mask"></div></div> 
     </div>
     <div class="area w--6 w__sm--16 g__l g__l--sm m__t fade-e-below">
-      <h2 class="heading e">05 Deploy</h2>
+      <h2 class="heading e"><small>05</small> Deploy</h2>
       <p class="bullet e">We will never launch a product that is either below our high standards of quality or delivers a sub-par user experience.</p>
     </div>
     <div id="deploy" class="area w--8 g__l chart hide--sm">
@@ -81,7 +137,7 @@ redirect_from:
 <section id="lab" data-title="Our Innovation Lab" class="section fade-e-below">
   <div class="section__i"> 
     <div class="area w--16">
-      <h4 class="area w--16 c--red">Our Innovation Lab</h4>
+      <h4 class="area w--16 c--red e">Our Innovation Lab</h4>
       <h2 class="area w--6 w__xl--10 w__sm--16 heading e">Collaborative innovation with speed and agility.</h2>
     </div>
     <p class="area w--4  w__xl--7 w__lg--10 w__sm--16 g__r bullet e">Launched in 2013, our China-based lab covers the full innovation lifecycle.</p>

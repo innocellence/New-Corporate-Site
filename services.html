@@ -1,5 +1,5 @@
 ---
-title: Our Services
+title: What we do
 layout: services
 menu: initialize
 ref: services
@@ -14,188 +14,226 @@ redirect_from:
   - /d/en/capabilities/website_application_development.html
 ---
 
-<section id="innovation" data-title="Innovation Consulting" class="section bg--blue fade-e-below">
-  <div class="section__i"> 
-    <div class="area w--6">
-      <h2 class="heading e">Our approach to innovation underpins the products
-we&nbsp;build.</h2>
-      <p class="bullet inverted e">We analyze the threat of competiton, evaluate industry trends, identify strategic opportunities, and develop targeted POC’s, to ensure we deliver digitally innovative solutions that transform businesses.</p>
-      <p><a href="{{ site.baseurl }}/about/#process" class="button button--inverted e"><span>Our approach to innovation</span></a></p>
-    </div>  
-    <div class="area w--12 o--right">
-      <div class="graphic research">
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/marketResearch.svg">
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/marketResearch_shadow.svg"> 
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/marketResearch_flash.svg">
-        <p class="e">Market Research &amp; Analysis</p>
+<section id="our-services" data-title="Our Services" class="section bg--white fade-e-below">
+  <div class="section__i g__b"> 
+    <h2 class="heading heading--super g__b e">Our Services.</h2>
+    <div class="w--16 grid grid--3">
+      {% for i in site.data.services[page.lang] %}
+      <div class="card centered t e">
+        <a style="width: 100%;max-width: 200px;" href="{{ i.url | prepend: '#' }}">
+          <img class="fluid" src="{{ site.baseurl }}/assets/img/icons/{{ i.img }}">
+        </a>
+        <p><a href="{{ i.url | prepend: '#' }}">{{ i.text }}</a></p>
       </div>
-      <div class="graphic ideation">
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/ideationWorkshops.svg"> 
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/ideationWorkshops_shadow.svg">
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/ideationWorkshops_flash.svg">
-        <p class="e">Ideation Workshops</p>
-      </div>
-      <div class="graphic poc">
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/targetedPOC.svg"> 
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/targetedPOC_shadow.svg">
-        <img class="e" src="{{ site.baseurl }}/assets/img/services/targetedPOC_flash.svg">
-        <p class="e">Targeted PoC's</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
   {% include section__bottom.html %}
 </section>
 
-<!--
-<section id="projects" class="section g__t fade-e-below">
-  <div class="grid">
-    <div class="grid__quart"> 
-      <h3 class="heading e">Capabilities that deliver.</h3>
-      <p class="e">Our end-to-end service offering has produced industry leading products for our partners.</p>
+
+<section id="innovation-consulting" data-title="Innovation Consulting"  class="section fade-e-below">
+  <div class="section__i"> 
+    <div class="area m__b">
+      <h3 class="w--16 heading c--red e">Innovation Consulting</h3>  
+      <h2 class="w--10 w__lg--16 heading e">Our approach to innovation underpins the products
+  we&nbsp;build.</h2>
     </div>
-  </div>
-  <div class="container gallery g__t">
-    <div class="swiper-container gallery__thumbs fade-e-below">
-      <div class="swiper-pagination e"></div> 
-      <div class="swiper-wrapper e">
-        {% assign p = site.data.projects %}
-        {% for i in p %}
-        <a href="javascript:void(0)" class="gallery__thumb swiper-slide">
-          <h3 class="match">{{ i.name }}</h3> 
-          <div class="control"></div>
-          <img src="{{ site.baseurl }}/assets/img/services/projects/{{ i.thumb }}.jpg">
-        </a>
-        {% endfor %}
-      </div>
-      <div class="swiper-button-prev e"></div>
-      <div class="swiper-button-next e"></div>
+    <div class="area w--7 w__xl--9 w__lg--16 m__b g__r g__r--lg">
+      <p class="bullet e">We analyze the threat of competiton, evaluate industry trends, identify strategic opportunities, and develop targeted POC’s, to ensure we deliver digitally innovative solutions that transform businesses.</p>
+      <p><a href="{{ site.baseurl }}/about/#process" class="button button--primary e"><span>Our process</span></a><a href="{{ site.baseurl }}/about/#lab" class="button button--primary e"><span>Our innovation lab</span></a></p>
     </div>
-    <div class="swiper-container gallery__showcase fade-c-transparent">
-      <div class="swiper-wrapper swiper-no-swiping"> 
-        {% for i in p %}
-        <div class="swiper-slide">
-          <div class="grid g">
-            <div class="grid__quart grid__right g__b">
-              <h3>{{ i.name }}</h3>
-              {% if i.text %}<p>{{ i.text }}</p>{% endif %}
-            </div>
-          </div> 
-          <img src="{{ site.baseurl }}/assets/img/services/projects/{{ i.img }}.jpg">
-        </div> 
+    <div class="area w--12 w__xl--10 w__lg--16 o--right--4 g__r--lg tail e">
+      <img class="fluid" src="{{ site.baseurl }}/assets/img/services/innovationConsulting.svg">  
+    </div>
+    <div class="area w--16">
+      <div class="grid grid--4 g__b">
+        {% for i in site.data.innovation_consulting[page.lang] %}
+        <div class="card centered t e">
+          <img class="" src="{{ site.baseurl }}/assets/img/icons/{{ i.img }}">
+          <p>{{ i.text }}</p>
+        </div>
         {% endfor %}
       </div>
     </div>
   </div>
   {% include section__bottom.html color="white" %}
 </section>
--->
 
-<section id="web" data-title="Web Design" class="section bg--white">
-  <div class="section__i g__t fade-e-below">
-    <div class="area g__t w--6">
-        <h2 class="area heading e">We build beautifully designed, mobile-ready websites.</h2>    
+<section id="application-development" data-title="Application Development" class="section bg--white">
+  <div class="section__i fade-e-below">
+    <div class="area g__t w--6 w__lg--8 w__sm--16">
+      <h3 class="w--16 heading c--red e">Web Development</h3>
+      <h2 class="area heading e">We build beautifully designed, mobile-ready websites.</h2>    
       <p class="bullet e">Deliver consistent and intuative experiences across multiple devices with responsive design.</p>
       <p class="bullet e">Increase brand awareness and outrank competitors online with advanced SEO.</p>
       <p class="bullet e">Improve productivity by storing data in a cost-effective Content Management System (CMS).</p>
     </div>
-    <div class="area w--14 o--right--4">
+    <div class="area m__t w--14 w__lg--12 w__sm--16 tail o--right--4 g__r--sm">
       <div class="laptop e">
         <div class="laptop__screen">
-          <div class="area content g__b g__t">
-            <h2 class="heading e">Our Platform Expertise.</h2>
-            <p class="e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>
-          </div>  
-          {% assign p = site.data.partners %}
-          <div class="feed">
-            <div class="cards e">
-              {% for i in p %}
-              <a href="{{ i.url }}" class="card t centered">
-                {% if i.text %}<p>{{ i.text }}</p>{% endif %}
-                <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
-              </a>
-              {% endfor %}
-            </div>
-          </div> 
-          <div class="feed">
-            <div class="cards e">
-              {% for i in p %}
-              <a href="{{ i.url }}" class="card t centered">
-                {% if i.text %}<p>{{ i.text }}</p>{% endif %}
-                <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
-              </a>
-              {% endfor %}
-            </div>
-          </div> 
+          Content required 
         </div> 
-        <script>
-          var $feed = $(".feed .cards");
-          $feed.each(function(){
-            var e = $(this);
-            for (var i = 0; i < 2; i++) {
-              e.clone().addClass("cloned").insertBefore(this);
-            }
-          });
-        </script>
-        <img src="{{ site.baseurl }}/assets/img/services/laptop.png">
+        <img class="fluid" src="{{ site.baseurl }}/assets/img/services/laptop.png">
       </div> 
-<!--      <img src="{{ site.baseurl }}/assets/img/services/laptop.png">-->
-<!--
-      <h2 class="heading e">Our Platform Expertise.</h2>
-      <p class="e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>
--->
     </div>
   </div>
-<!--
-  <div class="container fade-e-below">
-    <div class="laptop e">
-      <div class="laptop__screen">
-        {% assign p = site.data.partners %}
-        <div class="feed">
-          <div class="cards e">
-            {% for i in p %}
-            <a href="{{ i.url }}" class="card">
-              {% if i.text %}<p>{{ i.text }}</p>{% endif %}
-              <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
-            </a>
-            {% endfor %}
-          </div>
-        </div> 
-        <div class="content">
-          <h2 class="heading e">Our Platform Expertise.</h2>
-          <p class="e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>
-        </div> 
-        <div class="feed">
-          <div class="cards e">
-            {% for i in p %}
-            <a href="{{ i.url }}" class="card">
-              {% if i.text %}<p>{{ i.text }}</p>{% endif %}
-              <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.png">
-            </a>
-            {% endfor %}
-          </div>
-        </div> 
-      </div> 
-      <script>
-        var $feed = $(".feed .cards");
-        $feed.each(function(){
-          var e = $(this);
-          for (var i = 0; i < 2; i++) {
-            e.clone().addClass("cloned").insertBefore(this);
-          }
-        });
-      </script>
-      <img src="{{ site.baseurl }}/assets/img/services/laptop.png">
+</section>
+  
+<section id="partners" class="section fade-e-below bg--white">
+  <div class="section__i">
+    <div class="area w--16 m__t">
+      <h3 class="w--16 heading c--red e">Our Technology Stack</h3> 
+<!--      <h2 class="heading e">Our Platform Expertise.</h2>-->
+      <h2 class="area w--8 heading e">We support the industry’s most popular platforms and frameworks.</h2>
     </div>
+    <style>
+        table {
+/*          width: 100%;*/
+          text-align: left;
+          border: none;
+          table-layout: auto;
+          word-break: break-word;
+          font-size: .875rem;
+        }
+        th {
+          border-bottom: 2px solid #000;
+          padding: .5rem 0;
+          width: 130px;
+        }
+        td {
+          border-bottom: 1px solid #ccc;
+          padding: .5rem 0;
+          vertical-align: top;
+          line-height: 1.2;
+        }
+      </style>
+      
+    <div class="area w--4 m__t">
+      <table>
+        <thead>
+          <tr>
+            <th>Languages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typescript</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+          </tr>
+          <tr>
+            <td>Javascript</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="area w--4 m__t">
+      <table>
+        <thead>
+          <tr>
+            <th>Languages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typescript</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+          </tr>
+          <tr>
+            <td>Javascript</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="area w--4 m__t">
+      <table>
+        <thead>
+          <tr>
+            <th>Languages</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typescript</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+          </tr>
+          <tr>
+            <td>Javascript</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Languages</th>
+            <th>Frameworks</th>
+            <th>Tools</th>
+            <th>Front End</th>
+            <th>Server Side</th>
+            <th>Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typescript</td>
+            <td>AngularJS</td>
+            <td>MySQL</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+            <td>.NET</td>
+            <td>GitLab</td>
+          </tr>
+          <tr>
+            <td>Javascript</td>
+            <td>Vue</td>
+            <td>Docker</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <p class="area w--16"><a href="https://stackshare.io/innocellence" class="button button--primary e"><span>View Full Stack</span></a></p>
+
+<!--      <p class="bullet w--10 w__lg--16 e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>-->
+    </div>  
+<!--  </div>-->
+  <div class="section__i g__b swiper carousel swiper-container">
+    <div class="swiper-pagination e"></div> 
+    <div class="swiper-wrapper">
+      {% assign p = site.data.partners %}
+      {% for i in p %}
+      <div class="swiper-slide e">
+        <div class="slide__i">
+          <a href="{{ i.url }}" class="card t centered">
+            <img title="{{ i.name }}" src="{{ site.baseurl }}/assets/img/services/partners/{{ i.img }}.jpg">
+            {% if i.text %}<p class="small">{{ i.text }}</p>{% endif %}
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+      
+    <div class="swiper-button-prev e"></div>
+    <div class="swiper-button-next e"></div>
   </div>
--->
   {% include section__bottom.html %}
 </section>
-
-{% include call.html %}
 
 <section id="mobile" data-title="Mobile Solutions" class="section fade-e-below">
   <div class="section__i"> 
     <div class="area w--16">
+      <h3 class="w--16 heading c--red e">Mobile Apps</h3> 
       <h2 class="area w--6 heading e">“The only thing worse than not having a mobile app is having one your customers hate using.”</h2>
     </div>
     
@@ -207,10 +245,18 @@ we&nbsp;build.</h2>
     <p class="area w--4 g__r bullet e">Digitize your content, tailoring messaging for the right audience to improve engagement.</p>
     <p class="area w--4 bullet e">Leverage platform-specific technologies such as AR, wearables and machine learning.</p>
     
+<!--
     <div class="area w--16">
-      <h4 class="area w--16 c--red">Native or Hybrid?</h4>
+      <h4 class="area w--16 c--red e">Our Technology Stack</h4>
       <h2 class="area w--6 heading e">We support the industry’s most popular platforms and frameworks.</h2>
+      <p>Node.js, .NET</p>
     </div>
+-->
   </div>
+  
+  How to work with us
+  
+  {% include call.html %}
+  
   {% include section__bottom.html %}
 </section>

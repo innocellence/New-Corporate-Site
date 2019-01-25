@@ -1,7 +1,7 @@
 ---
-title: Data Consultant
+title: Data Consultant TBC
 location: Dalian
-department: engineering
+department: technology
 ---
 
 We are looking for a motivated and experienced Business Intelligence and Data Specialist to join the InnoCellence team.

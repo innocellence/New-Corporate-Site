@@ -39,11 +39,11 @@
       margin-bottom: $margin_sm;
       
       a {
-        color: $grey;
+        color: $grey !important;
       }
       a:hover {
-        color: $black;
-        &:before {background: transparentize($black, .8);}
+        color: $black !important;
+        &:before {background: transparentize($black, .8) !important;}
       }
     }
     

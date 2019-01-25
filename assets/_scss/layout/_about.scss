@@ -136,12 +136,20 @@ body[class="about"] {
         position: absolute;
         width: $tri_h;
         height: $tri_w;
-        background: $yellow;
         margin-top: $tri_w;
         margin-left: -1rem;
-        clip-path: polygon(50% 0, 0% 100%, 100% 100%);
         transform: rotate(-180deg);
         transform-origin: bottom;
+        
+        img { 
+          position: absolute;
+          left: $tri_h;
+          top: 0;
+          width: $tri_w;
+          height: $tri_h;
+          transform: rotate(90deg);
+          transform-origin: top left;
+        }
       }
       
       &-l,

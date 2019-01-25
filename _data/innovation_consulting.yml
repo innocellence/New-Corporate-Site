@@ -1,0 +1,29 @@
+#####################
+###### English ######
+#####################
+en:
+  - text: Market Research & Analysis
+    img:  icon_chart.svg
+  - text: Ideation Workshops
+    img:  icon_brain.svg
+  - text: Pharma & Healthcare Strategy
+    img:  
+  - text: Content Strategy
+    img:  icon_content.svg
+
+#####################
+###### Chinese ######
+#####################
+zh:
+  - text: 
+    img:  
+  
+  
+######################
+###### Japanese ######
+######################
+jp:
+  - text:
+    img: 
+  - text: 
+    img: 

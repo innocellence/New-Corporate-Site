@@ -122,6 +122,7 @@ h1, h2 {
   }
   @media only screen and (max-width: $screen_sm) {
     font-size: $typo_albatros;
+    line-height: $heading_line_height;
   }
 }
 
@@ -192,7 +193,7 @@ p {
 main, footer, .link {
   
   // Don't target buttons
-  a:not(.button) {
+  a:not(.button):not(.card) {
     position: relative;
     text-decoration: none;
     color: $blue;
@@ -224,8 +225,8 @@ main, footer, .link {
       }
     }
   }
-  // Terget External Links
-  a:not(.button).ext {
+  // Target External Links
+  a:not(.button):not(.card).ext {
     &:after {
       content: ' open_in_new';
       font-family: $icon;
@@ -246,7 +247,33 @@ main, footer, .link {
 
 ul, ol {
   margin: $margin_lg 0;
-  padding-left: $gutter;
+  padding-left: $margin_lg;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// After p
+p + ul, 
+p + ol {
+  margin-top: $base_line_height * 1rem;
+} 
+
+// Unordered
+main ul {
+  list-style: none;
+  
+  li::before {
+    content: "-";
+    color: $red;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em
+  }
 }
 
 
@@ -311,6 +338,7 @@ hr {
 ///////////
 
 .hide {
+  display: none !important;
   
   // XX-Large Screens < 1600px
   @media only screen and (max-width: $screen_xxl) {
@@ -346,6 +374,48 @@ hr {
   @media only screen and (max-width: $screen_mi) {
     &--mi {
       display: none !important;
+    }
+  }
+  
+}
+
+.show {
+  display: block !important;
+  
+  // XX-Large Screens < 1600px
+  @media only screen and (max-width: $screen_xxl) {
+    &--xxl {
+      display: block !important;
+    }
+  }
+  // X-Large Screens < 1280px
+  @media only screen and (max-width: $screen_xl) {
+    &--xl {
+      display: block !important;
+    }
+  }
+  // Large Screens < 1024px
+  @media only screen and (max-width: $screen_lg) {
+    &--lg {
+      display: block !important;
+    }
+  }
+  // Medium Screens < 900px
+  @media only screen and (max-width: $screen_md) {
+    &--md {
+      display: block !important;
+    }
+  }
+  // Small Screens < 768px
+  @media only screen and (max-width: $screen_sm) {
+    &--sm {
+      display: block !important;
+    }
+  }
+  // Mini Screens < 425px
+  @media only screen and (max-width: $screen_mi) {
+    &--mi {
+      display: block !important;
     }
   }
   

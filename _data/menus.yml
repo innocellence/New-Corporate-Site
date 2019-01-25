@@ -10,10 +10,10 @@ en:
         name: Home
         url: /
       2:
-        name: Our Services
+        name: What we do
         url: /services/
       3:
-        name: Our Process
+        name: About us
         url: /about/
       4:
         name: Careers

@@ -1,7 +1,8 @@
 ---
-title: Senior Solution Architect
+title: Senior Solution Architect TBC
 location: Singapore
-department: engineering
+department: technology
+published: true
 ---
 Solution Architects design and deliver innovative technical solutions that satisfy our customers’ requirements. You have to love and be interested in how technology can be used to solve real world problems. You must have excellent consulting skills to present complex technical solutions to both business executives and technical personnel. Furthermore, as a senior staff member, you will set the vision for how technology should be used effectively throughout the company.
 

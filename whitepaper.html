@@ -13,7 +13,7 @@ menu: initialize
     <div class="area w--8 w__xl--9 w__lg--16 m__b e">
       <div class="card"> 
         <div class="card__content"> 
-          <div class="c--red">Latest</div>
+          <div class="latest">Latest</div>
           <h2 class="heading">{{ item.title }}</h2>
           <p>{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
           <p><a class="button button--primary" href="{{ item.url }}"><span>Read Whitepaper</span></a></p>
@@ -22,7 +22,7 @@ menu: initialize
       </div>
     </div>
     {% endif %}{% endfor %}
-    <div class="latest area w--6 hide--lg tail">
+    <div class="area w--6 hide--lg tail">
       <img class="fluid i_shadow e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_shadow.svg">
       <img class="fluid i_people e" src="{{ site.baseurl }}/assets/img/whitepaper/whitepaper_people.svg">
     </div>

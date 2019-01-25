@@ -1,7 +1,7 @@
 ---
-title: Business Consultant
+title: Business Consultant TBC
 location: Singapore
-department: business-engagement
+department: client-services
 ---
 
 In order to enhance our ability to provide quality analytics and insights to both ourselves and our clients, we are searching for a Business Analyst/Consultant, preferably with a background in the Internet or healthcare industries. This person will be based in Shanghai, and work with the Digital and Delivery teams to provide business analysis and consultation support that is able to drive better business and marketing decisions for our customers. General responsibilities include:

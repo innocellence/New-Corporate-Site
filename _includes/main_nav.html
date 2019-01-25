@@ -36,13 +36,13 @@
   <div class="mobile_navigation">
     <ul>
     {% for item in site.data.menus[page.lang].main.items %}
-    <li>
+    <li {% if page.title == item[1].name %}class="active"{% endif %}>
       <a href="{{ item[1].url }}" title="{{ item[1].name }}"><h2>{{ item[1].name }}</h2></a>
     </li>
     {% endfor %}
     </ul>
    
-<!--
+<!-- Swiper to be implemented
     <div id="menu_swiper" class="swiper-container">
       <div class="swiper-wrapper">
         {% for item in site.data.menus[page.lang].main.items %}
