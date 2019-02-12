@@ -2,7 +2,6 @@
 title: 免责声明
 layout: page
 ref: disclaimer
-exclude: true
 redirect_from:
   - /d/cn/corporate/terms.html
 ---

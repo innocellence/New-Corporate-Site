@@ -2,7 +2,6 @@
 title: Terms of Use
 layout: page
 ref: terms
-exclude: true
 redirect_from:
   - /d/en/corporate/terms.html
 ---

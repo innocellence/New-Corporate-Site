@@ -1,0 +1,67 @@
+#####################
+###### English ######
+#####################
+en:
+  - 1:
+    name: Languages
+    items: 
+      - Javascript
+      - HTML5
+      - "C#"
+      - Typescript
+      - Swift
+  - 2:
+    name: Frameworks
+    items:
+      - jQuery
+      - AngularJS
+      - Node.js
+      - Vue.js
+      - .NET
+  - 3:
+    name: Data
+    items:
+      - mySQL
+      - SQL Server
+      - PostgreSQL
+      - Oracle
+  - 4:
+    name: DevOps
+    items:
+      - Git
+      - Visual Studio
+      - Xcode      
+
+#####################
+###### Chinese ######
+#####################
+zh:
+  - 1:
+    name: XXXXX
+    items: 
+      - Javascript
+      - HTML5
+      - "C#"
+      - Typescript
+      - Swift
+  - 2:
+    name: XXXXX
+    items:
+      - jQuery
+      - AngularJS
+      - Node.js
+      - Vue.js
+      - .NET
+  - 3:
+    name: XXXXX
+    items:
+      - mySQL
+      - SQL Server
+      - PostgreSQL
+      - Oracle
+  - 4:
+    name: XXXXX
+    items:
+      - Git
+      - Visual Studio
+      - Xcode 

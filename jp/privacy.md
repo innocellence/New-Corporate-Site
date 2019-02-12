@@ -2,7 +2,6 @@
 title: 個人情報保護方針
 layout: page
 ref: privacy
-exclude: true
 redirect_from:
   - /d/jp/privacy/index.html
 ---

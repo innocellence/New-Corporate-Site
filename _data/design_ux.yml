@@ -1,0 +1,31 @@
+#####################
+###### English ######
+#####################
+en:
+  - text: User Research & testing
+    img:  
+  - text: Information Architecture
+    img:  
+  - text: Prototyping
+    img:  
+  - text: UI Design
+    img:  
+  - text: Design Systems & Style Guides
+    img:    
+
+#####################
+###### Chinese ######
+#####################
+zh:
+  - text: 
+    img:  
+  
+  
+######################
+###### Japanese ######
+######################
+jp:
+  - text:
+    img: 
+  - text: 
+    img: 

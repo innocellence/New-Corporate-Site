@@ -23,7 +23,7 @@ redirect_from:
     <h4 class="area w--16 heading e">Our Locations</h4> 
     <div class="w--16 grid grid--3 grid--gap">
       {% for i in site.data.locations[page.lang] %}
-      <div class="card t no--h__pad e">
+      <div class="card t e">
         <div class="card__content">
           <h3 class="heading">{{ i.country }} <span id="{{ i.time }}"></span></h3>
           <p>{{ i.address }}</p>

@@ -233,6 +233,7 @@ main, footer, .link {
       line-height: 1;
       font-size: inherit;
       vertical-align: baseline;
+      font-feature-settings: 'liga';
     }
     &.button:after {
       margin-left: $margin_sm;
@@ -273,6 +274,35 @@ main ul {
     display: inline-block;
     width: 1em;
     margin-left: -1em
+  }
+}
+
+// Table List
+.table-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: $typo_sparrow;
+  
+  &__column {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    margin-right: $gutter;
+    list-style: none;
+  }
+  li {
+    padding: $margin_sm 0;
+    border-bottom: 1px solid transparentize($grey, .5);
+    
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+  .column__header {
+    font-weight: bold;
+    border-bottom: 2px solid $base_font_color;
   }
 }
 

@@ -30,6 +30,7 @@ body[class="careers"] {
         right: -24px;
         content: 'close';
         font-family: $icon;
+        font-feature-settings: 'liga';
         cursor: pointer;
         opacity: 0;
         visibility: hidden;

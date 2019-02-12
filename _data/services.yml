@@ -7,7 +7,7 @@ en:
     url:  innovation-consulting
   - text: Design & UX
     img:  icon_design.svg
-    url:
+    url:  design-ux
   - text: Application Development
     img:  icon_development.svg
     url:  application-development

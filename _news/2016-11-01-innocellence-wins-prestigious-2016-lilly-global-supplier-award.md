@@ -3,6 +3,7 @@ title: InnoCellence Wins Prestigious 2016 Lilly Global Supplier Award
 excerpt: InnoCellence has been selected as an award recipient for the 2016 Lilly Global Supplier Award by Eli Lilly and Company (NYSE:LLY). The award acknowledges the business contributions made to Lilly by its suppliers, spanning across all global business areas, and recognizes InnoCellence as a valuable partner.
 redirect_from:
   - /d/assets/press-release/InnoCellence-Prestigious-Award-2016.pdf
+  - /d/assets/press-release/InnoCellence-Prestigious-Award-2016.pdf
 ---
 
 InnoCellence has been selected as an award recipient for the 2016 Lilly Global Supplier Award by Eli Lilly and Company (NYSE:LLY). The award acknowledges the business contributions made to Lilly by its suppliers, spanning across all global business areas, and recognizes InnoCellence as a valuable partner.

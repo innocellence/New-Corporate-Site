@@ -68,146 +68,38 @@ redirect_from:
       <p class="bullet e">Deliver consistent and intuative experiences across multiple devices with responsive design.</p>
       <p class="bullet e">Increase brand awareness and outrank competitors online with advanced SEO.</p>
       <p class="bullet e">Improve productivity by storing data in a cost-effective Content Management System (CMS).</p>
+      <p class="area w--16"><a href="#" class="e"><i class="icon" data-icon="play_circle_outline"></i> Watch web design video</a></p>
     </div>
-    <div class="area m__t w--14 w__lg--12 w__sm--16 tail o--right--4 g__r--sm">
-      <div class="laptop e">
-        <div class="laptop__screen">
-          Content required 
-        </div> 
-        <img class="fluid" src="{{ site.baseurl }}/assets/img/services/laptop.png">
-      </div> 
+    <div class="area m__t w--12 w__lg--10 w__sm--16 tail o--right--4 g__r--sm">
+      <div class="html-embed e"> 
+        <video autoplay muted loop width="100%" height="auto">
+          <source src="{{ site.baseurl }}/assets/video/website_32.mp4" type="video/mp4">
+          <p>Your browser does not support the video element.</p>
+        </video>
+      </div>
     </div>
   </div>
 </section>
   
-<section id="partners" class="section fade-e-below bg--white">
+<section id="technology-stack" class="section fade-e-below bg--white">
   <div class="section__i">
-    <div class="area w--16 m__t">
+    <div class="area w--16 g__t">
       <h3 class="w--16 heading c--red e">Our Technology Stack</h3> 
-<!--      <h2 class="heading e">Our Platform Expertise.</h2>-->
       <h2 class="area w--8 heading e">We support the industry’s most popular platforms and frameworks.</h2>
     </div>
-    <style>
-        table {
-/*          width: 100%;*/
-          text-align: left;
-          border: none;
-          table-layout: auto;
-          word-break: break-word;
-          font-size: .875rem;
-        }
-        th {
-          border-bottom: 2px solid #000;
-          padding: .5rem 0;
-          width: 130px;
-        }
-        td {
-          border-bottom: 1px solid #ccc;
-          padding: .5rem 0;
-          vertical-align: top;
-          line-height: 1.2;
-        }
-      </style>
-      
-    <div class="area w--4 m__t">
-      <table>
-        <thead>
-          <tr>
-            <th>Languages</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Typescript</td>
-          </tr>
-          <tr>
-            <td>C#</td>
-          </tr>
-          <tr>
-            <td>Javascript</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="area w--16 g__t g__b table-list">
+      {% for stack in site.data.stacks.en %}
+      <ul class="table-list__column e">
+        <li class="column__header">{{ stack.name }}</li>
+        {% for item in stack.items %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+      {% endfor %}
     </div>
-    <div class="area w--4 m__t">
-      <table>
-        <thead>
-          <tr>
-            <th>Languages</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Typescript</td>
-          </tr>
-          <tr>
-            <td>C#</td>
-          </tr>
-          <tr>
-            <td>Javascript</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="area w--4 m__t">
-      <table>
-        <thead>
-          <tr>
-            <th>Languages</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Typescript</td>
-          </tr>
-          <tr>
-            <td>C#</td>
-          </tr>
-          <tr>
-            <td>Javascript</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      
-      
-      <table>
-        <thead>
-          <tr>
-            <th>Languages</th>
-            <th>Frameworks</th>
-            <th>Tools</th>
-            <th>Front End</th>
-            <th>Server Side</th>
-            <th>Tools</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Typescript</td>
-            <td>AngularJS</td>
-            <td>MySQL</td>
-          </tr>
-          <tr>
-            <td>C#</td>
-            <td>.NET</td>
-            <td>GitLab</td>
-          </tr>
-          <tr>
-            <td>Javascript</td>
-            <td>Vue</td>
-            <td>Docker</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <p class="area w--16"><a href="https://stackshare.io/innocellence" class="button button--primary e"><span>View Full Stack</span></a></p>
-
-<!--      <p class="bullet w--10 w__lg--16 e">We partner with industry-leading service providers to deliver solutions on the most versatile and trusted industry platforms:</p>-->
-    </div>  
-<!--  </div>-->
+    <p class="area w--16"><a href="https://stackshare.io/innocellence" class="button button--primary e"><span>View full stack</span></a></p>
+  </div>  
+</section>
+  
+<!--
   <div class="section__i g__b swiper carousel swiper-container">
     <div class="swiper-pagination e"></div> 
     <div class="swiper-wrapper">
@@ -227,36 +119,61 @@ redirect_from:
     <div class="swiper-button-prev e"></div>
     <div class="swiper-button-next e"></div>
   </div>
+-->
+
+<section id="mobile-apps" class="section bg--white">
+  <div class="section__i fade-e-below">
+    <div class="area g__t g__b w--6 w__lg--8 w__sm--16">
+      <h3 class="w--16 heading c--red e">Mobile Apps</h3>
+      <h2 class="area heading e">User-friendly mobile applications.</h2>    
+      <p class="bullet e">Increase connectivity, reaching more users with multi-channel products and services.</p>
+      <p class="bullet e">Digitize your content, tailoring messaging for the right audience to improve engagement.</p>
+      <p class="bullet e">Leverage platform-specific technologies such as AR, wearables and machine learning.</p>
+    </div>
+    <div class="area m__t w--12 w__lg--10 w__sm--16 tail o--right--4 g__r--sm">
+      <div class="html-embed e"> 
+        <video autoplay muted loop width="100%" height="auto">
+          <source src="{{ site.baseurl }}/assets/video/website_32.mp4" type="video/mp4">
+          <p>Your browser does not support the video element.</p>
+        </video>
+      </div>
+    </div>
+  </div>
   {% include section__bottom.html %}
 </section>
 
-<section id="mobile" data-title="Mobile Solutions" class="section fade-e-below">
-  <div class="section__i"> 
-    <div class="area w--16">
-      <h3 class="w--16 heading c--red e">Mobile Apps</h3> 
-      <h2 class="area w--6 heading e">“The only thing worse than not having a mobile app is having one your customers hate using.”</h2>
+<section id="design-ux" data-title="Design & UX" class="section">
+  <div class="section__i fade-e-below">
+    <div class="area w--16 g__t">
+      <h3 class="w--16 heading c--red e">Design &amp; UX</h3> 
+      <h2 class="area w--9 w__lg--16 heading e">We merge business strategy with design, because good design is good business.</h2>
     </div>
-    
-    <div class="area w--16">
-      <h2 class="area tail w--6 heading e">We create user-friendly mobile applications.</h2>
+     
+    <div class="area g__t w--6 w__lg--8 w__sm--16">
+      <p class="bullet e">Increase connectivity, reaching more users with multi-channel products and services.</p>
+      <p class="bullet e">Digitize your content, tailoring messaging for the right audience to improve engagement.</p>
+      <p class="bullet e">Leverage platform-specific technologies such as AR, wearables and machine learning.</p>
     </div>
-    
-    <p class="area w--4 g__r bullet e">Increase connectivity, reaching more users with multi-channel products and services.</p>
-    <p class="area w--4 g__r bullet e">Digitize your content, tailoring messaging for the right audience to improve engagement.</p>
-    <p class="area w--4 bullet e">Leverage platform-specific technologies such as AR, wearables and machine learning.</p>
-    
-<!--
-    <div class="area w--16">
-      <h4 class="area w--16 c--red e">Our Technology Stack</h4>
-      <h2 class="area w--6 heading e">We support the industry’s most popular platforms and frameworks.</h2>
-      <p>Node.js, .NET</p>
+    <div class="area m__t w--12 w__lg--10 w__sm--16 tail o--right--4 g__r--sm">
+      <div class="html-embed e"> 
+        <video autoplay muted loop width="100%" height="auto">
+          <source src="{{ site.baseurl }}/assets/video/website_32.mp4" type="video/mp4">
+          <p>Your browser does not support the video element.</p>
+        </video>
+      </div>
     </div>
--->
+        <div class="area w--16">
+      <div class="grid grid--5 g__b">
+        {% for i in site.data.design_ux[page.lang] %}
+        <div class="card centered t e">
+          <img class="" src="{{ site.baseurl }}/assets/img/icons/{{ i.img }}">
+          <p>{{ i.text }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
-  
-  How to work with us
-  
-  {% include call.html %}
-  
   {% include section__bottom.html %}
 </section>
+
+{% include call.html %}

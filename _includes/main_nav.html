@@ -37,7 +37,7 @@
     <ul>
     {% for item in site.data.menus[page.lang].main.items %}
     <li {% if page.title == item[1].name %}class="active"{% endif %}>
-      <a href="{{ item[1].url }}" title="{{ item[1].name }}"><h2>{{ item[1].name }}</h2></a>
+      <a href="{{ item[1].url | prepend: site.baseurl }}" title="{{ item[1].name }}"><h2>{{ item[1].name }}</h2></a>
     </li>
     {% endfor %}
     </ul>

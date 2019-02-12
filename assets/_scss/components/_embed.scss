@@ -1,0 +1,29 @@
+///////////
+// Embed 
+///////////
+
+.html-embed {
+  background-color: $white;
+//  box-shadow: -3px 5px 16px 0 rgba(30,32,53,.1);
+  box-shadow: -3px 5px 16px 0 transparentize($black, .85);
+  border-radius: $radius-sm;
+  overflow: hidden;
+  padding-bottom: 0;
+  margin-bottom: -8px;
+  
+  &:before, &:after {
+    display: table;
+    content: " ";
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+video {
+  display: block;
+}

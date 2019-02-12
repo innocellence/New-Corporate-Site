@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   background: $white;
-  width: 100%;
+//  width: 100%;
   height: auto;
   margin: 0;
   padding: $margin_lg;
@@ -25,16 +25,22 @@
   &.centered {
     align-items: center;
     text-align: center;
+    
+    > * {
+      max-width: 100%;
+    }
   }
   // Padding Variations
-  &.no--h__pad {
-    padding: $margin_lg 0;
-  }
   &.no--v__pad {
-    padding: 0 $margin_lg;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  &.no--h__pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   &.no--pad {
-    padding: 0;
+    padding: 0 !important;
   }
   // Content
   &__content {

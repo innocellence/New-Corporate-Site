@@ -2,7 +2,6 @@
 title: Privacy
 layout: page
 ref: privacy
-exclude: true
 redirect_from:
   - /d/en/corporate/privacy.html
 ---

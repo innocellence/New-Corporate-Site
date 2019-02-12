@@ -82,6 +82,7 @@ $softBounce: cubic-bezier(.17,.89,.49,1.14);
   
   &:before {
     font-family: $icon;
+    font-feature-settings: 'liga';
     content: 'chevron_right';
     font-size: $typo_hawk;
   }
@@ -99,6 +100,7 @@ $softBounce: cubic-bezier(.17,.89,.49,1.14);
   
   &:before {
     font-family: $icon;
+    font-feature-settings: 'liga';
     content: 'chevron_left';
     font-size: $typo_hawk;
   }

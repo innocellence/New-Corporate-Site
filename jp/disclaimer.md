@@ -2,7 +2,6 @@
 title: 免責事項
 layout: page
 ref: disclaimer
-exclude: true
 redirect_from:
   - /d/jp/disclaimer/index.html
 ---
