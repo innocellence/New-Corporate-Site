@@ -20,7 +20,7 @@ With consumers quickly going mobile *across the globe*, many companies are devel
 
 Here are three reasons why your business to have a mobile app: 
 
-#### #1 Consumers Prefer Mobile Apps Over Websites 
+### #1 Consumers Prefer Mobile Apps Over Websites 
 
 If there’s one major reason to explore mobile app development, it’s this — *customers prefer apps over websites*. 
 
@@ -36,7 +36,7 @@ Why do people prefer mobile apps over websites? The answer is simple — because
 Remember, the performance of your mobile app will impact your brand’s perception. If you don’t conduct user testing or take User Experience (UX) into account when developing it — your app might end up frustrating your customers instead of making their lives easier. 
 
 
-#### #2 Because Mobile Apps Enable You to Support and Solve Customer Needs 
+### #2 Because Mobile Apps Enable You to Support and Solve Customer Needs 
 
 For companies in the retail, software, internet, banking, and gaming industries — *creating apps for customers is an absolute necessity*. 
 
@@ -51,7 +51,7 @@ If you’re unsure of what type of app to look into, here are several that can e
 
 If your market isn’t dominated by a particular platform (e.g. iOS), you might want to consider developing a cross-platform app that can be adapted to multiple platforms such as iOS, Android, and Windows — *so your app can reach more mobile users*.
 
-#### #3 Because Mobile Apps Can Expand Your Market Reach 
+### #3 Because Mobile Apps Can Expand Your Market Reach 
 
 For an app to be successful, it *must* acquire new users and be engaging enough to keep them. App marketing for acquiring new users is a whole other topic, but a good first step is listing your app on a distribution platform ([App Store](https://itunes.apple.com/sg/genre/ios/id36), [Google Play](https://play.google.com/store/apps?hl=en), etc.) and creating a page or microsite for it within your website. 
 
@@ -64,7 +64,7 @@ While acquiring, attaining, and engaging your users are the ultimate goals of an
 
 It’s crucial that you monitor your app’s performance through mobile analytics so you can continually optimize its content, features, and functions. 
 
-###Should Your Company Invest in Building a Mobile App? 
+### Should Your Company Invest in Building a Mobile App? 
 
 *Mobile apps aren’t for everyone*. In fact, you need a *mobile app strategy* in order to define the requirements that’ll lead to an app that is intuitive, provides a good UX, and satisfies users’ needs. 
 
@@ -78,4 +78,4 @@ So before you invest tens or hundreds of thousands of dollars in mobile app deve
 
 With the help of a digital innovation consultant, you’ll also be able to answer the question of whether or not your company *needs* a mobile app. After all, it may turn out that what your company really needs isn’t a mobile app, but *responsive web design* and/or a *mobile web app*. 
 
-#####How has having a mobile app improved your business? What challenges did you face when building your company’s app? Share your experience with us by leaving a comment. 
+**How has having a mobile app improved your business? What challenges did you face when building your company’s app?**

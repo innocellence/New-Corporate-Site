@@ -8,8 +8,6 @@ tags:
 ---
 
 For pharmaceutical companies, this is a valuable opportunity to deliver engaging disease and treatment messages that can improve their brand awareness, perception, and reputation among patients.  
-
-![](/content/images/2016/10/doctor-and-patient-1080409_1920.png)
         
 When it comes to creating patient education materials, there are several mistakes pharmas should avoid: 
 
@@ -74,6 +72,4 @@ Of course, the needs and preferences of patients can vary by market, which is wh
 
 Otherwise, pharmas risk missing their target audiences by not adapting their content and distribution channels to meet the needs of local audiences. 
 
-**What do you think is the biggest challenge pharmas face in creating effective patient education materials? Share your thoughts with us by commenting below!**
-
-Image Credit: Pixabay  
+**What do you think is the biggest challenge pharmas face in creating effective patient education materials?**

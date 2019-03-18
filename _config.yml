@@ -70,7 +70,6 @@ defaults:
       type: 'jobs'
     values:
       lang: en
-      published: false
       
   -
     scope:

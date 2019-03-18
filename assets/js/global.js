@@ -96,6 +96,72 @@ function forEach() {
 }
 
 ///////////
+// Browser Check
+///////////
+function browserCheck() {
+  $('body').prepend('<div id="systemCheck"><div class="popup"><h3 class="title">Out of date browser!</h3><div class="content"><p>We have detected that you are using an old browser, some of the features on this site may not function correctly.</p><p id="gonogo"></p><p>Please update your browser to the latest version of <a href="https://www.google.com/chrome/">Chrome</a>, <a href="https://www.apple.com/sg/safari/">Safari</a>, or <a href="https://www.microsoft.com/en-sg/windows/microsoft-edge">Internet Explorer</a> and reload this page for the best experience.</p></div><div class="foot"><a id="systemContinue" href="javascript:void(0);" class="button button--primary"><span>Continue to InnoCellence.com <i class="icon" data-icon="arrow_forward"></i></span></a></div></div>');
+  
+  // Get IE or Edge browser version
+  var version = detectIE();
+  var $continue = $('#systemContinue');
+
+  if (version === false) {
+    document.getElementById('gonogo').innerHTML = '<s>No IE/Edge</s>';
+    console.log('System Check: \n👨‍🚀: Go \n👩‍💻: ' + window.navigator.userAgent);
+  } else if (version >= 11) {
+    document.getElementById('gonogo').innerHTML = 'Edge ' + version;
+    console.log('System Check: \n👨‍🚀: Go \n👩‍💻: ' + window.navigator.userAgent);
+  } else {
+    document.getElementById('gonogo').innerHTML = 'IE ' + version;
+    $('#systemCheck').addClass('active');
+    $('html').addClass('no_overflow');
+    $continue.click(function() {
+      $('html').removeClass('no_overflow');
+      $('#systemCheck').removeClass('active');
+      console.log('System Override');
+    });
+    console.log('System Check: \n👨‍🚀: No Go \n👩‍💻: ' + window.navigator.userAgent);
+  }
+  // Detect IE
+  // Return version of IE or false, if browser is not Internet Explorer
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    // Test values; Uncomment ua to check
+    // IE 10
+    // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+    // IE 11
+    // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+    // Edge 12 (Spartan)
+    // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+    // Edge 13
+    // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf('rv:');
+      return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+      // Edge (IE 12+) => return version number
+      return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+
+    // other browser
+    return false;
+  }
+}
+
+///////////
 // External Links
 ///////////
 function externalLinks() {
@@ -145,6 +211,47 @@ function smoothScroll () {
     });
   return false;
   });
+}
+
+
+///////////
+// Cookie Pop
+///////////
+function cookieCheck() {
+  if (Cookies.get('popupRemove') == null && Cookies.get('popupHide') == null) {
+  } else {
+    console.log('🍪 Discovered');
+  }
+}
+function cookie() {
+//  $('body').prepend('<a href="javascript:void(0)" class="clear">REMOVE COOKIES</a>');
+//  $('.clear').click(function() {
+//    Cookies.remove('PopupRemove');
+//    Cookies.remove('popupHide');
+//  });
+  if (Cookies.get('popupRemove') == null && Cookies.get('popupHide') == null) {
+    var $cookie = $('<div class="cookie"></div>'),
+        $message = $('<div class="cookie__popup"><div>We use cookies. By using our site you agree to our <a href="../privacy/">privacy&nbsp;policy</a>. <span class="remove"></span></div><span class="close"></span></div>'),
+        $close = $('<a href="javascript:void(0)"><i class="icon" data-icon="close"></a>'),
+        $remove = $('<a href="javascript:void(0)">Never&nbsp;show&nbsp;again.</a>');
+    
+      $('#navigation').prepend($cookie);
+      $cookie.prepend($message);
+      $('.cookie__popup .close').prepend($close);
+      $('.remove').prepend($remove);
+    
+      $('html').addClass('cookie-active');
+      $close.click(function() {
+        $('html').removeClass('cookie-active');
+        Cookies.set('popupHide', 'true', { expires: 1 });
+        console.log('🍪 Recorded');
+      });
+      $remove.click(function() {
+        $('html').removeClass('cookie-active');
+        Cookies.set('popupRemove', 'true', { expires: 365 });
+        console.log('🍪 Recorded');
+      });
+  }
 }
 
 
@@ -282,7 +389,7 @@ function navigation () {
             if (i === 'footer') {
               console.log('✋ End of page');
             } else {
-              console.log('👀 Viewing > #' + i);
+              console.log('👀 > #' + i);
             }
             $('.pagename div').removeClass('active');
             $match.addClass('active');
@@ -924,8 +1031,9 @@ function ajaxify() {
       
       // Set the destination
       var p = window.location.pathname;
-      console.log("🚀 Travelling to ... " + p );      
+      console.log("🚀 to... " + p );      
       
+      cookie();
       cursorReplace();
       loadingAnimations();
       smoothScroll();
@@ -942,6 +1050,8 @@ function ajaxify() {
 
 function init() {
   forEach();
+  cookieCheck();
+  cookie();
   cursorGenerate();
   cursorReplace();
   loadingAnimations();
@@ -963,8 +1073,12 @@ $(document).ready(function () {
   // Captain's Log
   ///////////
   
-  console.log('%c \u00A9 2018 & Beyond. InnoCellence', "background: #F8F9FC; font-size: 12px; color: #375EB4; padding:4px 8px 4px 0");
-  console.log('%c Join our team: careers@innocellence.com', "font-size: 12px; color: #EF4B46; padding:2px 8px 2px 0; margin-bottom: 10px; border-bottom: 2px solid #EF4B46;");
+  console.log('%c \u00A9 2018 & Beyond. InnoCellence \n Join our team: careers@innocellence.com', "display: block; background: #F8F9FC; color: #375EB4;");
+  
+  ///////////
+  // System Check
+  ///////////
+  browserCheck();
   
   ///////////
   // Make it so

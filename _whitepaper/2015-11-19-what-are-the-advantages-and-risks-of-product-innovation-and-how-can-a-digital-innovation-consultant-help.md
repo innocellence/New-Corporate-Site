@@ -13,7 +13,7 @@ That’s a realization shared by 93% of executives who took part in Pricewaterho
 
 Today’s executives know that product innovation holds many business advantages, but reward *never* comes without risk.
 
-###Advantages of Product Innovation
+### Advantages of Product Innovation
 
 The "popular" definition of product innovation is that it’s only about inventing new products. However, it also constitutes improving the design and function of existing products, as well as using new technologies, manufacturing processes, and materials to differentiate them from competitors’ products.
 
@@ -30,7 +30,7 @@ Here are some of the advantages product innovation can deliver:
 - **Success in Failure**: The "failed" result of innovation for one target market can end up being a disruptive and profitable innovation that can be applied to other markets. Penicillin, plastic, saccharin, WD-40, and the pacemaker are key examples of “successful” innovation failures/mistakes.
 
 
-###Risks of Product Innovation
+### Risks of Product Innovation
 
 With its ability to generate profit and increased market share, it’s easy to see why the vast majority of C-level executives are championing product innovation. But when the investment in time, manpower, expenses, and risks are factored – many companies are *understandably* cautious about product innovation.
 
@@ -42,7 +42,7 @@ Here are some of the risks companies face when investing in product innovation:
 - **Employee Dilemmas**: Developing an innovative product that improves efficiency and saves costs can also render employees redundant, leaving companies with the tough dilemma of either having to retrench staff, or invest time and resources retraining them for other tasks.
 
 
-###Is Product Innovation Worth the Risk?
+### Is Product Innovation Worth the Risk?
 
 That can be a tough question to answer, especially when you consider that the product innovation failure rate is high — 40% to 90%, depending on which industry studies and sources you reference.
 
@@ -60,7 +60,7 @@ The reality is that companies must answer many key questions before making the d
 
 Answering these questions can be a daunting task for companies, especially if they lack an innovation strategy that maximizes the latest digital technologies. However, companies can still get the answers they need to invest in innovation — *with a little outside help.*
 
-###How Can a Digital Innovation Consultant Help?
+### How Can a Digital Innovation Consultant Help?
 
 There’s nothing more dangerous in today’s digital marketplace than staying idle while the competition develops market-grabbing products. Sadly, many companies are too paralyzed by uncertainty and a lack of innovation experience to do anything about it.
 
@@ -84,4 +84,4 @@ While experience and capabilities are good enough reasons to hire a digital inno
 
 After all, who would you rather have as your company’s product innovation parter — a transaction-based mercenary who sees your company as a project number, or a trusted partner that knows your business and functions as an extension of your team?
 
-#####What are the biggest obstacles preventing Product Innovation in your business? Share your experience with us by leaving a comment.
+**What are the biggest obstacles preventing Product Innovation in your business?**

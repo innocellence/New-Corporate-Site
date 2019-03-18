@@ -8,9 +8,6 @@ tags:
 
 *And it doesn't look like the Internet will stop evolving as a key source for relevant medical content and services anytime soon.* 
 
- 
-![](/content/images/2016/09/thermometer-1539191_1920.jpg)
-
 ### Patients Increasingly Want Digital Healthcare Content 
 
 The way patients deal with health-related problems is also changing. Although HCPs are still the top source of health information, a larger percentage of patients are accessing healthcare information online — according to a study by Pew Research Center. 
@@ -19,7 +16,7 @@ The way patients deal with health-related problems is also changing. Although HC
 
 Another survey conducted by Princeton Survey Research Associates International similarly revealed that more adults in the U.S. are going online for medical-related content:
 
-![](/content/images/2016/09/Picture1-3.png)
+![]({{ site.baseurl }}/whitepaper/img/Picture1-3.png)
 
 Meanwhile, in China, the growth percentage is not quite as drastic, but there is certainly room for tremendous growth. A survey conducted by the [China Internet Network Information Center (CNNIC)](http://cnnic.com.cn/IDR/ReportDownloads/201601/P020160106496544403584.pdf) shows that as of December 2015, the scale of medical Internet users is 152 million, making up 22.1% of the total Internet users.
 
@@ -27,7 +24,7 @@ Meanwhile, in China, the growth percentage is not quite as drastic, but there is
 
 Pew’s survey also showed that patients frequently went online to search for information about specific diseases or medical problems; medical treatments and procedures; and diet and nutrition information.
 
-![](/content/images/2016/09/Picture2.png)
+![]({{ site.baseurl }}/whitepaper/img/Picture2.png)
 
 **What's driving the trend in patient healthcare-related searching habits?**
 
@@ -52,7 +49,7 @@ This trend is captured by a recent survey conducted by [Cello Health Insight](ht
 
 The research concluded that more than 60% of HCPs agree that patients research and/or self-diagnose their medical conditions before consultation:
 
-![Graphic 3](/content/images/2016/09/Picture3-2.png)
+![]({{ site.baseurl }}/whitepaper/img/Picture3-2.png)
 
 To quote the report on the implications of the survey: 
 
@@ -62,8 +59,4 @@ With this data in mind, pharmas should begin to look closer their [content strat
 
 After all, it's not so hard to imagine that in the near future, well-informed patients are going to the be ones driving HCPs decisions on which medications and treatments to prescribe.  
 
-
-
-**Do you think pharmas will begin to put more emphasis on creating patient-centric content? Share your thoughts with us by commenting below!**
-
-Image Credit: Pixabay 
+**Do you think pharmas will begin to put more emphasis on creating patient-centric content?**

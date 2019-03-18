@@ -90,7 +90,7 @@ en:
 zh:
   ## Main Navigation / Explore ##
   main: 
-    title: XExploreX
+    title: 探索
     items: 
       1:
         name: 首页
@@ -104,18 +104,18 @@ zh:
         
   ## Location ##      
   location: 
-    title: XFind UsX
+    title: 找到我们
     items: 
       1: 
         name: "InnoCellence Dalian<br>大连高新园区<br>汇贤园区<br>7号腾飞软件园<br>2号11-05"
       2:
-        name: XOther LocationsX
+        name: 其他位置
         url: /cn/contact/
         class: other_locations
         
   ## Updates ##      
   updates:
-    title: XUpdatesX
+    title: 新情报
     items: 
       1:
         name: 领英中国
@@ -126,15 +126,15 @@ zh:
         url: http://weixin.qq.com/r/MUwtKezEySS1KahKbxm1
         external: true
       3:
-        name: XNewsX
+        name: 新闻
         url: /news/
       4:
-        name: XWhitepapersX
+        name: 白皮书
         url: /whitepaper/      
         
   ## Contact ##      
   contact: 
-    title: XNew OpportunitiesX
+    title: 发展机遇
     items: 
       1: 
         name: info@innocellence.com
@@ -152,7 +152,7 @@ zh:
         
   ## Legal ##
   legal: 
-    title: Legal
+    title: 法律
     items: 
       1: 
         name: 免责声明
@@ -225,7 +225,7 @@ jp:
         
   ## Legal ##
   legal: 
-    title: Legal
+    title: 法律
     items: 
       1: 
         name: 個人情報保護方針

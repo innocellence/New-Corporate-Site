@@ -1,28 +1,30 @@
 ---
-title: Senior Solution Architect TBC
+title: Senior Solution Architect
 location: Singapore
 department: technology
-published: true
 ---
-Solution Architects design and deliver innovative technical solutions that satisfy our customers’ requirements. You have to love and be interested in how technology can be used to solve real world problems. You must have excellent consulting skills to present complex technical solutions to both business executives and technical personnel. Furthermore, as a senior staff member, you will set the vision for how technology should be used effectively throughout the company.
+Senior Solution Architects design and deliver innovative technical solutions that satisfy our client’s requirements.
+As a Senior Solution Architect, you will utilize your technical knowledge and business consulting skills to translate complex real-world problems into technical solutions, presenting them directly to our clients. This senior role will also be responsible for setting the vision of how technology can be leveraged to improve productivity and efficiency throughout our organization. 
+
 
 ### Responsibilities
 
-- Translate client’s business needs into detailed, end-to-end system specifications
-- Engage in senior level technology and business discussions related to business value and technological strategy
-- Communicate system requirements to software development teams and ensure proper understanding, always willing to answer questions
-- Take responsibility for the implementation of architecture throughout the project lifecycle, troubleshooting issues when necessary
-- Define overall architecture standards for the company
-- Conduct architecture reviews to ensure solutions are right sized and architecture standards and process is followed
+- Transform our client’s business needs into system architecture specifications 
+- Provide support and direction to our client’s architecture teams
+- Lead technology discussions related to enhancing business value and driving technological strategy
+- Communicate architecture standards and requirements to software development teams, providing direction when necessary
+- Take responsibility for the implementation of architecture throughout the project lifecycle, troubleshooting when necessary
+- Define our organization’s architecture standards, technology stack, and explore applicable emerging technologies
+- Conduct architecture reviews, ensuring that architecture standards and processes are followed
 - Build and manage a high-performing team, taking responsibility for training
-- Explore emerging technologies, assess feasibility of applying new technology to solve business problems
+
 
 ### Requirements
 
 - Degree in Computer Science, Engineering, or equivalent
-- 5+ years’ experience as an enterprise-level Solution Architect
-- Excellent knowledge of software development, system administration, and IT strategy with a hands-on approach
-- Proven ability to define robust system architecture, database structures, and coding standards.
-- Experience choosing, defining, and training a team in modern quality-related methodologies including peer code review and unit tests
-- Architectural understanding of both commercial and common Open Source solution development tools and technologies
-- Must be able to write and present a proposal and statement of work effectively
+- 5+ years of experience as an enterprise-level Solution Architect
+- Excellent knowledge of software development, system administration, and IT strategy 
+- Proven ability to define robust system architecture, database structures, and coding standards
+- Experience choosing, defining, and training a team in modern development methodologies including peer code review and unit testing
+- Architectural understanding of commercial and Open Source development tools and technologies
+- Must be able to create and present a proposal and statement of work effectively

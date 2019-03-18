@@ -10,8 +10,6 @@ Just how costly and time-consuming is it? According to recent food and drug admi
 
 In addition, less than 10% of drugs make it from discovery to market. 
 
-![](/content/images/2016/08/test-214185_1280.jpg)
-
 ## The Complete Drug R&D Process
 
 The complete drug R&D process is divided into five main stages: discovery and development, preclinical research, clinical research, FDA review, and FDA post-market safety monitoring. 
@@ -51,41 +49,45 @@ The clinical research phase is comprised of four sub-phases:
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg .tg-yw4l{vertical-align:top}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top;text-align: left;}
 </style>
 <table class="tg">
-  <tr>
-    <th class="tg-yw4l">Phase</th>
-    <th class="tg-yw4l">Length of Study</th>
-    <th class="tg-yw4l">Subjects</th>
-    <th class="tg-yw4l">Purpose</th>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Phase I</td>
-    <td class="tg-yw4l">Several months</td>
-    <td class="tg-yw4l">20 to 100 healthy volunteers</td>
-    <td class="tg-yw4l">Safety and dosage</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Phase II</td>
-    <td class="tg-yw4l">Several months up to 2 years</td>
-    <td class="tg-yw4l">Up to several hundred volunteers with the disease/condition</td>
-    <td class="tg-yw4l">Efficacy and side effects</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Phase III</td>
-    <td class="tg-yw4l">1 to 4 years </td>
-    <td class="tg-yw4l">300 to 3,000 volunteers with the disease/condition</td>
-    <td class="tg-yw4l">Efficacy and monitoring of adverse reactions</td>
-  </tr>
-  <tr>
-    <td class="tg-yw4l">Phase IV</td>
-    <td class="tg-yw4l">Post-approval</td>
-    <td class="tg-yw4l">All patients are taking the drug</td>
-    <td class="tg-yw4l">Safety and efficacy </td>
-  </tr>
+  <thead>
+    <tr>
+      <th class="tg-yw4l">Phase</th>
+      <th class="tg-yw4l">Length of Study</th>
+      <th class="tg-yw4l">Subjects</th>
+      <th class="tg-yw4l">Purpose</th>
+    </tr>
+  </thead>
+  <tbody> 
+    <tr>
+      <td class="tg-yw4l">Phase&nbsp;I</td>
+      <td class="tg-yw4l">Several months</td>
+      <td class="tg-yw4l">20 to 100 healthy volunteers</td>
+      <td class="tg-yw4l">Safety and dosage</td>
+    </tr>
+    <tr>
+      <td class="tg-yw4l">Phase&nbsp;II</td>
+      <td class="tg-yw4l">Several months up to 2 years</td>
+      <td class="tg-yw4l">Up to several hundred volunteers with the disease/condition</td>
+      <td class="tg-yw4l">Efficacy and side effects</td>
+    </tr>
+    <tr>
+      <td class="tg-yw4l">Phase&nbsp;III</td>
+      <td class="tg-yw4l">1 to 4 years </td>
+      <td class="tg-yw4l">300 to 3,000 volunteers with the disease/condition</td>
+      <td class="tg-yw4l">Efficacy and monitoring of adverse reactions</td>
+    </tr>
+    <tr>
+      <td class="tg-yw4l">Phase&nbsp;IV</td>
+      <td class="tg-yw4l">Post-approval</td>
+      <td class="tg-yw4l">All patients are taking the drug</td>
+      <td class="tg-yw4l">Safety and efficacy </td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -105,6 +107,4 @@ Drug R & D is essential for the sustainable development of pharmaceutical compan
 
 Pharmas are continuing to adapt to these challenges in a variety of ways including restructuring their operating/business models. However, finding the right solution(s) to the growing problem of R&D productivity is proving as elusive as the quest for the next blockbuster drug. 
 
-**What do you think are some of the biggest challenges impacting the drug R&D process? Share your thoughts with us by commenting below!**
-
-Image Credit: Pixabay 
+**What do you think are some of the biggest challenges impacting the drug R&D process?**

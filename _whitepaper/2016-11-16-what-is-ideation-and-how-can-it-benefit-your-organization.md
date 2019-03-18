@@ -57,6 +57,6 @@ While it’s important to evaluate a vendor’s ideation process, it’s more im
 After all, participants who trust their ideation facilitator are more likely to share their ideas — *and one of those ideas just might lead to your organization’s next breakthrough product*. 
 
 
-**How does your organization approach ideation? Share your thoughts and experiences with us in the comment box below!** 
+**How does your organization approach ideation?** 
 
 [product-innovation]: {{ site.baseurl }}/whitepaper/2015-11-19-what-are-the-advantages-and-risks-of-product-innovation-and-how-can-a-digital-innovation-consultant-help/

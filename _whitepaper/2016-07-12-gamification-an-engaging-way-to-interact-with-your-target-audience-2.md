@@ -15,41 +15,42 @@ In order to grab and hold the attention of key audiences — *both internal and 
 
 One fun and engaging way to do that is through gamification. 
 
-![](/content/images/2016/07/ipad-718411_1920-2.jpg)
-####What Is Gamification?
-Gamification is the concept of using gaming elements to increase user engagement in digital platforms such as web and [mobile applications](http://blog.innocellence.com/2015/11/18/3-reasons-why-your-business-needs-a-mobile-app/) created by non-game industry companies.  
+### What Is Gamification?
+
+Gamification is the concept of using gaming elements to increase user engagement in digital platforms such as web and [mobile applications]({{ site.baseurl}}/whitepaper/2015-11-18-3-reasons-why-your-business-needs-a-mobile-app/) created by non-game industry companies.  
 
 Gaming elements include, but are not limited to the following:
 
-* **Knowledge Sharing:** Enabling users to assist each other by answering questions enhances engagement by motivating knowledge sharing through rewards (e.g. points) or even goodwill.<br><br>
-* **Competition/Leaderboards:** Ranking users by their score or other criteria gives users a way to compare their status to other users when it comes to challenges involving real/in-game rewards.<br><br>
-* **Badges/Accomplishments:** Rewarding users with “badges” for achievements encourages them to gain distinction in a company’s web or mobile app.<br><br>
-* **Experience Points System:** Solving challenges to gain “experience points” gives users motivation to “level up” to access to new content, challenges, and features.<br><br>
-* **Rewards (Real/In-game):** Offering real or in-game rewards to users for completing challenges is a powerful motivating factor for engagement.
+- **Knowledge Sharing:** Enabling users to assist each other by answering questions enhances engagement by motivating knowledge sharing through rewards (e.g. points) or even goodwill.
+- **Competition/Leaderboards:** Ranking users by their score or other criteria gives users a way to compare their status to other users when it comes to challenges involving real/in-game rewards.
+- **Badges/Accomplishments:** Rewarding users with “badges” for achievements encourages them to gain distinction in a company’s web or mobile app.
+- **Experience Points System:** Solving challenges to gain “experience points” gives users motivation to “level up” to access to new content, challenges, and features.
+- **Rewards (Real/In-game):** Offering real or in-game rewards to users for completing challenges is a powerful motivating factor for engagement.
 
 Gamification apps can not only make training and educational content engaging —  but measurable as well. 
 
 In fact, engagement metrics such as unique visitors, visit frequency, page depth, and conversions can be measured and optimized to improve a gamification app’s user experience and content.  
 
+### How Can Gamification be Applied?
 
-
-####How Can Gamification be Applied?
 When it comes to gamification, many non-gaming companies in industries ranging from insurance to healthcare face a similar dilemma — *how can we apply it to our business?*
 
 The answer to that question can often be found by answering another important set of questions:
 
-**A)  Who is your target internal/external audience?** (e.g. sales force, customer service, HCPs, patients)<br><br>
-**B)  What actions do you want your target users to take?** (e.g. read more content, share more content, use a web/mobile app feature more frequently)<br><br>
+**A)  Who is your target internal/external audience?** (e.g. sales force, customer service, HCPs, patients)
+
+**B)  What actions do you want your target users to take?** (e.g. read more content, share more content, use a web/mobile app feature more frequently)
+
 **C)  What business goals do you want to accomplish?** (e.g. improve brand awareness, sales training effectiveness, brand loyalty)
 
 Once those questions have been answered, it will be much easier to apply gamification in a variety of contexts including, but not limited to:
 
-* eLearning<br>
-* Sales Training<br>
-* Interactive Video Aids<br>
-* Recruiting<br>
-* Marketing<br>
-* Customer Retention
+- eLearning
+- Sales Training
+- Interactive Video Aids
+- Recruiting
+- Marketing
+- Customer Retention
 
 **For example:**
 
@@ -61,7 +62,8 @@ Once those questions have been answered, it will be much easier to apply gamific
 
 *Children playing the game would learn about the effects of diabetes and high-sugar foods on their blood-sugar levels.*
 
-####How Are You Using Gamification? 
+### How Are You Using Gamification? 
+
 Gamification isn't for every company. But if there is a critical need to drive audience engagement with the company's educational and training content — few options work better than gamification.   
 
 Of course, not every company has the in-house digital, design, and development expertise needed to create a web or mobile gamification application.
@@ -69,6 +71,4 @@ Of course, not every company has the in-house digital, design, and development e
 In such instances, working with an experienced digital innovation agency that applies user experience (UX) design principles can help you develop a gamification app that is effective and engaging. 
 
 
-#####*What are some other intersting ways gamification can be applied to engage your customers and/or employees? Share your thoughts and experiences with us by commenting below!*<br><br>
-
-Image Credit: Pixabay 
+**What are some other intersting ways gamification can be applied to engage your customers and/or employees?**

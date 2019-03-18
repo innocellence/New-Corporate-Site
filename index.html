@@ -6,14 +6,14 @@ ref: home
 redirect_from: 
   - /d/
 ---
-<section id="about" data-title="About us" class="section fade-e-below">
+<section id="about" data-title="About us" class="section">
   <div class="section__i">
-    <div class="area w--16">
-      <h2 class="heading e">About us.</h2>   
-      <p class="area w--6 w__xl--10 w__lg--10 w__sm--16 bullet e">We are a digital service provider, successfully combining innovative design with digital technology to create products our customers love.</p>
-      <p class="area w--6 w__xl--10 w__lg--10 w__sm--16 bullet e">Our team consists of experienced professionals who specialize in business strategy, design &amp; technical development.</p>
+    <div class="area w--16 fade-c-below">
+      <h2 class="heading">About us.</h2>   
+      <p class="area w--6 w__xl--10 w__lg--10 w__sm--16 bullet">We are a digital service provider, successfully combining innovative design with digital technology to create products our customers love.</p>
+      <p class="area w--6 w__xl--10 w__lg--10 w__sm--16 bullet">Our team consists of experienced professionals who specialize in business strategy, design &amp; technical development.</p>
     </div>
-    <div class="area w--10 w__xl--16 tail m__t">
+    <div class="area w--10 w__xl--16 tail m__t fade-e-below">
       <div class="grid grid--3">
         {% for i in site.data.snapshot[page.lang] %}
         <div class="card centered t e">
@@ -61,12 +61,12 @@ redirect_from:
   </div>
 </section>
   
-<section id="stories" class="section fade-e-below bg--white">
-  <div class="section__i g__b swiper swiper-container">
-    <div class="swiper-pagination e"></div> 
+<section id="stories" class="section bg--white fade-e-below">
+  <div class="section__i g__b swiper swiper-container e">
+    <div class="swiper-pagination"></div> 
     <div class="swiper-wrapper">
       {% for i in site.data.stories[page.lang] %}
-      <div class="swiper-slide e">
+      <div class="swiper-slide">
         <div class="slide__i w--14">
           <div class="slide__content">
             <h2>{{ i.title }}</h2>
@@ -86,8 +86,8 @@ redirect_from:
       </div>
       {% endfor %}
     </div>
-    <div class="swiper-button-prev e"></div>
-    <div class="swiper-button-next e"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </section>
 
@@ -109,13 +109,13 @@ redirect_from:
 
 <section id="team" data-title="One team, global reach" class="section fade-e-below bg--white">
   <div class="section__i"> 
-    <div class="area w--16">
-      <h2 class="area w--6 w__xl--16 heading e">One team, global reach.</h2> 
-      <p class="area w--6 w__xl--8 w__lg--10 w__sm--16 bullet e">Our Digital SMEs, Engineers, Designers and Project Managers provide expertise to build solutions from ideation to implementation.</p>
+    <div class="area w--16 e">
+      <h2 class="area w--6 w__xl--16 heading">One team, global reach.</h2> 
+      <p class="area w--6 w__xl--8 w__lg--10 w__sm--16 bullet">Our Digital SMEs, Engineers, Designers and Project Managers provide expertise to build solutions from ideation to implementation.</p>
     </div>
-    <div class="area w--6 w__xl--8 w__lg--10 w__sm--16 m__t">
-      <p class="bullet e">InnoCellence is headquartered in Singapore, with offices throughout Asia.</p>
-      <p class="e"><a href="{{ site.baseurl }}/contact/" class="button button--primary e"><span>Contact us</span></a><a href="{{ site.baseurl }}/careers/" class="button button--primary e"><span>Join the team</span></a></p>
+    <div class="area w--6 w__xl--8 w__lg--10 w__sm--16 m__t e">
+      <p class="bullet">InnoCellence is headquartered in Singapore, with offices throughout Asia.</p>
+      <p><a href="{{ site.baseurl }}/contact/" class="button button--primary"><span>Contact us</span></a><a href="{{ site.baseurl }}/careers/" class="button button--primary"><span>Join the team</span></a></p>
     </div>
     <div class="area w--8 w__lg--10 w__sm--16 tail e">
       <svg viewBox="0 0 648 414" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

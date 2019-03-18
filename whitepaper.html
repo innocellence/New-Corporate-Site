@@ -5,21 +5,15 @@ ref: whitepapers
 menu: initialize
 ---
 
-<section id="whitepapers" data-title="{{ page.title }}" class="section bg--blue"> 
+<section id="whitepapers" data-title="{{ page.title }}" class="section bg--white"> 
   <div class="section__i fade-e-below"> 
-    <h2 class="area w--16 g__b heading e">{{ page.title }}</h2> 
+    <h5 class="area w--16 g__b heading c--red e">Latest Whitepaper</h5> 
     {% assign whitepapers = site.whitepaper | reverse %}
     {% for item in whitepapers %}{% if forloop.first %}
     <div class="area w--8 w__xl--9 w__lg--16 m__b e">
-      <div class="card"> 
-        <div class="card__content"> 
-          <div class="latest">Latest</div>
-          <h2 class="heading">{{ item.title }}</h2>
-          <p>{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
-          <p><a class="button button--primary" href="{{ item.url }}"><span>Read Whitepaper</span></a></p>
-          <p class="small">{% for t in item.tags %}{{ t | prepend: '#' }} {% endfor %}</p>
-        </div>
-      </div>
+      <h2 class="heading">{{ item.title }}</h2>
+      <p>{{ item.excerpt | strip_html | truncatewords: 24 }}</p>
+      <p><a class="button button--primary" href="{{ item.url }}"><span>Read Whitepaper</span></a></p>
     </div>
     {% endif %}{% endfor %}
     <div class="area w--6 hide--lg tail">
@@ -29,21 +23,22 @@ menu: initialize
   </div>
   {% include section__bottom.html %}
 </section>
-<section id="archive" class="section"> 
-  <div class="section__i g__t g__b">  
+<section id="archive" class="section fade-e-below"> 
+  <div class="section__i g__t g__b e">  
+  <h5 class="area w--16 g__b heading c--red e">Our Archive</h5> 
   {% assign archive = whitepapers %}
   {% assign rows = archive.size | divided_by: 12.0 | ceil %}
   {% for i in (1..rows) %}     
-    <div class="grid grid--3 grid__md--2 grid--gap fade-e-below">
+    <div class="grid grid--3 grid--gap">
     {% assign offset = forloop.index0 | times: 12 %}
       {% for item in archive limit:13 offset:offset %}
         {% unless forloop.first %}
-        <div class="card e">
+        <div class="card t">
           <div class="card__content m__b">
-            <h3 class="heading match">{{ item.title }}</h3>
-            <p><a href="{{ item.url }}">Read Whitepaper</a></p>
+            <h2 class="heading match">{{ item.title }}</h2>
+            <p>{{ item.excerpt | strip_html | truncatewords: 24 }} <a href="{{ item.url }}"><span>Read&nbsp;more</span></a></p>
           </div>
-          <div class="card__footer">
+          <div class="card__footer m__b">
             <p class="small">{% for t in item.tags %}{{ t | prepend: '#' }} {% endfor %}</p>
           </div>
         </div>

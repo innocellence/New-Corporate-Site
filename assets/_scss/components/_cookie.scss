@@ -1,0 +1,57 @@
+///////////
+// Cookie Notice 
+///////////
+.cookie-active {
+  .cookie {
+    display: block;
+    transform: translateY(0);
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+.cookie {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+//  position: fixed;
+//  bottom: 0;
+  transform: translateY(-68px);
+  transition: all $base_duration $base_motion;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  background: $sky;
+  color: $black;
+  font-size: $typo_hummingbird;
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid transparentize($black, .5);
+  
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+    }
+  }
+  .close a {
+    border-bottom: 0;
+  }
+  .icon {
+    line-height: 1;
+  }
+  
+  &__popup {
+    display: flex;
+    justify-content: space-between;
+//    max-width: $content_max;
+    padding: $margin $gap;
+    align-items: center;
+    margin: auto;
+    
+    @media only screen and (max-width: $screen_md) {
+//      width: $content_w--sm;
+    }
+  }
+}

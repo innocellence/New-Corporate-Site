@@ -104,6 +104,7 @@ nav {
   overflow: hidden;
   transform: translate(0,0);
   border-bottom: 1px solid #f9f9f9;
+  background: $white;
   transition: all $base_duration $base_motion;
   animation: firstFadeInAndDrop $base_duration;
   
@@ -135,6 +136,15 @@ nav {
     100% {
       opacity: 1;
       transform: translate(0,0);
+    }
+  }
+}
+.cookie-active {
+  nav.invisible {
+    transform: translateY(-157px);
+    
+    @media only screen and (max-width: $screen_md) {
+      transform: translateY(-142px);
     }
   }
 }
@@ -196,10 +206,10 @@ nav {
     
     &__top,
     &__bottom {
-      height: 4px;
+      height: 2px;
       width: 36px;
       background: $white;
-      margin: 11px 0;
+      margin: 12px 0;
       transition: $base_duration $base_motion;
       
       @media only screen and (max-width: $screen_md) {
@@ -210,15 +220,15 @@ nav {
     // Mobile Menu Hover & Active
     &:hover {
       .mobileTrigger__top {
-        transform: translateY(2px);
+        transform: translateX(4px);
       }
       .mobileTrigger__bottom {
-        transform: translateY(-2px);
+        transform: translateX(-4px);
       }
       
       @media only screen and (max-width: $screen_md) {
         .mobileTrigger__top {
-          background: $red;
+          background: $blue;
         }
         .mobileTrigger__bottom {
           background: $blue;
@@ -358,7 +368,7 @@ nav {
 @media only screen and (max-width: $screen_md) {
   nav.expanded {
     background: $white;
-    padding: $gap 0;
+    padding: $margin;
     height: 100vh;
     overflow-y: scroll;
     z-index: 1001;

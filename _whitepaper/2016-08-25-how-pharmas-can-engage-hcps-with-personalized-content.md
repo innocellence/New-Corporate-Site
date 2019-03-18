@@ -12,8 +12,6 @@ On one hand, plenty of medical content is being created every day — but on the
 
 A major reason why this dilemma continues to plague HCPs is because they are not being provided with content that is customized to their preferences — HCPs must search through an ocean of content just to find information that's trustworthy and relevant to their specialty. 
 
-![](/content/images/2016/08/computer-1149148_1920.jpg)
-
 ### How Can Pharmas Provide HCPs with Personalized Content? 
 
 To deliver personalized content to HCPs, pharmas must follow several key principles: 
@@ -53,6 +51,4 @@ Once you do that, you can use your digital solutions to fill in the communicatio
 So striking a balance between digital technology and human touch of SRs can be a powerful combination for successfully engaging HCPs with personalized content.
 
 
-**What are some of the challenges your organization faces in delivering more personalized content? Share your experience with us by commenting below!**
-
-Image Credit: Pixabay 
+**What are some of the challenges your organization faces in delivering more personalized content?**

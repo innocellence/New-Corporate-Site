@@ -1,0 +1,109 @@
+///////////
+// Cookie Notice 
+///////////
+#systemCheck.active {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  
+  .popup {}
+}
+#systemCheck {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  bottom: 0;
+  transition: all $base_duration $base_motion;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  background: transparentize($black, .4);
+  
+  .popup {
+    max-width: 600px;
+    width: 95vw;
+    transition: transform .3s;
+    margin: $padding_sm;
+    background: $white;
+    color: $black;
+    box-shadow: 0 1px 10px transparentize($black, .6);
+    
+    #gonogo {
+      display: none;
+    }
+    .title {
+      padding: $padding_lg $padding_lg *2;
+      border-bottom: 1px solid transparentize($black, .8);
+      margin-bottom: 0;
+      
+      @media only screen and (max-width: $screen_md) {
+        padding: $padding_lg;
+      }
+    }
+    .content {
+      padding: $padding_lg *2;
+      
+      @media only screen and (max-width: $screen_md) {
+        padding: $padding_lg;
+      }
+      
+        a {
+          position: relative;
+          text-decoration: none;
+          color: $blue;
+          font-weight: inherit;
+          transition: all $base_duration $base_motion;
+
+          // Underline
+          &:before {
+            position: absolute;
+            content: '';
+            height: .3em;
+            width: 100%;
+            top: calc(50% + .15em);
+            left: 0;
+            background: transparent;
+            transform: scale3d(0,1,1);
+            transform-origin: left;
+            transition: all $base_duration $base_motion;
+          }
+
+          // Hover Effects
+          &:hover {
+            color: $blue;
+
+            &:before {
+              background: transparentize($blue, .8);
+              transform: scale3d(1,1,1);
+              transition: all $base_duration $base_motion;
+            }
+          }
+        }
+    }
+    .foot {
+      text-align: right;
+      padding: $padding_lg $padding_lg *2;
+      
+      @media only screen and (max-width: $screen_md) {
+        padding: $padding_lg;
+      }
+      
+      .button {
+        margin-right: 0; 
+      }
+      span {
+        flex-direction: row;
+      }
+      .icon {
+        line-height: 1;
+        padding-bottom: 0 !important;
+        margin-left: .5rem;
+      }
+    }
+  }
+}
